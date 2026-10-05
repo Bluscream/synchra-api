@@ -1,0 +1,51 @@
+name: Refresh spec
+
+# Disabled: workflows do not run under this account; uncomment if you fork this repository.
+# A weekly refresh is the point of this job — the API has no changelog, so a scheduled diff is the
+# only way a removed route gets noticed before a client hits the 404.
+#
+#  schedule:
+#    - cron: '17 5 * * 1'
+
+on:
+  workflow_dispatch:
+    inputs:
+      host:
+        description: API host to fetch from
+        required: false
+        default: https://api.synchra.net
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch the live description
+        env:
+          SYNCHRA_API_HOST: ${{ inputs.host }}
+        run: tools/fetch-spec.sh
+
+      # Reported, never enforced here: a removal is a real change that should land in a reviewable
+      # pull request, not fail the job that is trying to tell you about it.
+      - name: Report what moved
+        run: |
+          git diff --quiet -- spec/ && { echo 'No change.'; exit 0; }
+          git stash --quiet
+          cp spec/openapi.json "$RUNNER_TEMP/previous.json"
+          git stash pop --quiet
+          tools/diff-spec.sh "$RUNNER_TEMP/previous.json" | tee "$RUNNER_TEMP/diff.txt" || true
+
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          branch: refresh-spec
+          title: Refresh the API description
+          body-path: ${{ runner.temp }}/diff.txt
+          commit-message: |
+            chore: refresh the API description
+
+            Fetched from the live service. See the diff summary on the pull request.
+          add-paths: spec/

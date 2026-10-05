@@ -1,0 +1,5016 @@
+[
+  {
+    "id": 37,
+    "names": {
+      "en": "Panda"
+    },
+    "diamond_count": 5,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/77259f70262b6632b9926a4a7ed12391~tplv-obj.png",
+    "slug": "panda",
+    "duration": 0
+  },
+  {
+    "id": 5269,
+    "names": {
+      "id": "TikTok",
+      "pt": "TikTok",
+      "de": "TikTok",
+      "es": "TikTok",
+      "ar": "‏TikTok",
+      "tr": "TikTok",
+      "fr": "TikTok",
+      "en": "TikTok",
+      "ru": "TikTok",
+      "ba": "TikTok"
+    },
+    "diamond_count": 1,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/802a21ae29f9fae5abe3693de9f874bd~tplv-obj.webp",
+    "slug": "tiktok",
+    "duration": 0
+  },
+  {
+    "id": 5487,
+    "names": {
+      "id": "Jari Hati",
+      "pt": "Mãos fazendo coração",
+      "de": "Fingerherz",
+      "es": "Corazón coreano",
+      "ar": "قلب صغير",
+      "tr": "Finger Heart",
+      "fr": "Cœur avec les doigts",
+      "en": "Finger Heart",
+      "ru": "Сердечко",
+      "ba": "Finger Heart"
+    },
+    "diamond_count": 5,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/a4c4dc437fd3a6632aba149769491f49.png~tplv-obj.webp",
+    "slug": "finger-heart",
+    "duration": 0
+  },
+  {
+    "id": 5488,
+    "names": {
+      "en": "LOVE Balloon"
+    },
+    "diamond_count": 699,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/871fe83f2263d4a31b6d9bfc3d9a21f3.png~tplv-obj.png",
+    "slug": "love-balloon",
+    "duration": 0
+  },
+  {
+    "id": 5489,
+    "names": {
+      "en": "Carousel"
+    },
+    "diamond_count": 2020,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/9b1f08d38a7516eaa242c760dc0f5547.png~tplv-obj.png",
+    "slug": "carousel",
+    "duration": 0
+  },
+  {
+    "id": 5509,
+    "names": {
+      "id": "Kacamata",
+      "pt": "Óculos escuros",
+      "de": "Sonnenbrille",
+      "es": "Gafas de sol",
+      "ar": "نظارات الشمس",
+      "tr": "Güneş gözlükleri",
+      "fr": "Lunettes de soleil",
+      "en": "Sunglasses",
+      "ru": "Очки",
+      "ba": "Sunglasses"
+    },
+    "diamond_count": 199,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/08af67ab13a8053269bf539fd27f3873.png~tplv-obj.webp",
+    "slug": "sunglasses",
+    "duration": 0
+  },
+  {
+    "id": 5585,
+    "names": {
+      "id": "Konfeti",
+      "pt": "Confete",
+      "de": "Konfetti",
+      "es": "Confeti",
+      "ar": "زينة الاحتفال",
+      "tr": "Konfeti",
+      "fr": "Confettis",
+      "en": "Confetti",
+      "ru": "Конфетти",
+      "ba": "Confetti"
+    },
+    "diamond_count": 100,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/cb4e11b3834e149f08e1cdcc93870b26~tplv-obj.webp",
+    "slug": "confetti",
+    "duration": 0
+  },
+  {
+    "id": 5586,
+    "names": {
+      "id": "Hati",
+      "pt": "Corações",
+      "de": "Herzen",
+      "es": "Corazones",
+      "ar": "قلوب",
+      "tr": "Kalpler",
+      "fr": "Cœurs",
+      "en": "Hearts",
+      "ru": "Любовь",
+      "ba": "Hearts"
+    },
+    "diamond_count": 199,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/934b5a10dee8376df5870a61d2ea5cb6.png~tplv-obj.webp",
+    "slug": "hearts",
+    "duration": 0
+  },
+  {
+    "id": 5587,
+    "names": {
+      "id": "Tambang Emas",
+      "pt": "Mina de ouro",
+      "de": "Goldmine",
+      "es": "Mina de oro",
+      "ar": "منجم الذهب",
+      "tr": "Altın Madeni",
+      "fr": "Mine d'or",
+      "en": "Gold Mine",
+      "ru": "Золото",
+      "ba": "Gold Mine"
+    },
+    "diamond_count": 1000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/58cbff1bd592ae4365a450c4bf767f3a.png~tplv-obj.webp",
+    "slug": "gold-mine",
+    "duration": 0
+  },
+  {
+    "id": 5650,
+    "names": {
+      "en": "Mic"
+    },
+    "diamond_count": 5,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/8d4381b7d2272ffc14227c3705832e24~tplv-obj.png",
+    "slug": "mic",
+    "duration": 1000
+  },
+  {
+    "id": 5651,
+    "names": {
+      "id": "Rangkaian Bunga",
+      "pt": "Guirlanda",
+      "de": "Girlande",
+      "es": "Guirnalda",
+      "ar": "إكليل",
+      "tr": "Garland",
+      "fr": "Guirlande",
+      "en": "Garland ",
+      "ru": "Цветы",
+      "ba": "Garland "
+    },
+    "diamond_count": 1500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/69d7dadcd93942bad49d0b9874f69c1b~tplv-obj.webp",
+    "slug": "garland-",
+    "duration": 1000
+  },
+  {
+    "id": 5652,
+    "names": {
+      "id": "Bianglala",
+      "pt": "Roda-gigante",
+      "de": "Riesenrad",
+      "es": "Noria",
+      "ar": "عجلة فيريس",
+      "tr": "Dönme Dolap",
+      "fr": "Grande-roue",
+      "en": "Ferris Wheel",
+      "ru": "Колесо",
+      "ba": "Ferris Wheel"
+    },
+    "diamond_count": 3000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/3c7291ad4c2a6d4f70505c3e296ecebe~tplv-obj.webp",
+    "slug": "ferris-wheel",
+    "duration": 1000
+  },
+  {
+    "id": 5655,
+    "names": {
+      "id": "Mawar",
+      "pt": "Rosa",
+      "de": "Rose",
+      "es": "Rosa",
+      "ar": "وردة",
+      "tr": "Gül",
+      "fr": "Rose",
+      "en": "Rose",
+      "ru": "Роза",
+      "ba": "Rose"
+    },
+    "diamond_count": 1,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/eba3a9bb85c33e017f3648eaf88d7189~tplv-obj.webp",
+    "slug": "rose",
+    "duration": 1000
+  },
+  {
+    "id": 5657,
+    "names": {
+      "en": "Lollipop"
+    },
+    "diamond_count": 10,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/7d055532898d2060101306de62b89882~tplv-obj.png",
+    "slug": "lollipop",
+    "duration": 1000
+  },
+  {
+    "id": 5658,
+    "names": {
+      "id": "Parfum",
+      "pt": "Perfume",
+      "de": "Parfüm",
+      "es": "Perfume",
+      "ar": "عطر",
+      "tr": "Parfüm",
+      "fr": "Parfum",
+      "en": "Perfume",
+      "ru": "Духи",
+      "ba": "Perfume"
+    },
+    "diamond_count": 20,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/20b8f61246c7b6032777bb81bf4ee055~tplv-obj.webp",
+    "slug": "perfume",
+    "duration": 1000
+  },
+  {
+    "id": 5659,
+    "names": {
+      "id": "Origami",
+      "pt": "Grou de papel",
+      "de": "Papierkranich",
+      "es": "Cisne de papel",
+      "ar": "طائر ورقي",
+      "tr": "Kağıttan Turna",
+      "fr": "Grue en origami",
+      "en": "Paper Crane",
+      "ru": "Журавлик",
+      "ba": "Paper Crane"
+    },
+    "diamond_count": 99,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/0f158a08f7886189cdabf496e8a07c21~tplv-obj.webp",
+    "slug": "paper-crane",
+    "duration": 1000
+  },
+  {
+    "id": 5660,
+    "names": {
+      "en": "Hand Hearts"
+    },
+    "diamond_count": 100,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/6cd022271dc4669d182cad856384870f~tplv-obj.png",
+    "slug": "hand-hearts",
+    "duration": 1000
+  },
+  {
+    "id": 5661,
+    "names": {
+      "en": "Air Dancer"
+    },
+    "diamond_count": 300,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/97c975dcce2483027ececde2b6719761~tplv-obj.png",
+    "slug": "air-dancer",
+    "duration": 1000
+  },
+  {
+    "id": 5662,
+    "names": {
+      "en": "Necklace"
+    },
+    "diamond_count": 400,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/7ad7ebc43e1c161c0ee566395ab7882b~tplv-obj.png",
+    "slug": "necklace",
+    "duration": 1000
+  },
+  {
+    "id": 5663,
+    "names": {
+      "en": "Heels"
+    },
+    "diamond_count": 700,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/23218022aa39dbc100b6570e97652397~tplv-obj.png",
+    "slug": "heels",
+    "duration": 1000
+  },
+  {
+    "id": 5664,
+    "names": {
+      "en": "Pearl"
+    },
+    "diamond_count": 800,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/70fd490f208c37c89ebdecf4c3c1c31b~tplv-obj.png",
+    "slug": "pearl",
+    "duration": 1000
+  },
+  {
+    "id": 5665,
+    "names": {
+      "en": "Jet plane"
+    },
+    "diamond_count": 6000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/70180f3d237a4f063964200b53333123~tplv-obj.png",
+    "slug": "jet-plane",
+    "duration": 1000
+  },
+  {
+    "id": 5680,
+    "names": {
+      "pt": "Bola de espelhos",
+      "de": "Discokugel",
+      "es": "Bola de discoteca",
+      "ar": "كرة ديسكو",
+      "tr": "Disko topu",
+      "fr": "Boule disco",
+      "ru": "Диско-шар",
+      "en": "Mirror Ball",
+      "id": "Mirror Ball",
+      "ba": "Mirror Ball"
+    },
+    "diamond_count": 1000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/8d0cb854bbe8eeea654f3f9c353c5cf0~tplv-obj.webp",
+    "slug": "mirror-ball",
+    "duration": 1000
+  },
+  {
+    "id": 5730,
+    "names": {
+      "en": "Treehouse"
+    },
+    "diamond_count": 1799,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/3ab394fa8f90013c4e3d74282ded22af~tplv-obj.png",
+    "slug": "treehouse",
+    "duration": 1000
+  },
+  {
+    "id": 5731,
+    "names": {
+      "id": "Karang",
+      "pt": "Coral",
+      "de": "Koralle",
+      "es": "Coral",
+      "ar": "أعشاب مرجانية",
+      "tr": "Mercan",
+      "fr": "Corail",
+      "en": "Coral",
+      "ru": "Коралл",
+      "ba": "Coral"
+    },
+    "diamond_count": 499,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/d4faa402c32bf4f92bee654b2663d9f1~tplv-obj.webp",
+    "slug": "coral",
+    "duration": 1000
+  },
+  {
+    "id": 5732,
+    "names": {
+      "en": "Submarine"
+    },
+    "diamond_count": 5199,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/778b3296b404d8b2849b2c7d6fbbaa65~tplv-obj.png",
+    "slug": "submarine",
+    "duration": 1000
+  },
+  {
+    "id": 5734,
+    "names": {
+      "en": "Goggles"
+    },
+    "diamond_count": 199,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/488be317f77358386438d04e38801b5e~tplv-obj.png",
+    "slug": "goggles",
+    "duration": 1000
+  },
+  {
+    "id": 5760,
+    "names": {
+      "en": "Weights"
+    },
+    "diamond_count": 1,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/a99fc8541c7b91305de1cdcf47714d03~tplv-obj.png",
+    "slug": "weights",
+    "duration": 1000
+  },
+  {
+    "id": 5763,
+    "names": {
+      "en": "Speedboat"
+    },
+    "diamond_count": 1888,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/59c1d54918e6e715b84a4f5387f2ddb9~tplv-obj.png",
+    "slug": "speedboat",
+    "duration": 1000
+  },
+  {
+    "id": 5764,
+    "names": {
+      "en": "Ice Machine"
+    },
+    "diamond_count": 538,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/d6b2dfa2b778c0448d72600135b75dbb~tplv-obj.png",
+    "slug": "ice-machine",
+    "duration": 1000
+  },
+  {
+    "id": 5765,
+    "names": {
+      "id": "Sepeda Motor",
+      "pt": "Motocicleta",
+      "de": "Motorrad",
+      "es": "Moto",
+      "ar": "دراجة بخارية",
+      "tr": "Motorsiklet",
+      "fr": "Moto",
+      "en": "Motorcycle",
+      "ru": "Мотоцикл",
+      "ba": "Motorcycle"
+    },
+    "diamond_count": 2988,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/6517b8f2f76dc75ff0f4f73107f8780e~tplv-obj.webp",
+    "slug": "motorcycle",
+    "duration": 1000
+  },
+  {
+    "id": 5767,
+    "names": {
+      "id": "Jet Pribadi",
+      "pt": "Jato particular",
+      "de": "Privatjet",
+      "es": "Jet privado",
+      "ar": "طائرة خاصة",
+      "tr": "Özel Jet",
+      "fr": "Jet privé",
+      "en": "Private Jet",
+      "ru": "Частный самолет",
+      "ba": "Private Jet"
+    },
+    "diamond_count": 4888,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/921c6084acaa2339792052058cbd3fd3~tplv-obj.webp",
+    "slug": "private-jet",
+    "duration": 1000
+  },
+  {
+    "id": 5827,
+    "names": {
+      "id": "Kerucut Es Krim",
+      "pt": "Casquinha de sorvete",
+      "de": "Eiswaffel",
+      "es": "Cono de helado",
+      "ar": "أيس كريم",
+      "tr": "Dondurma Külahı",
+      "fr": "Cornet de crème glacée",
+      "en": "Ice Cream Cone",
+      "ru": "Рожок мороженого",
+      "ba": "Ice Cream Cone"
+    },
+    "diamond_count": 1,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/968820bc85e274713c795a6aef3f7c67~tplv-obj.webp",
+    "slug": "ice-cream-cone",
+    "duration": 1000
+  },
+  {
+    "id": 5874,
+    "names": {
+      "en": "Lion 222"
+    },
+    "diamond_count": 1,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/83eca2312a948ae66c98d3fb6ab7d2e5~tplv-obj.png",
+    "slug": "lion-222",
+    "duration": 1000
+  },
+  {
+    "id": 5879,
+    "names": {
+      "id": "Donat",
+      "pt": "Rosquinha",
+      "de": "Donut",
+      "es": "Rosquilla",
+      "ar": "دونات",
+      "tr": "Donat",
+      "fr": "Donut",
+      "en": "Doughnut",
+      "ru": "Пончик",
+      "ba": "Doughnut"
+    },
+    "diamond_count": 30,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/4e7ad6bdf0a1d860c538f38026d4e812~tplv-obj.webp",
+    "slug": "doughnut",
+    "duration": 1000
+  },
+  {
+    "id": 5880,
+    "names": {
+      "id": "Gembok dan Kunci",
+      "pt": "Fechadura e chave",
+      "de": "Schloss und Schlüssel",
+      "es": "Candado con llave",
+      "ar": "قفل ومفتاح",
+      "tr": "Kilit ve Anahtar",
+      "fr": "Cadenas et clé",
+      "en": "Lock and Key",
+      "ru": "Замок с ключом",
+      "ba": "Lock and Key"
+    },
+    "diamond_count": 199,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/2c9cec686b98281f7319b1a02ba2864a~tplv-obj.webp",
+    "slug": "lock-and-key",
+    "duration": 1000
+  },
+  {
+    "id": 5882,
+    "names": {
+      "en": "Rock 'n' Roll"
+    },
+    "diamond_count": 299,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/57154f268c641793bca116a4b87d2bfa~tplv-obj.png",
+    "slug": "rock-n-roll",
+    "duration": 1000
+  },
+  {
+    "id": 5897,
+    "names": {
+      "id": "Angsa",
+      "pt": "Cisne",
+      "de": "Schwan",
+      "es": "Cisne",
+      "ar": "بجعة",
+      "tr": "Kuğu",
+      "fr": "Cygne",
+      "en": "Swan",
+      "ru": "Лебедь",
+      "ba": "Swan"
+    },
+    "diamond_count": 699,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/97a26919dbf6afe262c97e22a83f4bf1~tplv-obj.webp",
+    "slug": "swan",
+    "duration": 1000
+  },
+  {
+    "id": 5899,
+    "names": {
+      "en": "Swing"
+    },
+    "diamond_count": 399,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/4d547840317d296c4c743d310a27d575~tplv-obj.png",
+    "slug": "swing",
+    "duration": 1000
+  },
+  {
+    "id": 5915,
+    "names": {
+      "en": "Music Note"
+    },
+    "diamond_count": 169,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/b0b97078e33e46c8f7b7b3c321f684c3~tplv-obj.png",
+    "slug": "music-note",
+    "duration": 1000
+  },
+  {
+    "id": 5930,
+    "names": {
+      "en": "Rocket"
+    },
+    "diamond_count": 20000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/5cf0180749e79c5df2f3b242963e27ad~tplv-obj.png",
+    "slug": "rocket",
+    "duration": 1000
+  },
+  {
+    "id": 5938,
+    "names": {
+      "en": "Pool Party"
+    },
+    "diamond_count": 4999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/4147c5bcfad9623c693f83d5d6cba1f7~tplv-obj.png",
+    "slug": "pool-party",
+    "duration": 1000
+  },
+  {
+    "id": 5951,
+    "names": {
+      "en": "Pirate Ship"
+    },
+    "diamond_count": 4888,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/6c22ee4bf90cbd38b576e937bb22e306~tplv-obj.png",
+    "slug": "pirate-ship",
+    "duration": 1000
+  },
+  {
+    "id": 5954,
+    "names": {
+      "en": "Planet"
+    },
+    "diamond_count": 15000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/7d017c1f035b989127b16255398eddc9~tplv-obj.png",
+    "slug": "planet",
+    "duration": 1000
+  },
+  {
+    "id": 5955,
+    "names": {
+      "id": "Juara",
+      "pt": "Campeão",
+      "de": "Champion",
+      "es": "Campeón",
+      "ar": "بطل",
+      "tr": "Şampiyon",
+      "fr": "Champion",
+      "en": "Champion",
+      "ru": "Чемпион",
+      "ba": "Champion"
+    },
+    "diamond_count": 1500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/58ce827091411e667dd6ba8a93215f86~tplv-obj.webp",
+    "slug": "champion",
+    "duration": 1000
+  },
+  {
+    "id": 5964,
+    "names": {
+      "en": "Music Box"
+    },
+    "diamond_count": 2399,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/1b10e84b212f69fae1867c2ddbc1e586~tplv-obj.png",
+    "slug": "music-box",
+    "duration": 1000
+  },
+  {
+    "id": 5976,
+    "names": {
+      "pt": "Balão de ar quente",
+      "de": "Heißluftballon",
+      "es": "Globo aerostático",
+      "ar": "منطاد",
+      "tr": "Sıcak Hava Balonu",
+      "fr": "Montgolfière",
+      "ru": "Монгольфьер",
+      "en": "Hot Air Balloon",
+      "id": "Hot Air Balloon",
+      "ba": "Hot Air Balloon"
+    },
+    "diamond_count": 999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/dcdf999c463e424f1a88968189b0825a~tplv-obj.webp",
+    "slug": "hot-air-balloon",
+    "duration": 1000
+  },
+  {
+    "id": 5978,
+    "names": {
+      "id": "Kereta",
+      "pt": "Trem",
+      "de": "Zug",
+      "es": "Tren",
+      "ar": "قطار",
+      "tr": "Tren",
+      "fr": "Train",
+      "en": "Train",
+      "ru": "Поезд",
+      "ba": "Train"
+    },
+    "diamond_count": 899,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/4227ed71f2c494b554f9cbe2147d4899~tplv-obj.webp",
+    "slug": "train",
+    "duration": 1000
+  },
+  {
+    "id": 5995,
+    "names": {
+      "en": "Travel"
+    },
+    "diamond_count": 2888,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/6fb4edfc69803160f4559c663a6850c1~tplv-obj.png",
+    "slug": "travel",
+    "duration": 1000
+  },
+  {
+    "id": 5996,
+    "names": {
+      "en": "Bumper Cars"
+    },
+    "diamond_count": 1288,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/0b72093c619aeafe267d04c11ea0b22e~tplv-obj.png",
+    "slug": "bumper-cars",
+    "duration": 1000
+  },
+  {
+    "id": 6007,
+    "names": {
+      "id": "Sarung Tinju",
+      "pt": "Luvas de boxe",
+      "de": "Boxhandschuhe",
+      "es": "Guantes de boxeo",
+      "ar": "قفازات الملاكمة",
+      "tr": "Boks Eldivenleri",
+      "fr": "Gants de boxe",
+      "en": "Boxing Gloves",
+      "ru": "Боксерские перчатки",
+      "ba": "Boxing Gloves"
+    },
+    "diamond_count": 299,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/9f8bd92363c400c284179f6719b6ba9c~tplv-obj.webp",
+    "slug": "boxing-gloves",
+    "duration": 1000
+  },
+  {
+    "id": 6031,
+    "names": {
+      "en": "Gaming Chair"
+    },
+    "diamond_count": 1200,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/fd53368cacaba5c02fceb38903ed8dd3~tplv-obj.png",
+    "slug": "gaming-chair",
+    "duration": 1000
+  },
+  {
+    "id": 6033,
+    "names": {
+      "id": "Kotak Rias",
+      "pt": "Porta-joias",
+      "de": "Schminkkasten",
+      "es": "Estuche de maquillaje",
+      "ar": "صندوق مكياج",
+      "tr": "Makyaj Kutusu",
+      "fr": "Boîte de maquillage",
+      "en": "Make-up Box",
+      "ru": "Косметичка",
+      "ba": "Make-up Box"
+    },
+    "diamond_count": 1999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/a29aa87203ec09c699e3dafa1944b23e~tplv-obj.webp",
+    "slug": "make-up-box",
+    "duration": 1000
+  },
+  {
+    "id": 6036,
+    "names": {
+      "en": "Record Player"
+    },
+    "diamond_count": 600,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/9b3d84a61aba75bd506869b46f3c573c~tplv-obj.png",
+    "slug": "record-player",
+    "duration": 1000
+  },
+  {
+    "id": 6042,
+    "names": {
+      "en": "Mini Speaker"
+    },
+    "diamond_count": 1,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/728cc7436005cace2791aa7500e4bf95~tplv-obj.png",
+    "slug": "mini-speaker",
+    "duration": 1000
+  },
+  {
+    "id": 6052,
+    "names": {
+      "en": "Gamepad"
+    },
+    "diamond_count": 10,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/8ebe28a907bb6237fa3b11a97deffe96~tplv-obj.png",
+    "slug": "gamepad",
+    "duration": 1000
+  },
+  {
+    "id": 6053,
+    "names": {
+      "en": "Hi"
+    },
+    "diamond_count": 5,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/1339a0381f235a3e4011d6d8a0bead6a~tplv-obj.png",
+    "slug": "hi",
+    "duration": 1000
+  },
+  {
+    "id": 6059,
+    "names": {
+      "en": "Hand Wave"
+    },
+    "diamond_count": 9,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/63135affee2016240473cab8376dfe74~tplv-obj.png",
+    "slug": "hand-wave",
+    "duration": 1000
+  },
+  {
+    "id": 6064,
+    "names": {
+      "pt": "Bom jogo",
+      "de": "GG",
+      "es": "GG",
+      "ar": "أحسنت اللعب",
+      "tr": "GG",
+      "fr": "GG",
+      "ru": "GG",
+      "en": "GG",
+      "id": "GG",
+      "ba": "GG"
+    },
+    "diamond_count": 1,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/3f02fa9594bd1495ff4e8aa5ae265eef~tplv-obj.webp",
+    "slug": "gg",
+    "duration": 1000
+  },
+  {
+    "id": 6070,
+    "names": {
+      "en": "Mirror"
+    },
+    "diamond_count": 30,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/840b3d6e362053e4eb83af0ca7228762~tplv-obj.png",
+    "slug": "mirror",
+    "duration": 1000
+  },
+  {
+    "id": 6073,
+    "names": {
+      "en": "Sweet dreams"
+    },
+    "diamond_count": 399,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/73d750457215bbb20e160406b8e006d3~tplv-obj.png",
+    "slug": "sweet-dreams",
+    "duration": 1000
+  },
+  {
+    "id": 6089,
+    "names": {
+      "id": "Mobil Balap",
+      "pt": "Carro esportivo",
+      "de": "Sportwagen",
+      "es": "Coche deportivo",
+      "ar": "سيارة رياضية",
+      "tr": "Spor Araba",
+      "fr": "Voiture de sport",
+      "en": "Sports Car",
+      "ru": "Спорткар",
+      "ba": "Sports Car"
+    },
+    "diamond_count": 7000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/e7ce188da898772f18aaffe49a7bd7db~tplv-obj.webp",
+    "slug": "sports-car",
+    "duration": 1000
+  },
+  {
+    "id": 6090,
+    "names": {
+      "id": "Kembang api",
+      "pt": "Fogos de artifício",
+      "de": "Feuerwerk",
+      "es": "Fuegos artificiales",
+      "ar": "ألعاب نارية",
+      "tr": "Havai fişek",
+      "fr": "Feux d'artifice",
+      "en": "Fireworks",
+      "ru": "Фейерверки",
+      "ba": "Fireworks"
+    },
+    "diamond_count": 1088,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/9494c8a0bc5c03521ef65368e59cc2b8~tplv-obj.webp",
+    "slug": "fireworks",
+    "duration": 1000
+  },
+  {
+    "id": 6093,
+    "names": {
+      "en": "Football"
+    },
+    "diamond_count": 1,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/c043cd9e418f13017793ddf6e0c6ee99~tplv-obj.png",
+    "slug": "football",
+    "duration": 1000
+  },
+  {
+    "id": 6094,
+    "names": {
+      "en": "Match Trophy"
+    },
+    "diamond_count": 7999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/f630226a813d10acf55838f7dd503b63~tplv-obj.png",
+    "slug": "match-trophy",
+    "duration": 1000
+  },
+  {
+    "id": 6097,
+    "names": {
+      "id": "Mahkota Mungil",
+      "pt": "Coroazinha",
+      "de": "Krönchen",
+      "es": "Pequeña corona",
+      "ar": "تاج صغير",
+      "tr": "Küçük Taç",
+      "fr": "Petite couronne",
+      "en": "Little Crown",
+      "ru": "Маленькая Корона",
+      "ba": "Little Crown"
+    },
+    "diamond_count": 99,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/cf3db11b94a975417043b53401d0afe1~tplv-obj.webp",
+    "slug": "little-crown",
+    "duration": 3000
+  },
+  {
+    "id": 6102,
+    "names": {
+      "en": "Magic Album"
+    },
+    "diamond_count": 1999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/b31e4acfc916a88335df19095485eb4d~tplv-obj.png",
+    "slug": "magic-album",
+    "duration": 8000
+  },
+  {
+    "id": 6104,
+    "names": {
+      "id": "Topi",
+      "pt": "Boné",
+      "de": "Kappe",
+      "es": "Gorra",
+      "ar": "قبعة",
+      "tr": "Şapka",
+      "fr": "Casquette",
+      "en": "Cap",
+      "ru": "Кепка",
+      "ba": "Cap"
+    },
+    "diamond_count": 99,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/6c2ab2da19249ea570a2ece5e3377f04~tplv-obj.webp",
+    "slug": "cap",
+    "duration": 3000
+  },
+  {
+    "id": 6108,
+    "names": {
+      "en": "Spotlight"
+    },
+    "diamond_count": 1999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/64fdf3c91b32318f0f4d4d49605b3df5~tplv-obj.png",
+    "slug": "spotlight",
+    "duration": 8000
+  },
+  {
+    "id": 6133,
+    "names": {
+      "en": "Magic Letter"
+    },
+    "diamond_count": 7,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/df825153f014609f2093488846ae184d~tplv-obj.png",
+    "slug": "magic-letter",
+    "duration": 1000
+  },
+  {
+    "id": 6134,
+    "names": {
+      "en": "Wizard Hat"
+    },
+    "diamond_count": 177,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/0f0073dc9adc66974cf0c16ba995ecae~tplv-obj.png",
+    "slug": "wizard-hat",
+    "duration": 1000
+  },
+  {
+    "id": 6135,
+    "names": {
+      "en": "Teatime"
+    },
+    "diamond_count": 1777,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/8262434f5dcb0265dc23e22ae8a1a1fd~tplv-obj.png",
+    "slug": "teatime",
+    "duration": 1000
+  },
+  {
+    "id": 6146,
+    "names": {
+      "en": "Venus Flytrap"
+    },
+    "diamond_count": 400,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/d5f22e9c0c2cde210546948097693c83~tplv-obj.png",
+    "slug": "venus-flytrap",
+    "duration": 1000
+  },
+  {
+    "id": 6148,
+    "names": {
+      "id": "Bunga Tumpah Ruah",
+      "pt": "Elevador de flores",
+      "de": "Meer aus Blumen",
+      "es": "Explosión floral",
+      "ar": "مصعد الزهور",
+      "tr": "Çiçek Yağmuru",
+      "fr": "Ascenseur fleuri",
+      "en": "Flower Overflow",
+      "ru": "Гора цветов",
+      "ba": "Flower Overflow"
+    },
+    "diamond_count": 4000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/743c4bb44e7e0bf251a7f2f5ada231ee~tplv-obj.webp",
+    "slug": "flower-overflow",
+    "duration": 1000
+  },
+  {
+    "id": 6149,
+    "names": {
+      "id": "Antarbintang",
+      "pt": "Planeta maravilhoso",
+      "de": "Interstellar",
+      "es": "Interestelar",
+      "ar": "كوكب العجائب",
+      "tr": "Yıldızlar Arası",
+      "fr": "Planète merveilleuse",
+      "en": "Interstellar",
+      "ru": "Космос",
+      "ba": "Interstellar"
+    },
+    "diamond_count": 10000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/8520d47b59c202a4534c1560a355ae06~tplv-obj.webp",
+    "slug": "interstellar",
+    "duration": 1000
+  },
+  {
+    "id": 6182,
+    "names": {
+      "en": "Team Crown"
+    },
+    "diamond_count": 1000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/47d471d4ae92ee95afcc12e1fbb8f683~tplv-obj.png",
+    "slug": "team-crown",
+    "duration": 1000
+  },
+  {
+    "id": 6184,
+    "names": {
+      "en": "Hall of Glory"
+    },
+    "diamond_count": 30000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/223965702b5826f1138331d009665439~tplv-obj.png",
+    "slug": "hall-of-glory",
+    "duration": 1000
+  },
+  {
+    "id": 6199,
+    "names": {
+      "en": "Email Message"
+    },
+    "diamond_count": 1000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/c959df6dbffd6f07849d22d2c3c07861~tplv-obj.png",
+    "slug": "email-message",
+    "duration": 1000
+  },
+  {
+    "id": 6200,
+    "names": {
+      "pt": "Espelho florido",
+      "de": "Blühender Spiegel",
+      "es": "Espejo con flores",
+      "ar": "مرآة وسط الزهور",
+      "tr": "Çiçekli Ayna",
+      "fr": "Miroir fleuri",
+      "ru": "Оазис в зеркале",
+      "en": "Flowery Mirror",
+      "id": "Flowery Mirror",
+      "ba": "Flowery Mirror"
+    },
+    "diamond_count": 1000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/a9d0e9406230fa9a901d992a90574e39~tplv-obj.webp",
+    "slug": "flowery-mirror",
+    "duration": 1000
+  },
+  {
+    "id": 6203,
+    "names": {
+      "id": "Arena Balap Sunset",
+      "pt": "Via do sol poente",
+      "de": "Abendlichtfahrt",
+      "es": "Bulevar del ocaso",
+      "ar": "رحلة غروب الشمس",
+      "tr": "Gün Batımı Bulvarı",
+      "fr": "Coucher de soleil",
+      "en": "Sunset Speedway",
+      "ru": "Закатное шоссе",
+      "ba": "Sunset Speedway"
+    },
+    "diamond_count": 10000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/df63eee488dc0994f6f5cb2e65f2ae49~tplv-obj.webp",
+    "slug": "sunset-speedway",
+    "duration": 1000
+  },
+  {
+    "id": 6204,
+    "names": {
+      "en": "Restaurants"
+    },
+    "diamond_count": 4000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/e8764af35b7a390d436b68137541e19c~tplv-obj.png",
+    "slug": "restaurants",
+    "duration": 1000
+  },
+  {
+    "id": 6205,
+    "names": {
+      "en": "Love Chat"
+    },
+    "diamond_count": 400,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/a54af904b8d9981fbfd414614ed3dea5~tplv-obj.png",
+    "slug": "love-chat",
+    "duration": 1000
+  },
+  {
+    "id": 6217,
+    "names": {
+      "en": "Team Trophy"
+    },
+    "diamond_count": 7000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/ec5a9adf86d1e81f2eb26777ea100019~tplv-obj.png",
+    "slug": "team-trophy",
+    "duration": 1000
+  },
+  {
+    "id": 6224,
+    "names": {
+      "en": "Love Letter"
+    },
+    "diamond_count": 1,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/ba096f4e01e888e6c6d60f3b6eaa12b6~tplv-obj.png",
+    "slug": "love-letter",
+    "duration": 1000
+  },
+  {
+    "id": 6229,
+    "names": {
+      "en": "Ski Goggles"
+    },
+    "diamond_count": 199,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/95e8ead1772f8bf9e47dd425b12d17e8~tplv-obj.png",
+    "slug": "ski-goggles",
+    "duration": 3000
+  },
+  {
+    "id": 6230,
+    "names": {
+      "en": "Snowboard"
+    },
+    "diamond_count": 9,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/18293f214fe401cb068928259f51f131~tplv-obj.png",
+    "slug": "snowboard",
+    "duration": 1000
+  },
+  {
+    "id": 6233,
+    "names": {
+      "id": "Travel Bareng",
+      "pt": "Viagem com você",
+      "de": "Ich reise mit dir",
+      "es": "Viaje juntos",
+      "ar": "السفر معًا",
+      "tr": "Birlikte Seyahat",
+      "fr": "Voyage avec toi",
+      "en": "Travel with You",
+      "ru": "Совместное путешествие",
+      "ba": "Travel with You"
+    },
+    "diamond_count": 999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/753098e5a8f45afa965b73616c04cf89~tplv-obj.webp",
+    "slug": "travel-with-you",
+    "duration": 1000
+  },
+  {
+    "id": 6246,
+    "names": {
+      "id": "Acung Jempol",
+      "pt": "Polegares para cima",
+      "de": "Daumen hoch",
+      "es": "OK",
+      "ar": "أعجبني",
+      "tr": "Süper",
+      "fr": "Pouce vers le haut",
+      "en": "Thumbs Up",
+      "ru": "Отлично",
+      "ba": "Thumbs Up"
+    },
+    "diamond_count": 1,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/570a663e27bdc460e05556fd1596771a~tplv-obj.webp",
+    "slug": "thumbs-up",
+    "duration": 1000
+  },
+  {
+    "id": 6247,
+    "names": {
+      "id": "Hati",
+      "pt": "Coração",
+      "de": "Herz",
+      "es": "Corazón",
+      "ar": "قلب",
+      "tr": "Kalp",
+      "fr": "Cœur",
+      "en": "Heart",
+      "ru": "Сердце",
+      "ba": "Heart"
+    },
+    "diamond_count": 1,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/dd300fd35a757d751301fba862a258f1~tplv-obj.webp",
+    "slug": "heart",
+    "duration": 1000
+  },
+  {
+    "id": 6265,
+    "names": {
+      "id": "Bebek",
+      "pt": "Pato",
+      "de": "Ente",
+      "es": "Pato",
+      "ar": "بطة",
+      "tr": "Ördek",
+      "fr": "Canard",
+      "en": "Duck",
+      "ru": "Утка",
+      "ba": "Duck"
+    },
+    "diamond_count": 299,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/e172f660a1d4f95813a3ace0fde42323~tplv-obj.webp",
+    "slug": "duck",
+    "duration": 1000
+  },
+  {
+    "id": 6267,
+    "names": {
+      "id": "Corgi",
+      "pt": "Corgi",
+      "de": "Corgi",
+      "es": "Corgi",
+      "ar": "كورجي",
+      "tr": "Corgi",
+      "fr": "Corgi",
+      "en": "Corgi",
+      "ru": "Корги",
+      "ba": "Corgi"
+    },
+    "diamond_count": 299,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/148eef0884fdb12058d1c6897d1e02b9~tplv-obj.webp",
+    "slug": "corgi",
+    "duration": 1000
+  },
+  {
+    "id": 6320,
+    "names": {
+      "pt": "Aventuras estelares",
+      "de": "Sterneabenteuer",
+      "es": "Aventuras bajo las estrellas",
+      "ar": "مغامرات تحت النجوم",
+      "tr": "Yıldız Macerası",
+      "fr": "Aventures sous les étoiles",
+      "ru": "Приключения под звездами",
+      "en": "Stellar Adventures",
+      "id": "Stellar Adventures",
+      "ba": "Stellar Adventures"
+    },
+    "diamond_count": 1999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/7fae35d43508b54c7d57e98f948f54b9~tplv-obj.webp",
+    "slug": "stellar-adventures",
+    "duration": 1000
+  },
+  {
+    "id": 6327,
+    "names": {
+      "id": "Kapal Udara",
+      "pt": "Dirigível",
+      "de": "Zeppelin",
+      "es": "Dirigible",
+      "ar": "منطاد بمحرك",
+      "tr": "Zeplin",
+      "fr": "Dirigeable",
+      "en": "Airship",
+      "ru": "Дирижабль",
+      "ba": "Airship"
+    },
+    "diamond_count": 1999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/15184dde38cfe83fdecbbaf578169dcb~tplv-obj.webp",
+    "slug": "airship",
+    "duration": 1000
+  },
+  {
+    "id": 6364,
+    "names": {
+      "id": "Galaksi",
+      "pt": "Galáxia",
+      "de": "Galaxie",
+      "es": "Galaxia",
+      "ar": "مجرة",
+      "tr": "Galaksi",
+      "fr": "Galaxie",
+      "en": "Galaxy",
+      "ru": "Галактика",
+      "ba": "Galaxy"
+    },
+    "diamond_count": 1000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/bb3b8d4cd7627e9894cddf880da07733~tplv-obj.webp",
+    "slug": "galaxy",
+    "duration": 1000
+  },
+  {
+    "id": 6369,
+    "names": {
+      "id": "Singa",
+      "pt": "Leão",
+      "de": "Löwe",
+      "es": "León",
+      "ar": "أسد",
+      "tr": "Aslan",
+      "fr": "Lion",
+      "en": "Lion",
+      "ru": "Лев",
+      "ba": "Lion"
+    },
+    "diamond_count": 29999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/4fb89af2082a290b37d704e20f4fe729~tplv-obj.webp",
+    "slug": "lion",
+    "duration": 1000
+  },
+  {
+    "id": 6417,
+    "names": {
+      "id": "Kelab",
+      "en": "Club",
+      "pt": "Club",
+      "de": "Club",
+      "es": "Club",
+      "ar": "Club",
+      "tr": "Club",
+      "fr": "Club",
+      "ru": "Club",
+      "ba": "Club"
+    },
+    "diamond_count": 2000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/610d14c4f6e25a5ae4c8dfc0e82ec909~tplv-obj.webp",
+    "slug": "club",
+    "duration": 1000
+  },
+  {
+    "id": 6427,
+    "names": {
+      "id": "Topi dan Kumis",
+      "pt": "Chapéu e bigode",
+      "de": "Hut und Schnurrbart",
+      "es": "Sombrero y bigote",
+      "ar": "قبعة وشارب",
+      "tr": "Şapka ve Bıyık",
+      "fr": "Chapeau et moustache",
+      "en": "Hat and Mustache",
+      "ru": "Шляпа и усы",
+      "ba": "Hat and Mustache"
+    },
+    "diamond_count": 99,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/2f1e4f3f5c728ffbfa35705b480fdc92~tplv-obj.webp",
+    "slug": "hat-and-mustache",
+    "duration": 3000
+  },
+  {
+    "id": 6432,
+    "names": {
+      "id": "Bintang",
+      "pt": "Estrela",
+      "de": "Stern",
+      "es": "Estrella",
+      "ar": "نجمة",
+      "tr": "Yıldız",
+      "fr": "Étoile",
+      "en": "Star",
+      "ru": "Звезда",
+      "ba": "Star"
+    },
+    "diamond_count": 99,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/485175fda92f4d2f862e915cbcf8f5c4~tplv-obj.webp",
+    "slug": "star",
+    "duration": 3000
+  },
+  {
+    "id": 6437,
+    "names": {
+      "id": "Mahkota Bunga",
+      "pt": "Coroa de flores",
+      "de": "Blumenkranz",
+      "es": "Tocado de flores",
+      "ar": "إكليل الزهور",
+      "tr": "Çiçekten Taç",
+      "fr": "Coiffe guirlande",
+      "en": "Garland Headpiece",
+      "ru": "Цветочный венок",
+      "ba": "Garland Headpiece"
+    },
+    "diamond_count": 199,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/bdbdd8aeb2b69c173a3ef666e63310f3~tplv-obj.webp",
+    "slug": "garland-headpiece",
+    "duration": 3000
+  },
+  {
+    "id": 6488,
+    "names": {
+      "pt": "Tapete vermelho",
+      "de": "Roter Teppich",
+      "es": "Alfombra roja",
+      "ar": "بساط أحمر",
+      "tr": "Kırmızı Halı",
+      "fr": "Tapis rouge",
+      "ru": "Красная дорожка",
+      "en": "Red Carpet",
+      "id": "Red Carpet",
+      "ba": "Red Carpet"
+    },
+    "diamond_count": 1500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/5ca6fccc67a405733af4a489f31b1b0e~tplv-obj.webp",
+    "slug": "red-carpet",
+    "duration": 1000
+  },
+  {
+    "id": 6525,
+    "names": {
+      "pt": "Pessoa honrada",
+      "de": "Ehrenfrau/-mann",
+      "es": "Persona honorable",
+      "ar": "شخص نبيل",
+      "tr": "Ayrıcalıklı Kişi",
+      "fr": "Personne honorable",
+      "ru": "Уважаемый человек",
+      "en": "Honorable Person",
+      "id": "Honorable Person",
+      "ba": "Honorable Person"
+    },
+    "diamond_count": 99,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/05fd6d8ff4646d98078b61646b72df0b~tplv-obj.webp",
+    "slug": "honorable-person",
+    "duration": 1000
+  },
+  {
+    "id": 6559,
+    "names": {
+      "pt": "Estrela em ascensão",
+      "de": "Aufstrebender Star",
+      "es": "Estrella emergente",
+      "ar": "نجم صاعد",
+      "tr": "Yükselen Yıldız",
+      "fr": "Étoile montante",
+      "ru": "Восходящая звезда",
+      "en": "Rising Star",
+      "id": "Rising Star",
+      "ba": "Rising Star"
+    },
+    "diamond_count": 99,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/99bab445f78fbae66cb9aba506d4c0f3~tplv-obj.webp",
+    "slug": "rising-star",
+    "duration": 1000
+  },
+  {
+    "id": 6561,
+    "names": {
+      "en": "Dinosaur",
+      "id": "Dinosaurus",
+      "pt": "Dinossauro",
+      "de": "Dinosaurier",
+      "es": "Dinosaurio",
+      "ar": "الديناصور",
+      "tr": "Dinozor",
+      "fr": "Dinosaure",
+      "ru": "Динозавр",
+      "ba": "Dinosaur"
+    },
+    "diamond_count": 1000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/e1b0687ef6df9d6db8222831d353fcf9~tplv-obj.webp",
+    "slug": "dinosaur",
+    "duration": 1000
+  },
+  {
+    "id": 6563,
+    "names": {
+      "id": "Hujan Meteor",
+      "pt": "Chuva de meteoros",
+      "de": "Meteorschauer",
+      "es": "Lluvia de meteoritos",
+      "ar": "شُهُب متساقطة",
+      "tr": "Meteor Yağmuru",
+      "fr": "Pluie de météorites",
+      "en": "Meteor Shower",
+      "ru": "Метеоритный дождь",
+      "ba": "Meteor Shower"
+    },
+    "diamond_count": 3000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/71883933511237f7eaa1bf8cd12ed575~tplv-obj.webp",
+    "slug": "meteor-shower",
+    "duration": 1000
+  },
+  {
+    "id": 6618,
+    "names": {
+      "pt": "Meias e sandálias",
+      "de": "Socken in Sandalen",
+      "es": "Calcetines y sandalias",
+      "ar": "جوارب وصنادل",
+      "tr": "Çorap ve Sandaletler",
+      "fr": "Chaussettes et sandales",
+      "ru": "Носки с сандалиями",
+      "en": "Socks in sandals",
+      "id": "Socks in sandals",
+      "ba": "Socks in sandals"
+    },
+    "diamond_count": 150,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/e38a211a6e5ac9b21db408968d54f11d~tplv-obj.webp",
+    "slug": "socks-in-sandals",
+    "duration": 1000
+  },
+  {
+    "id": 6646,
+    "names": {
+      "id": "Leon si Anak Kucing",
+      "pt": "Leon, o gatinho",
+      "de": "Leon das Kätzchen",
+      "es": "León el gatito",
+      "ar": "القط ليون",
+      "tr": "Yavru Kedi Leon",
+      "fr": "Léon le chaton",
+      "en": "Leon the Kitten",
+      "ru": "Leon the Kitten",
+      "ba": "Leon the Kitten"
+    },
+    "diamond_count": 4888,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/a7748baba012c9e2d98a30dce7cc5a27~tplv-obj.webp",
+    "slug": "leon-the-kitten",
+    "duration": 1000
+  },
+  {
+    "id": 6661,
+    "names": {
+      "pt": "Beijo no coração",
+      "de": "Küss dein Herz",
+      "es": "Beso de corazón",
+      "ar": "أبوس قلبك",
+      "tr": "Kalbinden Öperim",
+      "fr": "Bisou du cœur",
+      "ru": "Целую в сердце",
+      "en": "Kiss in the Heart",
+      "id": "Kiss in the Heart",
+      "ba": "Kiss in the Heart"
+    },
+    "diamond_count": 99,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/ace1c44f201aa0a59c5da15af0304486~tplv-obj.webp",
+    "slug": "kiss-in-the-heart",
+    "duration": 1000
+  },
+  {
+    "id": 6671,
+    "names": {
+      "id": "Sayang Kamu",
+      "pt": "Amo você",
+      "de": "Ich liebe dich",
+      "es": "Te quiero",
+      "ar": "أحبك",
+      "tr": "Seni Seviyorum",
+      "fr": "Je t'aime",
+      "en": "Love You",
+      "ru": "Люблю тебя",
+      "ba": "Love You"
+    },
+    "diamond_count": 199,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/134e51c00f46e01976399883ca4e4798~tplv-obj.webp",
+    "slug": "love-you",
+    "duration": 1000
+  },
+  {
+    "id": 6713,
+    "names": {
+      "id": "Semangat Untuk Anda",
+      "pt": "Torço por você",
+      "de": "Ich juble für dich",
+      "es": "Me alegro por ti",
+      "ar": "تشجيع لك",
+      "tr": "Tezahürat",
+      "fr": "Bravo à toi",
+      "en": "Cheer For You",
+      "ru": "Болею за тебя",
+      "ba": "Cheer For You"
+    },
+    "diamond_count": 199,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/1059dfa76c78dc17d7cf0a1fc2ece185~tplv-obj.webp",
+    "slug": "cheer-for-you",
+    "duration": 1000
+  },
+  {
+    "id": 6751,
+    "names": {
+      "id": "Pesawat Ulang-alik TikTok",
+      "pt": "Ônibus espacial do TikTok",
+      "de": "TikTok-Shuttle",
+      "es": "Transbordador",
+      "ar": "صاروخ TikTok",
+      "tr": "TikTok Uzay Mekiği",
+      "fr": "Fusée TikTok",
+      "en": "TikTok Shuttle",
+      "ru": "Шаттл TikTok",
+      "ba": "TikTok Shuttle"
+    },
+    "diamond_count": 20000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/8ef48feba8dd293a75ae9d4376fb17c9~tplv-obj.webp",
+    "slug": "tiktok-shuttle",
+    "duration": 1000
+  },
+  {
+    "id": 6757,
+    "names": {
+      "id": "Dash",
+      "pt": "Dash",
+      "de": "Dash",
+      "es": "Dash",
+      "ar": "Dash",
+      "tr": "Dash",
+      "fr": "Dash",
+      "en": "Dash",
+      "ru": "Рывок",
+      "ba": "Dash"
+    },
+    "diamond_count": 299,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/47cb5409434d3c60ed864aab15bc60bc~tplv-obj.webp",
+    "slug": "dash",
+    "duration": 1000
+  },
+  {
+    "id": 6781,
+    "names": {
+      "id": "Cinta Semangka",
+      "pt": "Amor de melancia",
+      "de": "Wassermelonenliebe",
+      "es": "Amor sandía",
+      "ar": "بطيخ الحب",
+      "tr": "Karpuz Aşkı",
+      "fr": "Amour des pastèques",
+      "en": "Watermelon Love",
+      "ru": "Арбузная любовь",
+      "ba": "Watermelon Love"
+    },
+    "diamond_count": 1000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/1d1650cd9bb0e39d72a6e759525ffe59~tplv-obj.webp",
+    "slug": "watermelon-love",
+    "duration": 1000
+  },
+  {
+    "id": 6784,
+    "names": {
+      "id": "Irisan Kue",
+      "pt": "Fatia de bolo",
+      "de": "Tortenstück",
+      "es": "Rebanada de pastel",
+      "ar": "قطعة كعك",
+      "tr": "Pasta Dilimi",
+      "fr": "Tranche de gâteau",
+      "en": "Cake Slice",
+      "ru": "Кусок торта",
+      "ba": "Cake Slice"
+    },
+    "diamond_count": 1,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/f681afb4be36d8a321eac741d387f1e2~tplv-obj.webp",
+    "slug": "cake-slice",
+    "duration": 1000
+  },
+  {
+    "id": 6788,
+    "names": {
+      "id": "Tongkat Menyala",
+      "en": "Glow Stick",
+      "pt": "Glow Stick",
+      "de": "Glow Stick",
+      "es": "Glow Stick",
+      "ar": "Glow Stick",
+      "tr": "Glow Stick",
+      "fr": "Glow Stick",
+      "ru": "Glow Stick",
+      "ba": "Glow Stick"
+    },
+    "diamond_count": 1,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/8e1a5d66370c5586545e358e37c10d25~tplv-obj.webp",
+    "slug": "glow-stick",
+    "duration": 1000
+  },
+  {
+    "id": 6789,
+    "names": {
+      "id": "Bintang Karpet Merah",
+      "pt": "Estrela do tapete vermelho",
+      "de": "Star des roten Teppichs",
+      "es": "Estrella de la alfombra roja",
+      "ar": "نجمة السجادة الحمراء",
+      "tr": "Kırmızı Halının Yıldızı",
+      "fr": "Star du tapis rouge",
+      "en": "Star of Red Carpet",
+      "ru": "Звезда на красной дорожке",
+      "ba": "Star of Red Carpet"
+    },
+    "diamond_count": 1999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/5b9bf90278f87b9ca0c286d3c8a12936~tplv-obj.webp",
+    "slug": "star-of-red-carpet",
+    "duration": 1000
+  },
+  {
+    "id": 6790,
+    "names": {
+      "id": "Waktu Perayaan",
+      "pt": "É hora de celebrar",
+      "de": "Zeit zum Feiern",
+      "es": "Hora de la celebración",
+      "ar": "وقت الاحتفال",
+      "tr": "Kutlama Zamanı",
+      "fr": "L'heure de la fête",
+      "en": "Celebration Time",
+      "ru": "Празднество",
+      "ba": "Celebration Time"
+    },
+    "diamond_count": 6999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/e73e786041d8218d8e9dbbc150855f1b~tplv-obj.webp",
+    "slug": "celebration-time",
+    "duration": 1000
+  },
+  {
+    "id": 6820,
+    "names": {
+      "id": "Paus menyelam",
+      "pt": "Mergulho com baleias",
+      "de": "Waltauchen",
+      "es": "Ballena sumergida",
+      "ar": "الغوص مع الحيتان",
+      "tr": "Balina Dalışı",
+      "fr": "Plongée avec les baleines",
+      "en": "Whale diving",
+      "ru": "Ныряющий кит",
+      "ba": "Whale diving"
+    },
+    "diamond_count": 2150,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/46fa70966d8e931497f5289060f9a794~tplv-obj.webp",
+    "slug": "whale-diving",
+    "duration": 1000
+  },
+  {
+    "id": 6833,
+    "names": {
+      "pt": "Castelo de fantasia",
+      "de": "Fantasieschloss",
+      "es": "Castillo de fantasía",
+      "ar": "قلعة خيالية",
+      "tr": "Castle Fantasy",
+      "fr": "Château fabuleux",
+      "ru": "Замок",
+      "en": "Fantasy Castle",
+      "id": "Fantasy Castle",
+      "ba": "Fantasy Castle"
+    },
+    "diamond_count": 20000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/8173e9b07875cca37caa5219e4903a40~tplv-obj.webp",
+    "slug": "fantasy-castle",
+    "duration": 1000
+  },
+  {
+    "id": 6834,
+    "names": {
+      "id": "Kotak Hadiah",
+      "pt": "Caixa de presente",
+      "de": "Geschenkschachtel",
+      "es": "Caja de regalo",
+      "ar": "صندوق هدايا",
+      "tr": "Hediye Kutusu",
+      "fr": "Boîte cadeau",
+      "en": "Gift Box",
+      "ru": "Подарочная коробка",
+      "ba": "Gift Box"
+    },
+    "diamond_count": 1999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/9cc22f7c8ac233e129dec7b981b91b76~tplv-obj.webp",
+    "slug": "gift-box",
+    "duration": 1000
+  },
+  {
+    "id": 6835,
+    "names": {
+      "id": "Kotak Hadiah",
+      "pt": "Caixa de presente",
+      "de": "Geschenkschachtel",
+      "es": "Caja de regalo",
+      "ar": "صندوق هدايا",
+      "tr": "Hediye Kutusu",
+      "fr": "Boîte cadeau",
+      "en": "Gift Box",
+      "ru": "Подарочная коробка",
+      "ba": "Gift Box"
+    },
+    "diamond_count": 3999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/3646c259f8ce6f79c762ad00ce51dda0~tplv-obj.webp",
+    "slug": "gift-box",
+    "duration": 1000
+  },
+  {
+    "id": 6842,
+    "names": {
+      "id": "Jerapah Gerry",
+      "pt": "Gerry, a girafa",
+      "de": "Gerhard Giraffe",
+      "es": "Jirafa Gerry",
+      "ar": "الزرافة زرزورة",
+      "tr": "Zürafa Gerry",
+      "fr": "Gerry la girafe",
+      "en": "Gerry the Giraffe",
+      "ru": "Жираф Жозе",
+      "ba": "Gerry the Giraffe"
+    },
+    "diamond_count": 1000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/4e2c021bc1ec2e83448ddc91c6123caf~tplv-obj.webp",
+    "slug": "gerry-the-giraffe",
+    "duration": 1000
+  },
+  {
+    "id": 6845,
+    "names": {
+      "pt": "Ellie, o elefante",
+      "de": "Elefant",
+      "es": "Elefanta Ellie",
+      "ar": "إيلي صغيرة الفيل",
+      "tr": "Fil Ellie",
+      "fr": "Elise l'éléphante",
+      "ru": "Слониха Элли",
+      "en": "Ellie the Elephant",
+      "id": "Ellie the Elephant",
+      "ba": "Ellie the Elephant"
+    },
+    "diamond_count": 5000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/389b21dc7ad4e06e6b6132bb83c61b03~tplv-obj.webp",
+    "slug": "ellie-the-elephant",
+    "duration": 1000
+  },
+  {
+    "id": 6847,
+    "names": {
+      "id": "Keranjang Piknik",
+      "pt": "Cesta de piquenique",
+      "de": "Picknickkorb",
+      "es": "Cesta de pícnic",
+      "ar": "سلة الرحلات",
+      "tr": "Piknik Sepeti",
+      "fr": "Pique-Nique",
+      "en": "Picnic Basket",
+      "ru": "Корзина для пикника",
+      "ba": "Picnic Basket"
+    },
+    "diamond_count": 1000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/acff4cf768e04c0e5b134ed447772153~tplv-obj.webp",
+    "slug": "picnic-basket",
+    "duration": 1000
+  },
+  {
+    "id": 6862,
+    "names": {
+      "id": "Cooper Pulang Terbang",
+      "pt": "Cooper voando para casa",
+      "de": "Cooper fliegt nach Hause",
+      "es": "Cooper vuela a casa",
+      "ar": "كوبر يطير للبيت",
+      "tr": "Cooper Eve Uçuyor",
+      "fr": "Cooper rentre en montgolfière",
+      "en": "Cooper Flies Home",
+      "ru": "Купер летит домой",
+      "ba": "Cooper Flies Home"
+    },
+    "diamond_count": 1999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/3f1945b0d96e665a759f747e5e0cf7a9~tplv-obj.webp",
+    "slug": "cooper-flies-home",
+    "duration": 1000
+  },
+  {
+    "id": 6890,
+    "names": {
+      "id": "Sayang Kamu",
+      "pt": "Amo você",
+      "de": "Ich liebe dich",
+      "es": "Te quiero",
+      "ar": "أحبك",
+      "tr": "Seni Seviyorum",
+      "fr": "Je t'aime",
+      "en": "Love You",
+      "ru": "Люблю тебя",
+      "ba": "Love You"
+    },
+    "diamond_count": 199,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/134e51c00f46e01976399883ca4e4798~tplv-obj.webp",
+    "slug": "love-you",
+    "duration": 1000
+  },
+  {
+    "id": 6892,
+    "names": {
+      "pt": "Carro de corrida",
+      "de": "Rennwagen",
+      "es": "Coche de carreras",
+      "ar": "سيارة سباق",
+      "tr": "Yarış Arabası",
+      "fr": "Voiture de course",
+      "ru": "Гоночный болид",
+      "en": "Race Car",
+      "id": "Race Car",
+      "ba": "Race Car"
+    },
+    "diamond_count": 12000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/c95edc806c020e614635ba1ae1c837fa.png~tplv-obj.webp",
+    "slug": "race-car",
+    "duration": 1000
+  },
+  {
+    "id": 6922,
+    "names": {
+      "id": "Gajah Ellie",
+      "en": "Ellie the Elephant",
+      "pt": "Ellie the Elephant",
+      "de": "Ellie the Elephant",
+      "es": "Ellie the Elephant",
+      "ar": "Ellie the Elephant",
+      "tr": "Ellie the Elephant",
+      "fr": "Ellie the Elephant",
+      "ru": "Ellie the Elephant",
+      "ba": "Ellie the Elephant"
+    },
+    "diamond_count": 5000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/389b21dc7ad4e06e6b6132bb83c61b03~tplv-obj.webp",
+    "slug": "ellie-the-elephant",
+    "duration": 1000
+  },
+  {
+    "id": 6968,
+    "names": {
+      "id": "Tangan Bentuk Hati",
+      "pt": "Mãos em coração",
+      "de": "Handherz",
+      "es": "Corazón con las manos",
+      "ar": "قلب وأيادي",
+      "tr": "Elle Kalp",
+      "fr": "Cœur dans les mains",
+      "en": "Hand Heart",
+      "ru": "Сердце из рук",
+      "ba": "Hand Heart"
+    },
+    "diamond_count": 100,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/47e9081623cdae9faa55f4d0d67908bf~tplv-obj.webp",
+    "slug": "hand-heart",
+    "duration": 1000
+  },
+  {
+    "id": 7071,
+    "names": {
+      "id": "Bendera Festival",
+      "en": "Festival Flags",
+      "pt": "Festival Flags",
+      "de": "Festival Flags",
+      "es": "Festival Flags",
+      "ar": "Festival Flags",
+      "tr": "Festival Flags",
+      "fr": "Festival Flags",
+      "ru": "Festival Flags",
+      "ba": "Festival Flags"
+    },
+    "diamond_count": 10000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/0924e6a31d3408577d8ad57932ac24b6~tplv-obj.webp",
+    "slug": "festival-flags",
+    "duration": 1000
+  },
+  {
+    "id": 7121,
+    "names": {
+      "id": "Konfeti Mengagumkan",
+      "pt": "Confete maravilhoso",
+      "de": "Fabelhaftes Konfetti",
+      "es": "Confeti de Colores",
+      "ar": "قصاصات ملونة مدهشة",
+      "tr": "Harika Konfeti",
+      "fr": "Merveilleux confettis",
+      "en": "Marvelous Confetti",
+      "ru": "Великолепные конфетти",
+      "ba": "Marvelous Confetti"
+    },
+    "diamond_count": 100,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/fccc851d351716bc8b34ec65786c727d~tplv-obj.webp",
+    "slug": "marvelous-confetti",
+    "duration": 1000
+  },
+  {
+    "id": 7122,
+    "names": {
+      "id": "Pistol Permata",
+      "pt": "Pistola de gemas",
+      "de": "Juwelenpistole",
+      "es": "Pistola de Gemas",
+      "ar": "مسدس الجواهر",
+      "tr": "Hazine Tabancası",
+      "fr": "Pistolet à gemmes",
+      "en": "Gem Gun",
+      "ru": "Алмазная пушка",
+      "ba": "Gem Gun"
+    },
+    "diamond_count": 500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/dd06007ade737f1001977590b11d3f61~tplv-obj.webp",
+    "slug": "gem-gun",
+    "duration": 1000
+  },
+  {
+    "id": 7123,
+    "names": {
+      "id": "Balon udara berkilau",
+      "pt": "Balão brilhante",
+      "de": "Leuchtender Heißluftballon",
+      "es": "Globo Aerostático Brillante",
+      "ar": "منطاد لامع",
+      "tr": "Parlak sıcak hava balonu",
+      "fr": "Montgolfière brillante",
+      "en": "Shiny air balloon",
+      "ru": "Сияющий воздушный шар",
+      "ba": "Shiny air balloon"
+    },
+    "diamond_count": 1000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/9e7ebdca64b8f90fcc284bb04ab92d24~tplv-obj.webp",
+    "slug": "shiny-air-balloon",
+    "duration": 1000
+  },
+  {
+    "id": 7124,
+    "names": {
+      "id": "Jet Khas",
+      "pt": "Jato assinado",
+      "de": "Privatjet",
+      "es": "Jet Privado",
+      "ar": "طائرة بتوقيع",
+      "tr": "Özel Jet",
+      "fr": "Jet spécial",
+      "en": "Signature Jet",
+      "ru": "Личный самолет",
+      "ba": "Signature Jet"
+    },
+    "diamond_count": 4888,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/fe27eba54a50c0a687e3dc0f2c02067d~tplv-obj.webp",
+    "slug": "signature-jet",
+    "duration": 1000
+  },
+  {
+    "id": 7125,
+    "names": {
+      "id": "Pesawat Ulang-Alik Premium",
+      "pt": "Foguete premium",
+      "de": "Premium-Shuttle",
+      "es": "Transbordador Premium",
+      "ar": "مكوك خارق",
+      "tr": "Ayrıcalıklı Mekik",
+      "fr": "Navette Premium",
+      "en": "Premium Shuttle",
+      "ru": "Премиум-шаттл",
+      "ba": "Premium Shuttle"
+    },
+    "diamond_count": 20000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/c2b287adee5151b7889d6e3d45b72e44~tplv-obj.webp",
+    "slug": "premium-shuttle",
+    "duration": 1000
+  },
+  {
+    "id": 7168,
+    "names": {
+      "id": "Senjata Uang",
+      "pt": "Pistola de dinheiro",
+      "de": "Geldpistole",
+      "es": "Pistola de dinero",
+      "ar": "بندقية المال",
+      "tr": "Para Tabancası",
+      "fr": "Pistolet à argent",
+      "en": "Money Gun",
+      "ru": "Деньгопушка",
+      "ba": "Money Gun"
+    },
+    "diamond_count": 500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/e0589e95a2b41970f0f30f6202f5fce6~tplv-obj.webp",
+    "slug": "money-gun",
+    "duration": 1000
+  },
+  {
+    "id": 7237,
+    "names": {
+      "pt": "Unicórnio de fantasia",
+      "de": "Einhorn",
+      "es": "Unicornio de fantasía",
+      "ar": "خيل أصيل",
+      "tr": "Unicorn Fantasy",
+      "fr": "Licorne fabuleuse",
+      "ru": "Единорог",
+      "en": "Fantasy Unicorn",
+      "id": "Fantasy Unicorn",
+      "ba": "Fantasy Unicorn"
+    },
+    "diamond_count": 5000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/483c644e67e9bb1dd5970f2df00b7576~tplv-obj.webp",
+    "slug": "fantasy-unicorn",
+    "duration": 1000
+  },
+  {
+    "id": 7264,
+    "names": {
+      "id": "Beruang Mishka",
+      "pt": "Urso Misha",
+      "de": "Bruderherz",
+      "es": "Osito Mishka",
+      "ar": "الدب ميشكا",
+      "tr": "Mishka Bear",
+      "fr": "Le petit Ourson",
+      "en": "Bear love",
+      "ru": "Мишка",
+      "ba": "Bear love"
+    },
+    "diamond_count": 100,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/d78ed6496fd57286b42ac033acbee299~tplv-obj.webp",
+    "slug": "bear-love",
+    "duration": 1000
+  },
+  {
+    "id": 7312,
+    "names": {
+      "id": "TikTok Universe+",
+      "pt": "TikTok Universe+",
+      "es": "TikTok Universe+",
+      "ar": "TikTok Universe+",
+      "tr": "TikTok Universe+",
+      "fr": "TikTok Universe+",
+      "en": "TikTok Universe+",
+      "ru": "TikTok Universe+",
+      "de": "TikTok Universe+",
+      "ba": "TikTok Universe+"
+    },
+    "diamond_count": 34999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/b13105782e8bf8fbefaa83b7af413cee~tplv-obj.webp",
+    "slug": "tiktok-universe+",
+    "duration": 1000
+  },
+  {
+    "id": 7319,
+    "names": {
+      "id": "Phoenix",
+      "pt": "Fênix",
+      "de": "Phönix",
+      "es": "Fénix",
+      "ar": "طائر العنقاء",
+      "tr": "Anka kuşu",
+      "fr": "Phénix",
+      "en": "Phoenix",
+      "ru": "Феникс",
+      "ba": "Phoenix"
+    },
+    "diamond_count": 25999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/ef248375c4167d70c1642731c732c982~tplv-obj.webp",
+    "slug": "phoenix",
+    "duration": 1000
+  },
+  {
+    "id": 7367,
+    "names": {
+      "id": "Berlian Raja",
+      "pt": "Rei dos diamantes",
+      "de": "Diamanten Geschenk",
+      "es": "Rey de diamantes",
+      "ar": "ألماسة الملك",
+      "tr": "Diamond King",
+      "fr": "Roi Diamant",
+      "en": "Diamond Ring",
+      "ru": "Король алмазов",
+      "ba": "Diamond Ring"
+    },
+    "diamond_count": 1500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/692a9ee511b6d688a9d19452e58a8974~tplv-obj.webp",
+    "slug": "diamond-ring",
+    "duration": 1000
+  },
+  {
+    "id": 7398,
+    "names": {
+      "pt": "Prince",
+      "de": "Super-Panda",
+      "es": "Prince",
+      "ar": "أمير",
+      "tr": "Prince",
+      "fr": "Prince",
+      "ru": "Принц",
+      "en": "Panda Prince",
+      "id": "Panda Prince",
+      "ba": "Panda Prince"
+    },
+    "diamond_count": 500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/ea1fc9cb68514ec3c844179c6f09e8de~tplv-obj.webp",
+    "slug": "panda-prince",
+    "duration": 1000
+  },
+  {
+    "id": 7400,
+    "names": {
+      "id": "Impian Adam",
+      "pt": "O Sonho de Adam",
+      "de": "Adams Traumwelt",
+      "es": "El sueño de Adam",
+      "ar": "حلم Adam",
+      "tr": "Adam'ın Hayali",
+      "fr": "Le rêve d'Adam",
+      "en": "Adam’s Dream",
+      "ru": "Мечта Адама",
+      "ba": "Adam’s Dream"
+    },
+    "diamond_count": 25999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/9a586391fbb1e21621c4203e5563a9e0~tplv-obj.webp",
+    "slug": "adam’s-dream",
+    "duration": 1000
+  },
+  {
+    "id": 7467,
+    "names": {
+      "id": "Mengejar Impian",
+      "pt": "Tudo por um sonho",
+      "de": "Auf Traumjagd",
+      "es": "Todo por un sueño",
+      "ar": "مطاردة الحلم",
+      "tr": "Hayallerinin Peşinde",
+      "fr": "Poursuis tes rêves",
+      "en": "Chasing the Dream",
+      "ru": "Погоня за мечтой",
+      "ba": "Chasing the Dream"
+    },
+    "diamond_count": 1500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/1ea8dbb805466c4ced19f29e9590040f~tplv-obj.webp",
+    "slug": "chasing-the-dream",
+    "duration": 1000
+  },
+  {
+    "id": 7529,
+    "names": {
+      "id": "Kembang Api Misteri",
+      "pt": "Fogos de Artifício Misteriosos",
+      "de": "Zufallsknaller",
+      "es": "Fuegos artificiales misteriosos",
+      "ar": "ألعاب نارية غامضة",
+      "tr": "Gizemli Havai Fişek",
+      "fr": "Feu d'artifice Mystère",
+      "en": "Mystery Firework",
+      "ru": "Загадочный фейерверк",
+      "ba": "Mystery Firework"
+    },
+    "diamond_count": 1999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/c110230c5db903db5f060a432f5a86cd~tplv-obj.webp",
+    "slug": "mystery-firework",
+    "duration": 1000
+  },
+  {
+    "id": 7553,
+    "names": {
+      "id": "Tiny Diny",
+      "pt": "Mini dino",
+      "de": "Kleiner Dino",
+      "es": "Pequeño dinosaurio",
+      "ar": "ديناصور صغير",
+      "tr": "Küçük Dino",
+      "fr": "Petit dino",
+      "en": "Tiny Diny",
+      "ru": "Динозаврик",
+      "ba": "Tiny Diny"
+    },
+    "diamond_count": 10,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/3851a489dea62b3a9fe99f61de5470ae~tplv-obj.webp",
+    "slug": "tiny-diny",
+    "duration": 1000
+  },
+  {
+    "id": 7598,
+    "names": {
+      "id": "Kapal Perompak",
+      "en": "Pirate’s Ship",
+      "pt": "Pirate’s Ship",
+      "de": "Pirate’s Ship",
+      "es": "Pirate’s Ship",
+      "ar": "Pirate’s Ship",
+      "tr": "Pirate’s Ship",
+      "fr": "Pirate’s Ship",
+      "ru": "Pirate’s Ship",
+      "ba": "Pirate’s Ship"
+    },
+    "diamond_count": 15000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/fe5a54fafb734cf2b41cfd65c6174d48~tplv-obj.webp",
+    "slug": "pirate’s-ship",
+    "duration": 1000
+  },
+  {
+    "id": 7610,
+    "names": {
+      "id": "Api Naga",
+      "pt": "Chama de Dragão",
+      "de": "Drache",
+      "es": "Llama de dragón",
+      "ar": "لهيب التنين",
+      "tr": "Ejderha Alevi",
+      "fr": "Flamme du dragon",
+      "en": "Dragon Flame",
+      "ru": "Пламя дракона",
+      "ba": "Dragon Flame"
+    },
+    "diamond_count": 26999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/89b4d1d93c1cc614e3a0903ac7a94e0c~tplv-obj.webp",
+    "slug": "dragon-flame",
+    "duration": 1000
+  },
+  {
+    "id": 7627,
+    "names": {
+      "pt": "Falcão",
+      "de": "Falke",
+      "es": "Halcón",
+      "ar": "صقر",
+      "tr": "Şahin",
+      "fr": "Faucon",
+      "ru": "Орел",
+      "en": "Hawk",
+      "id": "Hawk",
+      "ba": "Hawk"
+    },
+    "diamond_count": 10999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/6026505eea9b9bce071dd699253abf6a~tplv-obj.webp",
+    "slug": "hawk",
+    "duration": 1000
+  },
+  {
+    "id": 7789,
+    "names": {
+      "id": "Mike",
+      "en": "Mike",
+      "pt": "Mike",
+      "de": "Mike",
+      "es": "Mike",
+      "ar": "Mike",
+      "tr": "Mike",
+      "fr": "Mike",
+      "ru": "Mike",
+      "ba": "Mike"
+    },
+    "diamond_count": 4000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/43ef3af707a6b2ca618108534e4b5347~tplv-obj.webp",
+    "slug": "mike",
+    "duration": 1000
+  },
+  {
+    "id": 7823,
+    "names": {
+      "id": "Leon dan Lion",
+      "pt": "Leon e Lion",
+      "de": "Leon und der Löwe",
+      "es": "Leoncito y León",
+      "ar": "ليون والأسد",
+      "tr": "Leon ve Aslan",
+      "fr": "Léon et le Lion",
+      "en": "Leon and Lion",
+      "ru": "Леон и Лев",
+      "ba": "Leon and Lion"
+    },
+    "diamond_count": 34000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/a291aedacf27d22c3fd2d83575d2bee9~tplv-obj.webp",
+    "slug": "leon-and-lion",
+    "duration": 1000
+  },
+  {
+    "id": 7871,
+    "names": {
+      "pt": "Bateria",
+      "de": "Schlagzeug",
+      "es": "Tambores",
+      "ar": "طبول",
+      "tr": "Davullar",
+      "fr": "Batterie",
+      "ru": "Барабаны",
+      "en": "Drums",
+      "id": "Drums",
+      "ba": "Drums"
+    },
+    "diamond_count": 1000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/31b83dd3ed4b279ba3c7de9d5cea3048~tplv-obj.webp",
+    "slug": "drums",
+    "duration": 1000
+  },
+  {
+    "id": 7879,
+    "names": {
+      "pt": "Palco central",
+      "de": "Mittelpunkt",
+      "es": "Escenario principal",
+      "ar": "وسط المسرح",
+      "tr": "İlgi Odağı",
+      "fr": "Centre de la scène",
+      "ru": "Центр внимания",
+      "en": "Center Stage",
+      "id": "Center Stage",
+      "ba": "Center Stage"
+    },
+    "diamond_count": 1799,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/3c5311f7f3e48bb400af7f2125e82c18~tplv-obj.webp",
+    "slug": "center-stage",
+    "duration": 1000
+  },
+  {
+    "id": 7880,
+    "names": {
+      "id": "Konser",
+      "pt": "Show",
+      "de": "Konzert",
+      "es": "Concierto",
+      "ar": "حفل موسيقي",
+      "tr": "Konser",
+      "fr": "Concert",
+      "en": "Concert",
+      "ru": "Гитару",
+      "ba": "Concert"
+    },
+    "diamond_count": 2888,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/eda5406ec3af22676a3378551338b89d~tplv-obj.webp",
+    "slug": "concert",
+    "duration": 1000
+  },
+  {
+    "id": 7881,
+    "names": {
+      "pt": "Palco de mágica",
+      "de": "Magische Bühne",
+      "es": "Escenario mágico",
+      "ar": "مسرح السحر",
+      "tr": "Sihir Sahnesi",
+      "fr": "Scène magique",
+      "ru": "Волшебная сцена",
+      "en": "Magic Stage",
+      "id": "Magic Stage",
+      "ba": "Magic Stage"
+    },
+    "diamond_count": 2599,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/d2297d8da4f6a4da942d4c55f3fb5a3f~tplv-obj.webp",
+    "slug": "magic-stage",
+    "duration": 1000
+  },
+  {
+    "id": 7883,
+    "names": {
+      "id": "Gitar",
+      "pt": "Violão",
+      "de": "Gitarre",
+      "es": "Guitarra",
+      "ar": "جيتار",
+      "tr": "Gitar",
+      "fr": "Guitare",
+      "en": "Guitar",
+      "ru": "Гитара",
+      "ba": "Guitar"
+    },
+    "diamond_count": 99,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/5c82ba276c718fa295a50867cb9c5568~tplv-obj.webp",
+    "slug": "guitar",
+    "duration": 1000
+  },
+  {
+    "id": 7911,
+    "names": {
+      "pt": "Maggie",
+      "de": "Mammuth",
+      "es": "Maggie",
+      "ar": "ماغي الماموث",
+      "tr": "Maggie",
+      "fr": "Maggie",
+      "ru": "Мэгги",
+      "en": "Maggie",
+      "id": "Maggie",
+      "ba": "Maggie"
+    },
+    "diamond_count": 15000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/0a3e2a7cbed19434df523604c708a5ba~tplv-obj.webp",
+    "slug": "maggie",
+    "duration": 1000
+  },
+  {
+    "id": 7934,
+    "names": {
+      "id": "Sayangi Aku",
+      "pt": "Heart Me",
+      "de": "Teamherz",
+      "es": "Quiéreme",
+      "ar": "أحبني",
+      "tr": "Beni Sev",
+      "fr": "Coeur sur toi",
+      "en": "Heart Me",
+      "ru": "«От всего сердца»",
+      "ba": "Heart Me"
+    },
+    "diamond_count": 1,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/d56945782445b0b8c8658ed44f894c7b~tplv-obj.webp",
+    "slug": "heart-me",
+    "duration": 3000
+  },
+  {
+    "id": 7963,
+    "names": {
+      "id": "Pohon Berlian",
+      "pt": "Árvore de Diamante",
+      "de": "Diamantbaum",
+      "es": "Árbol de diamantes",
+      "ar": "شجرة الماس",
+      "tr": "Elmas Ağacı",
+      "fr": "Arbre à diamants",
+      "en": "Diamond Tree",
+      "ru": "Алмазное дерево",
+      "ba": "Diamond Tree"
+    },
+    "diamond_count": 1088,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/b2aafe2ca2e529b10194d143ef86a31b~tplv-obj.webp",
+    "slug": "diamond-tree",
+    "duration": 1000
+  },
+  {
+    "id": 7985,
+    "names": {
+      "id": "Surai Singa",
+      "pt": "Juba de Leão",
+      "de": "Löwenmähne",
+      "es": "Melena del león",
+      "ar": "لبدة الأسد",
+      "tr": "Aslan Yelesi",
+      "fr": "Crinière de lion",
+      "en": "Lion’s Mane",
+      "ru": "Львиная грива",
+      "ba": "Lion’s Mane"
+    },
+    "diamond_count": 500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/44818035acbbe673514caa600755268c~tplv-obj.webp",
+    "slug": "lion’s-mane",
+    "duration": 3000
+  },
+  {
+    "id": 8086,
+    "names": {
+      "id": "Mobil Mengepot",
+      "pt": "Derrapagem de Carro",
+      "de": "Auto-Driften",
+      "es": "Drifting",
+      "ar": "سيارة تنزلق",
+      "tr": "Drift Yapan Araba",
+      "fr": "Drift en voiture",
+      "en": "Car Drifting",
+      "ru": "Дрифт",
+      "ba": "Car Drifting"
+    },
+    "diamond_count": 3000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/d214113a72527ce758ca79c1106f784d~tplv-obj.webp",
+    "slug": "car-drifting",
+    "duration": 1000
+  },
+  {
+    "id": 8107,
+    "names": {
+      "id": "Mengitari Bunga",
+      "pt": "Voo da Flor",
+      "de": "Blumenflug",
+      "es": "Vuelo en flor",
+      "ar": "طيران حول الزهور",
+      "tr": "Çiçek Uçuşu",
+      "fr": "Envol fleuri",
+      "en": "Flower Flight",
+      "ru": "Полет вокруг цветка",
+      "ba": "Flower Flight"
+    },
+    "diamond_count": 399,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/187313a9e7ec80008ff932b9cb4ff8db.png~tplv-obj.webp",
+    "slug": "flower-flight",
+    "duration": 1000
+  },
+  {
+    "id": 8111,
+    "names": {
+      "id": "Kekuatan Super",
+      "pt": "Superpoder",
+      "de": "Superkraft",
+      "es": "Superpoder",
+      "ar": "قوة خارقة",
+      "tr": "Süper Güç",
+      "fr": "Super-pouvoir",
+      "en": "Superpower",
+      "ru": "Суперсила",
+      "ba": "Superpower"
+    },
+    "diamond_count": 299,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/64544632272389a1d84198cd6f90abbd~tplv-obj.webp",
+    "slug": "superpower",
+    "duration": 1000
+  },
+  {
+    "id": 8130,
+    "names": {
+      "id": "Like-Pop",
+      "pt": "Like-Pop",
+      "de": "Like-Pop",
+      "es": "Metralleta de me gustas",
+      "ar": "مسدس فقاعات الحب",
+      "tr": "Köpük Tabancası",
+      "fr": "Like-Pop",
+      "en": "Like-Pop",
+      "ru": "Лайк-заряд",
+      "ba": "Like-Pop"
+    },
+    "diamond_count": 99,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/75eb7b4aca24eaa6e566b566c7d21e2f~tplv-obj.webp",
+    "slug": "like-pop",
+    "duration": 1000
+  },
+  {
+    "id": 8152,
+    "names": {
+      "id": "Kereta musim semi",
+      "pt": "Trem da primavera",
+      "de": "Frühlingszug",
+      "es": "Tren primaveral",
+      "ar": "قطار الربيع",
+      "tr": "Bahar treni",
+      "fr": "Train printanier",
+      "en": "Spring train",
+      "ru": "Весенний поезд",
+      "ba": "Spring train"
+    },
+    "diamond_count": 3999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/b859c413a241fec75bc78668aeb0f581.png~tplv-obj.webp",
+    "slug": "spring-train",
+    "duration": 1000
+  },
+  {
+    "id": 8165,
+    "names": {
+      "id": "Anak Ayam",
+      "pt": "Pintinho",
+      "de": "Küken",
+      "es": "Polluelo",
+      "ar": "كتكوت",
+      "tr": "Civciv",
+      "fr": "Poussin",
+      "en": "Chick",
+      "ru": "Цыпленок",
+      "ba": "Chick"
+    },
+    "diamond_count": 10,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/15e9e164c6ecd00fcfa1cd4d3b9bb503~tplv-obj.webp",
+    "slug": "chick",
+    "duration": 1000
+  },
+  {
+    "id": 8188,
+    "names": {
+      "id": "Beruang Joget",
+      "pt": "Ursos Dançarinos",
+      "de": "Tanzende Bären",
+      "es": "Ositos bailarines",
+      "ar": "دببة راقصة",
+      "tr": "Dans Eden Ayılar",
+      "fr": "Ours dansants",
+      "en": "Dancing Bears",
+      "ru": "Танец медведей",
+      "ba": "Dancing Bears"
+    },
+    "diamond_count": 3000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/86336c5959de51b0d1d9270040276d5c~tplv-obj.webp",
+    "slug": "dancing-bears",
+    "duration": 1000
+  },
+  {
+    "id": 8206,
+    "names": {
+      "id": "Kelinci",
+      "pt": "Coelho",
+      "de": "Hase",
+      "es": "Conejo",
+      "ar": "أرنب صغير",
+      "tr": "Tavşan",
+      "fr": "Lapin",
+      "en": "Bunny",
+      "ru": "Кролик",
+      "ba": "Bunny"
+    },
+    "diamond_count": 10,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/a5ebcc4514e6a8dd3001cf5e9214273e~tplv-obj.webp",
+    "slug": "bunny",
+    "duration": 1000
+  },
+  {
+    "id": 8243,
+    "names": {
+      "id": "Membuatmu Bersemangat",
+      "pt": "Anime-se",
+      "de": "Aufmunterung",
+      "es": "Apoyo",
+      "ar": "يشعرك بالسعادة",
+      "tr": "Neşelen",
+      "fr": "Remonter le moral",
+      "en": "Cheer You Up",
+      "ru": "Хорошего настроения",
+      "ba": "Cheer You Up"
+    },
+    "diamond_count": 9,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/97e0529ab9e5cbb60d95fc9ff1133ea6~tplv-obj.webp",
+    "slug": "cheer-you-up",
+    "duration": 1000
+  },
+  {
+    "id": 8244,
+    "names": {
+      "id": "Angkat Tangan",
+      "pt": "Mãos Para Cima",
+      "de": "Hände hoch",
+      "es": "Manos arriba",
+      "ar": "ارفع يدك وشجع",
+      "tr": "Eller Yukarı",
+      "fr": "Mains levées",
+      "en": "Hands Up",
+      "ru": "Поддержка всеми руками",
+      "ba": "Hands Up"
+    },
+    "diamond_count": 499,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/f4d906542408e6c87cf0a42f7426f0c6~tplv-obj.webp",
+    "slug": "hands-up",
+    "duration": 1000
+  },
+  {
+    "id": 8245,
+    "names": {
+      "id": "Ini Dia",
+      "pt": "Aqui Vamos Nós",
+      "de": "Los geht's",
+      "es": "Allá vamos",
+      "ar": "هيا بنا ننطلق",
+      "tr": "Başlıyoruz",
+      "fr": "C'est parti",
+      "en": "Here We Go",
+      "ru": "Начинаем!",
+      "ba": "Here We Go"
+    },
+    "diamond_count": 1799,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/61b76a51a3757f0ff1cdc33b16c4d8ae~tplv-obj.webp",
+    "slug": "here-we-go",
+    "duration": 1000
+  },
+  {
+    "id": 8247,
+    "names": {
+      "id": "Pesta Bahagia",
+      "pt": "Festa Feliz",
+      "de": "Fröhliche Party",
+      "es": "Fiesta animada",
+      "ar": "حفلة مبهجة",
+      "tr": "Mutlu Partiler",
+      "fr": "Fête joyeuse",
+      "en": "Happy Party",
+      "ru": "Веселый праздник",
+      "ba": "Happy Party"
+    },
+    "diamond_count": 6999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/41774a8ba83c59055e5f2946d51215b4~tplv-obj.webp",
+    "slug": "happy-party",
+    "duration": 1000
+  },
+  {
+    "id": 8248,
+    "names": {
+      "id": "Cinta Mengangkasa",
+      "pt": "Amor Voador",
+      "de": "Fliegende Liebe",
+      "es": "Amor en el aire",
+      "ar": "طائرة المحبة",
+      "tr": "Aşk Uçuşu",
+      "fr": "Amour volant",
+      "en": "Fly Love",
+      "ru": "Полет любви",
+      "ba": "Fly Love"
+    },
+    "diamond_count": 19999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/a598ba4c7024f4d46c1268be4d82f901~tplv-obj.webp",
+    "slug": "fly-love",
+    "duration": 1000
+  },
+  {
+    "id": 8259,
+    "names": {
+      "id": "Cinta bahasa isyarat",
+      "pt": "Amor em linguagem de sinais",
+      "de": "Zeichensprache der Liebe",
+      "es": "Te quiero en lengua de signos",
+      "ar": "الحب بلغة الإشارة",
+      "tr": "İşaret dili aşkı",
+      "fr": "Amour en langage des signes",
+      "en": "Sign language love",
+      "ru": "Любовь на языке жестов",
+      "ba": "Sign language love"
+    },
+    "diamond_count": 49,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/a90213d1783ef37bf68d1c7d4a0f4d4b.png~tplv-obj.webp",
+    "slug": "sign-language-love",
+    "duration": 1000
+  },
+  {
+    "id": 8260,
+    "names": {
+      "id": "Belalai gajah",
+      "pt": "Tromba de elefante",
+      "de": "Elefantenrüssel",
+      "es": "Trompa y orejas de elefante",
+      "ar": "خرطوم الفيل وأذناه",
+      "tr": "Fil Hortumu",
+      "fr": "Trompe d'éléphant",
+      "en": "Elephant trunk",
+      "ru": "Хобот слона",
+      "ba": "Elephant trunk"
+    },
+    "diamond_count": 299,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/9c64c1c15bb2e3ba5f1303c3f9208dac.png~tplv-obj.webp",
+    "slug": "elephant-trunk",
+    "duration": 3000
+  },
+  {
+    "id": 8277,
+    "names": {
+      "id": "Tetesan Cinta",
+      "pt": "Brinde de amor",
+      "de": "Liebesabwurf",
+      "es": "Sorpresa romántica",
+      "ar": "حب من الأعلى",
+      "tr": "Aşk Damlası",
+      "fr": "Goutte d'amour",
+      "en": "Love Drop",
+      "ru": "Капля любви",
+      "ba": "Love Drop"
+    },
+    "diamond_count": 1800,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/1ea684b3104abb725491a509022f7c02~tplv-obj.webp",
+    "slug": "love-drop",
+    "duration": 1000
+  },
+  {
+    "id": 8344,
+    "names": {
+      "id": "Pawang Burung",
+      "pt": "Encantador de Pássaros",
+      "de": "Vogelflüsterer",
+      "es": "Susurrador de aves",
+      "ar": "صديق الطيور",
+      "tr": "Kuş Fısıltısı",
+      "fr": "Maître des oiseaux",
+      "en": "Bird Whisperer",
+      "ru": "Заклинатель птиц",
+      "ba": "Bird Whisperer"
+    },
+    "diamond_count": 5000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/0cd8a5adc3e8498aaca1af4c65820931.png~tplv-obj.webp",
+    "slug": "bird-whisperer",
+    "duration": 1000
+  },
+  {
+    "id": 8381,
+    "names": {
+      "id": "Anjing Laut dan Paus",
+      "pt": "Foca e Baleia",
+      "de": "Robbe und Wal",
+      "es": "Foca y ballena",
+      "ar": "الفقمة والحوت",
+      "tr": "Fok ve Balina",
+      "fr": "Phoque et baleine",
+      "en": "Seal and Whale",
+      "ru": "Тюленька и кит",
+      "ba": "Seal and Whale"
+    },
+    "diamond_count": 34500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/3781e9159ff09272826d3f2216ba36ef.png~tplv-obj.webp",
+    "slug": "seal-and-whale",
+    "duration": 1000
+  },
+  {
+    "id": 8387,
+    "names": {
+      "id": "merak",
+      "en": "peacock",
+      "pt": "peacock",
+      "de": "peacock",
+      "es": "peacock",
+      "ar": "peacock",
+      "tr": "peacock",
+      "fr": "peacock",
+      "ru": "peacock",
+      "ba": "peacock"
+    },
+    "diamond_count": 15000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/5bd8a2c3013143f9816287d2edca22a3.png~tplv-obj.webp",
+    "slug": "peacock",
+    "duration": 1000
+  },
+  {
+    "id": 8391,
+    "names": {
+      "id": "Sam si Paus",
+      "pt": "Sam, a Baleia",
+      "de": "Sam, der Wal",
+      "es": "Ballena Sam",
+      "ar": "الحوت ودود",
+      "tr": "Balina Sam",
+      "fr": "Sam la baleine",
+      "en": "Sam the Whale",
+      "ru": "Кит Сэм",
+      "ba": "Sam the Whale"
+    },
+    "diamond_count": 30000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/f48a1887eb88238738996bb997b31c0f.png~tplv-obj.webp",
+    "slug": "sam-the-whale",
+    "duration": 1000
+  },
+  {
+    "id": 8392,
+    "names": {
+      "id": "Katak Bernyanyi",
+      "en": "Singing frogs",
+      "pt": "Singing frogs",
+      "de": "Singing frogs",
+      "es": "Singing frogs",
+      "ar": "Singing frogs",
+      "tr": "Singing frogs",
+      "fr": "Singing frogs",
+      "ru": "Singing frogs",
+      "ba": "Singing frogs"
+    },
+    "diamond_count": 398,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/026f5b45d1a8f0d82143ad1079b7cbbd.png~tplv-obj.webp",
+    "slug": "singing-frogs",
+    "duration": 1000
+  },
+  {
+    "id": 8415,
+    "names": {
+      "pt": "Nocaute",
+      "de": "Knockout",
+      "es": "Noqueo",
+      "ar": "ضربة قاضية",
+      "tr": "Nakavt",
+      "fr": "Knockout",
+      "ru": "Нокаут",
+      "en": "Knockout",
+      "id": "Knockout",
+      "ba": "Knockout"
+    },
+    "diamond_count": 4999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/ca48dabd9142eaeb6e1dd4cfaaabdf56.png~tplv-obj.webp",
+    "slug": "knockout",
+    "duration": 1000
+  },
+  {
+    "id": 8417,
+    "names": {
+      "id": "Gurita",
+      "en": "Octopus",
+      "pt": "Octopus",
+      "de": "Octopus",
+      "es": "Octopus",
+      "ar": "Octopus",
+      "tr": "Octopus",
+      "fr": "Octopus",
+      "ru": "Octopus",
+      "ba": "Octopus"
+    },
+    "diamond_count": 10000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/17af407c487787b5a01a3d5cd0c32b92~tplv-obj.webp",
+    "slug": "octopus",
+    "duration": 1000
+  },
+  {
+    "id": 8419,
+    "names": {
+      "id": "Petir Merah",
+      "pt": "Relâmpago Vermelho",
+      "de": "Roter Blitz",
+      "es": "Relámpago rojo",
+      "ar": "برق أحمر",
+      "tr": "Kırmızı Yıldırım",
+      "fr": "Foudre rouge",
+      "en": "Red Lightning",
+      "ru": "Красная молния",
+      "ba": "Red Lightning"
+    },
+    "diamond_count": 12000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/5f48599c8d2a7bbc6e6fcf11ba2c809f~tplv-obj.webp",
+    "slug": "red-lightning",
+    "duration": 1000
+  },
+  {
+    "id": 8420,
+    "names": {
+      "id": "Takhta Bintang",
+      "pt": "Trono estelar",
+      "de": "Sternenthron",
+      "es": "Trono estelar",
+      "ar": "عرش النجوم",
+      "tr": "Yıldız Tahtı",
+      "fr": "Trône des étoiles",
+      "en": "Star Throne",
+      "ru": "Звездный трон",
+      "ba": "Star Throne"
+    },
+    "diamond_count": 7999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/30063f6bc45aecc575c49ff3dbc33831~tplv-obj.webp",
+    "slug": "star-throne",
+    "duration": 1000
+  },
+  {
+    "id": 8433,
+    "names": {
+      "id": "Mobil Balap Perak",
+      "pt": "Carro esportivo prata",
+      "de": "Silberner Sportwagen",
+      "es": "Coche deportivo plateado",
+      "ar": "سيارة رياضية فضية",
+      "tr": "Gümüş Spor Araba",
+      "fr": "Voiture de sport argentée",
+      "en": "Silver Sports Car",
+      "ru": "Серебряная спортивная машина",
+      "ba": "Silver Sports Car"
+    },
+    "diamond_count": 5000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/22cb7e02e11332b44f7789e4ee808b06.png~tplv-obj.webp",
+    "slug": "silver-sports-car",
+    "duration": 1000
+  },
+  {
+    "id": 8435,
+    "names": {
+      "id": "Piramida",
+      "en": "Pyramids",
+      "pt": "Pyramids",
+      "de": "Pyramids",
+      "es": "Pyramids",
+      "ar": "Pyramids",
+      "tr": "Pyramids",
+      "fr": "Pyramids",
+      "ru": "Pyramids",
+      "ba": "Pyramids"
+    },
+    "diamond_count": 15000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/82ec70b79d99442e38963995027a37bf.png~tplv-obj.webp",
+    "slug": "pyramids",
+    "duration": 1000
+  },
+  {
+    "id": 8456,
+    "names": {
+      "id": "Zeus",
+      "pt": "Zeus",
+      "de": "Zeus",
+      "es": "Zeus",
+      "ar": "زيوس",
+      "tr": "Zeus",
+      "fr": "Zeus",
+      "en": "Zeus",
+      "ru": "Зевс",
+      "ba": "Zeus"
+    },
+    "diamond_count": 34000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/01793f9afe15f5037a9dc10435c37c85.png~tplv-obj.webp",
+    "slug": "zeus",
+    "duration": 1000
+  },
+  {
+    "id": 8564,
+    "names": {
+      "pt": "Trator",
+      "de": "Traktor",
+      "es": "Tractor",
+      "ar": "جرار",
+      "tr": "Traktör",
+      "fr": "Tracteur",
+      "ru": "Трактор",
+      "en": "Tractor",
+      "id": "Tractor",
+      "ba": "Tractor"
+    },
+    "diamond_count": 4099,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/cb687fc33baadcb7b743caa72faf6419.png~tplv-obj.webp",
+    "slug": "tractor",
+    "duration": 1000
+  },
+  {
+    "id": 8582,
+    "names": {
+      "id": "TikTok Stars",
+      "pt": "TikTok Stars",
+      "de": "TikTok Stars",
+      "es": "TikTok Stars",
+      "ar": "نجوم تيك توك",
+      "tr": "TikTok Stars",
+      "fr": "TikTok Stars",
+      "en": "TikTok Stars",
+      "ru": "TikTok Stars",
+      "ba": "TikTok Stars"
+    },
+    "diamond_count": 39999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/b1667c891ed39fd68ba7252fff7a1e7c~tplv-obj.webp",
+    "slug": "tiktok-stars",
+    "duration": 1000
+  },
+  {
+    "id": 8600,
+    "names": {
+      "id": "Sebar kebahagiaan",
+      "pt": "Positividade",
+      "de": "Sende Positivität",
+      "es": "Energía positiva",
+      "ar": "نشر طاقة إيجابية",
+      "tr": "Pozitif enerji",
+      "fr": "De la positivité",
+      "en": "Sending positivity",
+      "ru": "Позитивная энергия",
+      "ba": "Sending positivity"
+    },
+    "diamond_count": 199,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/25a35a49d1a0cb013e46ed9825f5418e.png~tplv-obj.webp",
+    "slug": "sending-positivity",
+    "duration": 1000
+  },
+  {
+    "id": 8602,
+    "names": {
+      "id": "Gorila",
+      "pt": "Gorila",
+      "de": "Gorilla",
+      "es": "Gorila",
+      "ar": "غوريللا",
+      "tr": "Goril",
+      "fr": "Gorille",
+      "en": "Gorilla",
+      "ru": "Горилла",
+      "ba": "Gorilla"
+    },
+    "diamond_count": 30000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/57619959bddbe35d8c684750a1d41d62.png~tplv-obj.webp",
+    "slug": "gorilla",
+    "duration": 1000
+  },
+  {
+    "id": 8648,
+    "names": {
+      "id": "Keranjang bunga di jendela",
+      "pt": "Floreira na janela",
+      "de": "Fensterkorb",
+      "es": "Alféizar con flores",
+      "ar": "سلة زهور تحت النافذة",
+      "tr": "Pencere Çiçekliği",
+      "fr": "Panier sur la fenêtre",
+      "en": "Window basket",
+      "ru": "Оконная цветочница",
+      "ba": "Window basket"
+    },
+    "diamond_count": 500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/dbddac7c48627d93e38b2d829a628d36.png~tplv-obj.webp",
+    "slug": "window-basket",
+    "duration": 1000
+  },
+  {
+    "id": 8651,
+    "names": {
+      "id": "Alap-Alap Petir",
+      "pt": "Falcão do trovão",
+      "de": "Donnerfalke",
+      "es": "Halcón de trueno",
+      "ar": "صقر الرعد",
+      "tr": "Savaşan Şahin",
+      "fr": "Faucon du tonnerre",
+      "en": "Thunder Falcon",
+      "ru": "Громовой сокол",
+      "ba": "Thunder Falcon"
+    },
+    "diamond_count": 39999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/26f3fbcda383e6093a19b8e7351a164c~tplv-obj.webp",
+    "slug": "thunder-falcon",
+    "duration": 1000
+  },
+  {
+    "id": 8737,
+    "names": {
+      "pt": "Bólido",
+      "de": "Flitzer",
+      "es": "Supervelocidad",
+      "ar": "سرعة فائقة",
+      "tr": "Hız Tutkunu",
+      "fr": "star de la vitesse",
+      "ru": "Суперскорость",
+      "en": "Bolide",
+      "id": "Bolide",
+      "ba": "Bolide"
+    },
+    "diamond_count": 15000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/fc066ba3bd4b28ff965379df2d675d96.png~tplv-obj.webp",
+    "slug": "bolide",
+    "duration": 1000
+  },
+  {
+    "id": 8741,
+    "names": {
+      "id": "Anak Domba",
+      "pt": "Cordeiro",
+      "de": "Lamm",
+      "es": "Cordero",
+      "ar": "حمل",
+      "tr": "Kuzu",
+      "fr": "Agneau",
+      "en": "Lamb",
+      "ru": "Ягненок",
+      "ba": "Lamb"
+    },
+    "diamond_count": 2200,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/8409886817690aa05c0987899c5e1dc8~tplv-obj.webp",
+    "slug": "lamb",
+    "duration": 1000
+  },
+  {
+    "id": 8768,
+    "names": {
+      "en": "Duckling",
+      "id": "Anak bebek",
+      "pt": "Patinho",
+      "de": "Küken",
+      "es": "Patito",
+      "ar": "البطلينوس",
+      "tr": "Civciv",
+      "fr": "Caneton",
+      "ru": "Утёнок",
+      "ba": "Duckling"
+    },
+    "diamond_count": 5,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/3382bbde181383ca2d6c4b9923d13da2.png~tplv-obj.webp",
+    "slug": "duckling",
+    "duration": 1000
+  },
+  {
+    "id": 8778,
+    "names": {
+      "id": "Serigala",
+      "pt": "Lobo",
+      "de": "Wolf",
+      "es": "Lobo",
+      "ar": "ذئب",
+      "tr": "Kurt",
+      "fr": "Loup",
+      "en": "Wolf",
+      "ru": "Волк",
+      "ba": "Wolf"
+    },
+    "diamond_count": 5500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/002d5e13fd6cd18b7574b43dc4fd13ae.png~tplv-obj.webp",
+    "slug": "wolf",
+    "duration": 1000
+  },
+  {
+    "id": 8852,
+    "names": {
+      "pt": "Fofa, a Foca",
+      "de": "Wolli, die Robbe",
+      "es": "Foca Algodoncito",
+      "ar": "الفقمة لطيفة",
+      "tr": "Fok Pamuk",
+      "fr": "Coton le phoque",
+      "ru": "Тюленька Хлоппи",
+      "en": "Fofa the Seal",
+      "id": "Fofa the Seal",
+      "ba": "Fofa the Seal"
+    },
+    "diamond_count": 399,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/90671376888d6f834c97b0d34bc8231a~tplv-obj.webp",
+    "slug": "fofa-the-seal",
+    "duration": 1000
+  },
+  {
+    "id": 8873,
+    "names": {
+      "id": "Mahkota TikTok",
+      "pt": "Coroa do TikTok",
+      "de": "TikTok-Krone",
+      "es": "Corona de TikTok",
+      "ar": "تاج TikTok",
+      "tr": "TikTok Tacı",
+      "fr": "Couronne TikTok",
+      "en": "TikTok Crown",
+      "ru": "Корона TikTok",
+      "ba": "TikTok Crown"
+    },
+    "diamond_count": 299,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/77289ae44d635380fa88e7bdfcfdc408.png~tplv-obj.webp",
+    "slug": "tiktok-crown",
+    "duration": 3000
+  },
+  {
+    "id": 8887,
+    "names": {
+      "id": "Air Mancur",
+      "en": "Fountain",
+      "pt": "Fountain",
+      "de": "Fountain",
+      "es": "Fountain",
+      "ar": "Fountain",
+      "tr": "Fountain",
+      "fr": "Fountain",
+      "ru": "Fountain",
+      "ba": "Fountain"
+    },
+    "diamond_count": 1200,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/021a7c3dec6155cf4da2b6e07848550f.png~tplv-obj.webp",
+    "slug": "fountain",
+    "duration": 1000
+  },
+  {
+    "id": 8892,
+    "names": {
+      "pt": "Equipe dos sonhos",
+      "de": "Alle zusammen",
+      "es": "Equipo de ensueño",
+      "ar": "فريق الأحلام",
+      "tr": "Rüya Takım",
+      "fr": "Équipe de rêve",
+      "ru": "Команда мечты",
+      "en": "Dream Team",
+      "id": "Dream Team",
+      "ba": "Dream Team"
+    },
+    "diamond_count": 500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/8539021685ac2b59bd4f8df2c1df92fe.png~tplv-obj.webp",
+    "slug": "dream-team",
+    "duration": 1000
+  },
+  {
+    "id": 8912,
+    "names": {
+      "id": "Rosa Nebula",
+      "pt": "Nebulosa da Rosa",
+      "de": "Rosennebel",
+      "es": "Rosa cósmica",
+      "ar": "مجرة روزا",
+      "tr": "Gül Nebulası",
+      "fr": "Rose nébuleuse",
+      "en": "Rosa Nebula",
+      "ru": "Космическая роза",
+      "ba": "Rosa Nebula"
+    },
+    "diamond_count": 15000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/f722088231103b66875dae33f13f8719.png~tplv-obj.webp",
+    "slug": "rosa-nebula",
+    "duration": 1000
+  },
+  {
+    "id": 8913,
+    "names": {
+      "id": "Rosa",
+      "pt": "Rosa",
+      "de": "Rosa",
+      "es": "Rosa",
+      "ar": "روزا",
+      "tr": "Rosa",
+      "fr": "Rosa",
+      "en": "Rosa",
+      "ru": "Роуз",
+      "ba": "Rosa"
+    },
+    "diamond_count": 10,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/eb77ead5c3abb6da6034d3cf6cfeb438~tplv-obj.webp",
+    "slug": "rosa",
+    "duration": 1000
+  },
+  {
+    "id": 8914,
+    "names": {
+      "id": "Forever Rosa",
+      "pt": "Rosa para sempre",
+      "de": "Ewige Rose",
+      "es": "Rosa de la eternidad",
+      "ar": "روزا إلى الأبد",
+      "tr": "Sonsuzluk Gülü",
+      "fr": "Rose à jamais",
+      "en": "Forever Rosa",
+      "ru": "Вечная роза",
+      "ba": "Forever Rosa"
+    },
+    "diamond_count": 399,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/863e7947bc793f694acbe970d70440a1.png~tplv-obj.webp",
+    "slug": "forever-rosa",
+    "duration": 1000
+  },
+  {
+    "id": 8916,
+    "names": {
+      "id": "Leon dan Lili",
+      "pt": "Leon e Lili",
+      "de": "Leon und Lili",
+      "es": "Leoncito y Lili",
+      "ar": "ليون وليلي",
+      "tr": "Leon ve Lili",
+      "fr": "Léon et Lili",
+      "en": "Leon and Lili",
+      "ru": "Леон и Лили",
+      "ba": "Leon and Lili"
+    },
+    "diamond_count": 9699,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/6958244f3eeb69ce754f735b5833a4aa.png~tplv-obj.webp",
+    "slug": "leon-and-lili",
+    "duration": 1000
+  },
+  {
+    "id": 8972,
+    "names": {
+      "id": "Medusa Luminosa",
+      "pt": "Água-viva reluzente",
+      "de": "Magische Qualle",
+      "es": "Medusa brillante",
+      "ar": "قنديل البحر المتألق",
+      "tr": "Parlayan Denizanası",
+      "fr": "Méduse Lumineuse",
+      "en": "Glowing Jellyfish",
+      "ru": "Светящаяся медуза",
+      "ba": "Glowing Jellyfish"
+    },
+    "diamond_count": 1000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/96d9226ef1c33784a24d0779ad3029d3.png~tplv-obj.webp",
+    "slug": "glowing-jellyfish",
+    "duration": 1000
+  },
+  {
+    "id": 8988,
+    "names": {
+      "id": "L'Alieno DJ",
+      "pt": "DJ extraterrestre",
+      "de": "Alien DJ",
+      "es": "Alien DJ",
+      "ar": "دي جي فضائي",
+      "tr": "Uzaylı DJ",
+      "fr": "Aurora Polare",
+      "en": "DJ Alien",
+      "ru": "DJ Пришелец",
+      "ba": "DJ Alien"
+    },
+    "diamond_count": 5000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/26dc658fc764e6bab4a92bd66a8e45c5.png~tplv-obj.webp",
+    "slug": "dj-alien",
+    "duration": 1000
+  },
+  {
+    "id": 9043,
+    "names": {
+      "id": "Beruang Pim",
+      "pt": "Urso Pim",
+      "de": "Pim Bär",
+      "es": "Oso Pim",
+      "ar": "الدب النشيط",
+      "tr": "Ayı Pim",
+      "fr": "L'Ours Pim",
+      "en": "Pim Bear",
+      "ru": "Мишка Пим",
+      "ba": "Pim Bear"
+    },
+    "diamond_count": 1500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/f8a207305960ecdb4756de9818e0b2b2.png~tplv-obj.webp",
+    "slug": "pim-bear",
+    "duration": 1000
+  },
+  {
+    "id": 9072,
+    "names": {
+      "id": "TikTok Universe",
+      "pt": "TikTok Universe",
+      "de": "TikTok Universe",
+      "es": "TikTok Universe",
+      "ar": "TikTok Universe",
+      "tr": "TikTok Universe",
+      "fr": "TikTok Universe",
+      "en": "TikTok Universe",
+      "ru": "TikTok Universe",
+      "ba": "TikTok Universe"
+    },
+    "diamond_count": 44999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/8f471afbcebfda3841a6cc515e381f58~tplv-obj.webp",
+    "slug": "tiktok-universe",
+    "duration": 1000
+  },
+  {
+    "id": 9087,
+    "names": {
+      "id": "Hati menyala-nyala",
+      "pt": "Coração em chama",
+      "de": "Flammenherz",
+      "es": "Corazón de fuego",
+      "ar": "قلب مشتعل",
+      "tr": "Yanan kalp",
+      "fr": "Cœur de flamme",
+      "en": "Flame heart",
+      "ru": "Пламенное сердце",
+      "ba": "Flame heart"
+    },
+    "diamond_count": 1,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/b199d028d5beb081fe16edcf77db0830.png~tplv-obj.webp",
+    "slug": "flame-heart",
+    "duration": 1000
+  },
+  {
+    "id": 9091,
+    "names": {
+      "id": "Mic Untuk Menyanyi",
+      "en": "Singing Mic",
+      "pt": "Singing Mic",
+      "de": "Singing Mic",
+      "es": "Singing Mic",
+      "ar": "Singing Mic",
+      "tr": "Singing Mic",
+      "fr": "Singing Mic",
+      "ru": "Singing Mic",
+      "ba": "Singing Mic"
+    },
+    "diamond_count": 399,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/b4f9039e892eaa5fd0f3770943b893a4.png~tplv-obj.webp",
+    "slug": "singing-mic",
+    "duration": 1000
+  },
+  {
+    "id": 9092,
+    "names": {
+      "id": "Phoenix Api",
+      "pt": "Fênix de fogo",
+      "de": "Feuerphönix",
+      "es": "Fénix de fuego",
+      "ar": "عنقاء النار",
+      "tr": "Ateş Anka kuşu",
+      "fr": "Phénix de feu",
+      "en": "Fire Phoenix",
+      "ru": "Пламенный Феникс",
+      "ba": "Fire Phoenix"
+    },
+    "diamond_count": 41999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/bfb8425a7e8fa03f9fec05a973a4a506.png~tplv-obj.webp",
+    "slug": "fire-phoenix",
+    "duration": 1000
+  },
+  {
+    "id": 9095,
+    "names": {
+      "id": "Pesta Ulang Tahun",
+      "pt": "Festa de aniversário",
+      "de": "Geburtstagsparty",
+      "es": "Fiesta de cumpleaños",
+      "ar": "حفل عيد ميلاد",
+      "tr": "Doğum Günü Partisi",
+      "fr": "Fête d'anniversaire",
+      "en": "Birthday Party",
+      "ru": "День рождения",
+      "ba": "Birthday Party"
+    },
+    "diamond_count": 6999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/0a7316f4403b05c8fc33071909521f02.png~tplv-obj.webp",
+    "slug": "birthday-party",
+    "duration": 1000
+  },
+  {
+    "id": 9096,
+    "names": {
+      "id": "Topi Ulang Tahun",
+      "pt": "Chapéu de aniversário",
+      "de": "Geburtstagskrone",
+      "es": "Corona de cumpleaños",
+      "ar": "قبعة عيد ميلاد",
+      "tr": "Doğum Günü Şapkası",
+      "fr": "Chapeau d'anniversaire",
+      "en": "Birthday Crown",
+      "ru": "Корона именинника",
+      "ba": "Birthday Crown"
+    },
+    "diamond_count": 99,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/0901dcc31c46c289a436536845c9cb70.png~tplv-obj.webp",
+    "slug": "birthday-crown",
+    "duration": 3000
+  },
+  {
+    "id": 9097,
+    "names": {
+      "id": "Kue Ultah",
+      "pt": "Bolo de aniversário",
+      "de": "Geburtstagskuchen",
+      "es": "Tarta de cumpleaños",
+      "ar": "كعكة عيد ميلاد",
+      "tr": "Doğum günü pastası",
+      "fr": "Gâteau d'anniversaire",
+      "en": "Birthday Cake",
+      "ru": "Праздничный торт",
+      "ba": "Birthday Cake"
+    },
+    "diamond_count": 1,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/3ac5ec732f6f4ba7b1492248bfea83d6.png~tplv-obj.webp",
+    "slug": "birthday-cake",
+    "duration": 1000
+  },
+  {
+    "id": 9138,
+    "names": {
+      "id": "Sosok yang Sedang Tren",
+      "pt": "Figura popular",
+      "de": "Angesagte Person",
+      "es": "Celebridad",
+      "ar": "نجم مشهور",
+      "tr": "Ünlü Kişi",
+      "fr": "Figure tendance",
+      "en": "Trending Figure",
+      "ru": "Популярная персона",
+      "ba": "Trending Figure"
+    },
+    "diamond_count": 999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/df7b556ccf369bf9a42fe83ec8a77acf.png~tplv-obj.webp",
+    "slug": "trending-figure",
+    "duration": 1000
+  },
+  {
+    "id": 9139,
+    "names": {
+      "id": "Gelang Tim",
+      "pt": "Bracelete da equipe",
+      "de": "Team-Armband",
+      "es": "Pulsera de equipo",
+      "ar": "سوار الفريق",
+      "tr": "Ekip Bilekliği",
+      "fr": "Bracelet d'équipe",
+      "en": "Team Bracelet",
+      "ru": "Браслет команды",
+      "ba": "Team Bracelet"
+    },
+    "diamond_count": 2,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/54cb1eeca369e5bea1b97707ca05d189.png~tplv-obj.webp",
+    "slug": "team-bracelet",
+    "duration": 1000
+  },
+  {
+    "id": 9156,
+    "names": {
+      "en": "Dinosaur footprint",
+      "id": "Jejak Dinosaurus",
+      "pt": "Pegada de dinossauro",
+      "de": "Dinosaurierfußabdruck",
+      "es": "Huellas de dinosaurio",
+      "ar": "أثر ديناصور",
+      "tr": "Dinozor izi",
+      "fr": "Empreinte de dinosaure",
+      "ru": "След динозавра",
+      "ba": "Dinosaur footprint"
+    },
+    "diamond_count": 1,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/1902ea98c1054565acf557e0d747dc0e.png~tplv-obj.webp",
+    "slug": "dinosaur-footprint",
+    "duration": 1000
+  },
+  {
+    "id": 9235,
+    "names": {
+      "id": "Musik Dinamis",
+      "en": "Dynamic Music",
+      "pt": "Dynamic Music",
+      "de": "Dynamic Music",
+      "es": "Dynamic Music",
+      "ar": "Dynamic Music",
+      "tr": "Dynamic Music",
+      "fr": "Dynamic Music",
+      "ru": "Dynamic Music",
+      "ba": "Dynamic Music"
+    },
+    "diamond_count": 4888,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/001c4ea85c78e9b35b5ae3228686a24c.png~tplv-obj.webp",
+    "slug": "dynamic-music",
+    "duration": 1000
+  },
+  {
+    "id": 9250,
+    "names": {
+      "id": "Musik Indah",
+      "en": "Lovely Music",
+      "pt": "Lovely Music",
+      "de": "Lovely Music",
+      "es": "Lovely Music",
+      "ar": "Lovely Music",
+      "tr": "Lovely Music",
+      "fr": "Lovely Music",
+      "ru": "Lovely Music",
+      "ba": "Lovely Music"
+    },
+    "diamond_count": 999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/fa6bd8486df33dbe732381fa5c6cf441~tplv-obj.webp",
+    "slug": "lovely-music",
+    "duration": 1000
+  },
+  {
+    "id": 9287,
+    "names": {
+      "id": "Kentang",
+      "en": "Potato",
+      "pt": "Potato",
+      "de": "Potato",
+      "es": "Potato",
+      "ar": "Potato",
+      "tr": "Potato",
+      "fr": "Potato",
+      "ru": "Potato",
+      "ba": "Potato"
+    },
+    "diamond_count": 5,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/909e256029f1649a9e7e339ef71c6896.png~tplv-obj.webp",
+    "slug": "potato",
+    "duration": 1000
+  },
+  {
+    "id": 9288,
+    "names": {
+      "id": "Big Ben",
+      "pt": "Big Ben",
+      "de": "Big Ben",
+      "es": "Big Ben",
+      "ar": "بيج بن",
+      "tr": "Big Ben",
+      "fr": "Big Ben",
+      "en": "Big Ben",
+      "ru": "Биг-Бен",
+      "ba": "Big Ben"
+    },
+    "diamond_count": 15000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/27e4fa40e19dfebbc893a60382a5aff0.png~tplv-obj.webp",
+    "slug": "big-ben",
+    "duration": 1000
+  },
+  {
+    "id": 9384,
+    "names": {
+      "pt": "Superstar",
+      "de": "Breakthrough Superstar",
+      "es": "Superestrella",
+      "ar": "نجم النجوم",
+      "tr": "Süperstar",
+      "fr": "Superstar",
+      "ru": "Суперзвезда",
+      "en": "Superstar",
+      "id": "Superstar",
+      "ba": "Superstar"
+    },
+    "diamond_count": 4088,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/3b50ff60442f9386ea83753bd2bcd522.png~tplv-obj.webp",
+    "slug": "superstar",
+    "duration": 1000
+  },
+  {
+    "id": 9427,
+    "names": {
+      "id": "Pegasus",
+      "pt": "Pégaso",
+      "de": "Pegasus",
+      "es": "Pegaso",
+      "ar": "الحصان المجنح",
+      "tr": "Kanatlı At",
+      "fr": "Pégase",
+      "en": "Pegasus",
+      "ru": "Пегас",
+      "ba": "Pegasus"
+    },
+    "diamond_count": 42999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/f600a2495ab5d250e7da2066484a9383.png~tplv-obj.webp",
+    "slug": "pegasus",
+    "duration": 1000
+  },
+  {
+    "id": 9457,
+    "names": {
+      "id": "Kit Pemula ASMR",
+      "pt": "Kit de iniciante para ASMR",
+      "de": "ASMR-Starterkit",
+      "es": "Kit básico de ASMR",
+      "ar": "مجموعة أدوات ASMR للمبتدئين",
+      "tr": "ASMR Başlangıç Kiti",
+      "fr": "Kit de démarrage ASMR",
+      "en": "ASMR Starter Kit",
+      "ru": "Стартовый набор для ASMR",
+      "ba": "ASMR Starter Kit"
+    },
+    "diamond_count": 1599,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/9bf08813d29ea146b0226de28297883f.png~tplv-obj.webp",
+    "slug": "asmr-starter-kit",
+    "duration": 1000
+  },
+  {
+    "id": 9458,
+    "names": {
+      "id": "Waktu ASMR",
+      "pt": "Hora do ASMR",
+      "de": "ASMR-Zeit",
+      "es": "Hora de ASMR",
+      "ar": "حان وقت ASMR",
+      "tr": "ASMR Zamanı",
+      "fr": "L'heure de l'ASMR",
+      "en": "ASMR Time ",
+      "ru": "Время для ASMR",
+      "ba": "ASMR Time "
+    },
+    "diamond_count": 10,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/748e74c8309e08dbc5b03e03f28a0ea0.png~tplv-obj.webp",
+    "slug": "asmr-time-",
+    "duration": 1000
+  },
+  {
+    "id": 9465,
+    "names": {
+      "id": "Teman Buah",
+      "pt": "Frutas Amigas",
+      "de": "Fruchtfreunde",
+      "es": "Amigos frutales",
+      "ar": "فواكه أصدقاء",
+      "tr": "Meyve Arkadaşlar",
+      "fr": "Amis fruités",
+      "en": "Fruit Friends",
+      "ru": "Фруктовые друзья",
+      "ba": "Fruit Friends"
+    },
+    "diamond_count": 299,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/1153dd51308c556cb4fcc48c7d62209f.png~tplv-obj.webp",
+    "slug": "fruit-friends",
+    "duration": 1000
+  },
+  {
+    "id": 9466,
+    "names": {
+      "id": "Taman Hiburan",
+      "pt": "Parque de diversões",
+      "de": "Freizeitpark",
+      "es": "Parque de atracciones",
+      "ar": "حديقة ملاهي",
+      "tr": "Lunapark",
+      "fr": "Parc d'attractions",
+      "en": "Amusement Park",
+      "ru": "Парк развлечений",
+      "ba": "Amusement Park"
+    },
+    "diamond_count": 17000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/12ecc01c2984c5d85bb508e80103a3cb.png~tplv-obj.webp",
+    "slug": "amusement-park",
+    "duration": 1000
+  },
+  {
+    "id": 9467,
+    "names": {
+      "id": "Lili si Macan Tutul",
+      "pt": "Lili, o Leopardo",
+      "de": "Lili, die Leopardin",
+      "es": "Leoparda Lili",
+      "ar": "ليلي النَمِرة",
+      "tr": "Leopar Lili",
+      "fr": "Lili le léopard",
+      "en": "Lili the Leopard",
+      "ru": "Леопардица Lili",
+      "ba": "Lili the Leopard"
+    },
+    "diamond_count": 6599,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/7be03e1af477d1dbc6eb742d0c969372.png~tplv-obj.webp",
+    "slug": "lili-the-leopard",
+    "duration": 1000
+  },
+  {
+    "id": 9468,
+    "names": {
+      "id": "Beruang Irama",
+      "pt": "Urso Dançante",
+      "de": "Rhythmischer Bär",
+      "es": "Osito rítmico",
+      "ar": "دب يرقص على الإيقاع",
+      "tr": "Ritmik Ayı",
+      "fr": "Ours rythmique",
+      "en": "Rhythmic Bear",
+      "ru": "Энергичный мишка",
+      "ba": "Rhythmic Bear"
+    },
+    "diamond_count": 2999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/16eacf541e4bd6816e88139d079519f5.png~tplv-obj.webp",
+    "slug": "rhythmic-bear",
+    "duration": 1000
+  },
+  {
+    "id": 9486,
+    "names": {
+      "pt": "Saxofone",
+      "de": "Saxophon",
+      "es": "Saxofón",
+      "ar": "ساكسوفون",
+      "tr": "Saksafon",
+      "fr": "Saxophone",
+      "ru": "Саксофон",
+      "en": "Saxofone",
+      "id": "Saxofone",
+      "ba": "Saxofone"
+    },
+    "diamond_count": 9000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/f793375f9109bbe878b2d84e49ec4b2b.png~tplv-obj.webp",
+    "slug": "saxofone",
+    "duration": 1000
+  },
+  {
+    "id": 9498,
+    "names": {
+      "id": "Pita Mekar",
+      "pt": "Fitas reluzentes",
+      "de": "Blühende Schleifen",
+      "es": "Cintas florecientes",
+      "ar": "شرائط متساقطة",
+      "tr": "Çiçek Açan Şeritler",
+      "fr": "Rubans fleuris",
+      "en": "Blooming Ribbons",
+      "ru": "Блестящий вихрь",
+      "ba": "Blooming Ribbons"
+    },
+    "diamond_count": 1000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/f76750ab58ee30fc022c9e4e11d25c9d.png~tplv-obj.webp",
+    "slug": "blooming-ribbons",
+    "duration": 1000
+  },
+  {
+    "id": 9499,
+    "names": {
+      "id": "Pesta Emas",
+      "pt": "Festa dourada",
+      "de": "Goldene Party",
+      "es": "Fiesta de oro",
+      "ar": "حفلة ذهبية",
+      "tr": "Altın Partisi",
+      "fr": "Fête dorée",
+      "en": "Golden Party",
+      "ru": "Золотая вечеринка",
+      "ba": "Golden Party"
+    },
+    "diamond_count": 3000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/a00450f3e3aa1f01b62774950e5729c3.png~tplv-obj.webp",
+    "slug": "golden-party",
+    "duration": 1000
+  },
+  {
+    "id": 9500,
+    "names": {
+      "id": "Jet Terbang",
+      "pt": "Jatos voadores",
+      "de": "Fliegende Jets",
+      "es": "Aviones volando",
+      "ar": "طائرات نفاثة",
+      "tr": "Uçan Jetler",
+      "fr": "Jets volants",
+      "en": "Flying Jets",
+      "ru": "Летящие самолеты",
+      "ba": "Flying Jets"
+    },
+    "diamond_count": 5000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/1d067d13988e8754ed6adbebd89b9ee8.png~tplv-obj.webp",
+    "slug": "flying-jets",
+    "duration": 1000
+  },
+  {
+    "id": 9501,
+    "names": {
+      "id": "Kapal Pesiar",
+      "pt": "Iate",
+      "de": "Jacht",
+      "es": "Yate",
+      "ar": "يخت",
+      "tr": "Yat",
+      "fr": "Yacht",
+      "en": "Yacht",
+      "ru": "Яхта",
+      "ba": "Yacht"
+    },
+    "diamond_count": 20000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/e69e2626f6ff43d1c1f2b8ae5ea42514.png~tplv-obj.webp",
+    "slug": "yacht",
+    "duration": 1000
+  },
+  {
+    "id": 9509,
+    "names": {
+      "id": "Grand Final LIVE Fest",
+      "en": "LIVE Fest Grand Finale",
+      "pt": "LIVE Fest Grand Finale",
+      "de": "LIVE Fest Grand Finale",
+      "es": "LIVE Fest Grand Finale",
+      "ar": "LIVE Fest Grand Finale",
+      "tr": "LIVE Fest Grand Finale",
+      "fr": "LIVE Fest Grand Finale",
+      "ru": "LIVE Fest Grand Finale",
+      "ba": "LIVE Fest Grand Finale"
+    },
+    "diamond_count": 10999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/7eb23964451bebf203ec2a031dcb240d.png~tplv-obj.webp",
+    "slug": "live-fest-grand-finale",
+    "duration": 1000
+  },
+  {
+    "id": 9525,
+    "names": {
+      "id": "Dino Besar",
+      "pt": "Grande dinossauro",
+      "de": "Großer Dino",
+      "es": "T-Rex",
+      "ar": "الديناصور الكبير",
+      "tr": "Büyük Dinozor",
+      "fr": "T-Rex",
+      "en": "Big Dino",
+      "ru": "Большой динозавр",
+      "ba": "Big Dino"
+    },
+    "diamond_count": 25999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/0959f0e02215e2f2568cb19537493540.png~tplv-obj.webp",
+    "slug": "big-dino",
+    "duration": 1000
+  },
+  {
+    "id": 9534,
+    "names": {
+      "id": "Meerkat",
+      "pt": "Suricato",
+      "de": "Erdmännchen",
+      "es": "Suricata",
+      "ar": "نمس",
+      "tr": "Mirket",
+      "fr": "Suricate",
+      "en": "Meerkat",
+      "ru": "Сурикат",
+      "ba": "Meerkat"
+    },
+    "diamond_count": 199,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/82c401f409482b0b6dd4f1016d7a4f49.png~tplv-obj.webp",
+    "slug": "meerkat",
+    "duration": 1000
+  },
+  {
+    "id": 9535,
+    "names": {
+      "id": "Bermain musik untukmu",
+      "pt": "Tocar para você",
+      "de": "Für dich spielen ",
+      "es": "Esta canción es para ti",
+      "ar": "أعزف لأجلك",
+      "tr": "Sizin için çalsın",
+      "fr": "Je joue pour toi",
+      "en": "Play for you",
+      "ru": "Музыка для вас",
+      "ba": "Play for you"
+    },
+    "diamond_count": 299,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/182659e90a3432aa155e61c9c0d89df0.png~tplv-obj.webp",
+    "slug": "play-for-you",
+    "duration": 3000
+  },
+  {
+    "id": 9536,
+    "names": {
+      "id": "Senyum palsu",
+      "en": "Fake smile",
+      "pt": "Fake smile",
+      "de": "Fake smile",
+      "es": "Fake smile",
+      "ar": "Fake smile",
+      "tr": "Fake smile",
+      "fr": "Fake smile",
+      "ru": "Fake smile",
+      "ba": "Fake smile"
+    },
+    "diamond_count": 299,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/35ce62173962e33834703212d0b845a7.png~tplv-obj.webp",
+    "slug": "fake-smile",
+    "duration": 3000
+  },
+  {
+    "id": 9550,
+    "names": {
+      "id": "Mesin capit",
+      "pt": "Máquina de pelúcias",
+      "de": "Greifautomat",
+      "es": "Máquina de garra",
+      "ar": "آلة الدمى",
+      "tr": "Oyuncak makinesi",
+      "fr": "Machine à pince",
+      "en": "Claw machine",
+      "ru": "Автомат с игрушками",
+      "ba": "Claw machine"
+    },
+    "diamond_count": 800,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/f00e5ea7c3d34d5d95cbfa21a0515a15.png~tplv-obj.webp",
+    "slug": "claw-machine",
+    "duration": 1000
+  },
+  {
+    "id": 9575,
+    "names": {
+      "id": "Keluarga",
+      "pt": "Família",
+      "de": "Familie",
+      "es": "Familia",
+      "ar": "الأسرة",
+      "tr": "Aile",
+      "fr": "Famille",
+      "en": "Family",
+      "ru": "Семья",
+      "ba": "Family"
+    },
+    "diamond_count": 90,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/8821932e2d3fe78e9af0bcf785ca1759.png~tplv-obj.webp",
+    "slug": "family",
+    "duration": 1000
+  },
+  {
+    "id": 9582,
+    "names": {
+      "id": "Lengan yang kuat",
+      "pt": "Braço forte",
+      "de": "Echt stark!",
+      "es": "Fuerza",
+      "ar": "ذراع قوية",
+      "tr": "Güçlü kol",
+      "fr": "Force à toi !",
+      "en": "Sending strength",
+      "ru": "Сильная рука",
+      "ba": "Sending strength"
+    },
+    "diamond_count": 90,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/12d9e8a8e889c643876aaedf67724714.png~tplv-obj.webp",
+    "slug": "sending-strength",
+    "duration": 1000
+  },
+  {
+    "id": 9588,
+    "names": {
+      "id": "Bunga cahaya rembulan",
+      "pt": "Flor da meia-noite",
+      "de": "Mondscheinblume",
+      "es": "Flor lunar",
+      "ar": "زهرة ضوء القمر",
+      "tr": "Ay Işığı Çiçeği",
+      "fr": "Fleur au clair de lune",
+      "en": "Moonlight flower",
+      "ru": "Цветок лунного света",
+      "ba": "Moonlight flower"
+    },
+    "diamond_count": 1400,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/c71bab14b39620c2311d00148d15d1ca.png~tplv-obj.webp",
+    "slug": "moonlight-flower",
+    "duration": 1000
+  },
+  {
+    "id": 9589,
+    "names": {
+      "id": "Kacamata Ulang Tahun",
+      "pt": "Óculos de aniversário",
+      "de": "Geburtstagsbrille",
+      "es": "Gafas de cumpleaños",
+      "ar": "نظارات عيد ميلاد",
+      "tr": "Doğum Günü Gözlüğü",
+      "fr": "Lunettes d'anniversaire",
+      "en": "Birthday Glasses",
+      "ru": "Очки именинника",
+      "ba": "Birthday Glasses"
+    },
+    "diamond_count": 199,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/58a9102fda9f45a7809b5370f578d472.png~tplv-obj.webp",
+    "slug": "birthday-glasses",
+    "duration": 3000
+  },
+  {
+    "id": 9622,
+    "names": {
+      "id": "Tepuk Tangan",
+      "pt": "Aplausos",
+      "de": "Applaus",
+      "es": "Aplauso",
+      "ar": "تصفيق",
+      "tr": "Alkış",
+      "fr": "Applaudissements",
+      "en": "Applause",
+      "ru": "Аплодисменты",
+      "ba": "Applause"
+    },
+    "diamond_count": 9,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/161fe1d8b5f0f0e132c9042a5d2ab931.png~tplv-obj.webp",
+    "slug": "applause",
+    "duration": 1000
+  },
+  {
+    "id": 9623,
+    "names": {
+      "id": "Menjatuhkan Mikrofon",
+      "pt": "Soltar o microfone",
+      "de": "Mic Drop",
+      "es": "Mic Drop",
+      "ar": "إسقاط الميكروفون",
+      "tr": "Mikrofon Bırakma",
+      "fr": "Lâche le micro",
+      "en": "Mic Drop",
+      "ru": "Бросок микрофона",
+      "ba": "Mic Drop"
+    },
+    "diamond_count": 500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/114dd70610045dda68ae32b8b93bf863.png~tplv-obj.webp",
+    "slug": "mic-drop",
+    "duration": 1000
+  },
+  {
+    "id": 9624,
+    "names": {
+      "id": "Mengecek Mikrofon",
+      "pt": "Mic Check",
+      "de": "Mic-Check",
+      "es": "Prueba de micrófono",
+      "ar": "اختبار الميكروفون",
+      "tr": "Ses Kontrol",
+      "fr": "Test micro",
+      "en": "Mic Check",
+      "ru": "Проверка микрофона",
+      "ba": "Mic Check"
+    },
+    "diamond_count": 399,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/e2392a30dcb1eec50d123cb092992a97.png~tplv-obj.webp",
+    "slug": "mic-check",
+    "duration": 3000
+  },
+  {
+    "id": 9717,
+    "names": {
+      "id": "Kotak Airdrop Keberuntungan",
+      "pt": "Caixa da sorte caída do céu",
+      "de": "Lucky Airdrop Box",
+      "es": "Caja de lanzamiento aéreo de la suerte",
+      "ar": "صندوق الإنزال الجوي",
+      "tr": "Şanslı Airdrop Kutusu",
+      "fr": "Boîte de largage chanceuse",
+      "en": "Lucky Airdrop Box",
+      "ru": "Воздушный груз удачи",
+      "ba": "Lucky Airdrop Box"
+    },
+    "diamond_count": 999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/6ae56f08ae3ee57ea2dda0025bfd39d3.png~tplv-obj.webp",
+    "slug": "lucky-airdrop-box",
+    "duration": 1000
+  },
+  {
+    "id": 9758,
+    "names": {
+      "pt": "Berlim",
+      "de": "Berlin",
+      "es": "Berlín",
+      "ar": "برلين",
+      "tr": "Berlin",
+      "fr": "Berlin",
+      "ru": "Берлин",
+      "en": "Berlin",
+      "id": "Berlin",
+      "ba": "Berlin"
+    },
+    "diamond_count": 15000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/5c0ed06ee5ce9d4e0c8ff0c743a6c43a.png~tplv-obj.webp",
+    "slug": "berlin",
+    "duration": 1000
+  },
+  {
+    "id": 9784,
+    "names": {
+      "id": "Sepatu kuda",
+      "pt": "Ferradura",
+      "de": "Hufeisen",
+      "es": "Herradura",
+      "ar": "حدوة حصان",
+      "tr": "At Nalı",
+      "fr": "Fer à cheval",
+      "en": "Horseshoe",
+      "ru": "Подкова",
+      "ba": "Horseshoe"
+    },
+    "diamond_count": 10,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/d8347da168aaed546587ce07c3d07437.png~tplv-obj.webp",
+    "slug": "horseshoe",
+    "duration": 1000
+  },
+  {
+    "id": 9792,
+    "names": {
+      "id": "Manifesting",
+      "pt": "Manifesting",
+      "de": "Manifestieren",
+      "es": "Manifestando",
+      "ar": "Manifesting",
+      "tr": "Manifesting",
+      "fr": "Manifester",
+      "en": "Manifesting",
+      "ru": "Manifesting",
+      "ba": "Manifesting"
+    },
+    "diamond_count": 500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/ca11566ae5a41ec8971cc00b51f78dac.png~tplv-obj.webp",
+    "slug": "manifesting",
+    "duration": 1000
+  },
+  {
+    "id": 9795,
+    "names": {
+      "id": "Masker perawatan diri",
+      "pt": "Máscara de autocuidado",
+      "de": "Self Care-Maske",
+      "es": "Parches de ojos",
+      "ar": "قناع تحت العينين",
+      "tr": "Kişisel bakım maskesi",
+      "fr": "Masque de soin du visage",
+      "en": "Self care mask",
+      "ru": "Патчи под глаза",
+      "ba": "Self care mask"
+    },
+    "diamond_count": 99,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/376ae5c1ca0498a38a366b4847526935.png~tplv-obj.webp",
+    "slug": "self-care-mask",
+    "duration": 3000
+  },
+  {
+    "id": 9818,
+    "names": {
+      "en": "Tennis",
+      "id": "Tenis",
+      "pt": "Tênis",
+      "de": "Tennis",
+      "es": "Tenis",
+      "ar": "تنس",
+      "tr": "Tenis",
+      "fr": "Tennis",
+      "ru": "Теннис",
+      "ba": "Tennis"
+    },
+    "diamond_count": 1,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/09d9b188294ecf9b210c06f4e984a3bd.png~tplv-obj.webp",
+    "slug": "tennis",
+    "duration": 1000
+  },
+  {
+    "id": 9824,
+    "names": {
+      "id": "Gembok Cinta",
+      "pt": "Fechadura do Apaixonado",
+      "de": "Lover’s Lock",
+      "es": "Candado de amor",
+      "ar": "قفل الحب",
+      "tr": "Aşk Kilidi",
+      "fr": "Cadenas d'amoureux",
+      "en": "Lover’s Lock",
+      "ru": "Замок любви",
+      "ba": "Lover’s Lock"
+    },
+    "diamond_count": 1500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/f3010d1fcb008ce1b17248e5ea18b178.png~tplv-obj.webp",
+    "slug": "lover’s-lock",
+    "duration": 1000
+  },
+  {
+    "id": 9825,
+    "names": {
+      "id": "Irama Ajaib",
+      "pt": "Ritmo Mágico",
+      "de": "Magic Rhythm",
+      "es": "Ritmo mágico",
+      "ar": "إيقاع سحري",
+      "tr": "Büyülü Ritim",
+      "fr": "Magic Rhythm",
+      "en": "Magic Rhythm",
+      "ru": "Волшебный ритм",
+      "ba": "Magic Rhythm"
+    },
+    "diamond_count": 399,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/00f1882035fcf9407e4b1955f0b4c48b.png~tplv-obj.webp",
+    "slug": "magic-rhythm",
+    "duration": 1000
+  },
+  {
+    "id": 9834,
+    "names": {
+      "pt": "Tênis",
+      "de": "Turnschuhe",
+      "es": "Zapatillas de deporte",
+      "ar": "أحذية رياضية",
+      "tr": "Spor Ayakkabı",
+      "fr": "Baskets",
+      "ru": "Кроссовки",
+      "en": "Tennis",
+      "id": "Tennis",
+      "ba": "Tennis"
+    },
+    "diamond_count": 10,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/3c1738fb0207018403a44fa037482966.png~tplv-obj.webp",
+    "slug": "tennis",
+    "duration": 1000
+  },
+  {
+    "id": 9908,
+    "names": {
+      "id": "Kenangan Manis",
+      "pt": "Doces lembranças",
+      "de": "Süße Erinnerungen",
+      "es": "Dulces recuerdos",
+      "ar": "ألبوم الذكريات السعيدة",
+      "tr": "Tatlı Anılar",
+      "fr": "Doux souvenirs",
+      "en": "Sweet Memories",
+      "ru": "Теплые воспоминания",
+      "ba": "Sweet Memories"
+    },
+    "diamond_count": 500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/69d88771aca90ce72b29c5ae6c4acb96.png~tplv-obj.webp",
+    "slug": "sweet-memories",
+    "duration": 1000
+  },
+  {
+    "id": 9909,
+    "names": {
+      "id": "Kartu Ucapan",
+      "pt": "Cartão de saudação",
+      "de": "Grußkarte",
+      "es": "Tarjeta de felicitación",
+      "ar": "بطاقة معايدة",
+      "tr": "Tebrik Kartı",
+      "fr": "Carte de vœux",
+      "en": "Greeting Card",
+      "ru": "Открытка тепла",
+      "ba": "Greeting Card"
+    },
+    "diamond_count": 1500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/dac91f95d4135654fe16d09369dd8355.png~tplv-obj.webp",
+    "slug": "greeting-card",
+    "duration": 1000
+  },
+  {
+    "id": 9910,
+    "names": {
+      "id": "Leon dan Lili",
+      "pt": "Leon e Lili",
+      "de": "Leon und Lili",
+      "es": "Leoncito y Lili",
+      "ar": "ليون وليلي",
+      "tr": "Leon ve Lili",
+      "fr": "Léon et Lili",
+      "en": "Leon and Lili",
+      "ru": "Леон и Лили",
+      "ba": "Leon and Lili"
+    },
+    "diamond_count": 9699,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/754523704c19da77b7b56fdec738f667.png~tplv-obj.webp",
+    "slug": "leon-and-lili",
+    "duration": 1000
+  },
+  {
+    "id": 9911,
+    "names": {
+      "id": "Kereta Mawar",
+      "pt": "Carruagem rosa",
+      "de": "Rosenkutsche",
+      "es": "Carruaje de rosas",
+      "ar": "عربة زهرية",
+      "tr": "Güllü Araba",
+      "fr": "Calèche à roses",
+      "en": "Rose Carriage",
+      "ru": "Карета с розами",
+      "ba": "Rose Carriage"
+    },
+    "diamond_count": 25000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/2e13179384e1eb5498a417854820c1b9.png~tplv-obj.webp",
+    "slug": "rose-carriage",
+    "duration": 1000
+  },
+  {
+    "id": 9912,
+    "names": {
+      "id": "Kartu Impian",
+      "pt": "Cartão sonhador",
+      "de": "Traumhafte Karte",
+      "es": "Tarjeta de ensueño",
+      "ar": "بطاقة ملاطفة",
+      "tr": "Hayal Kartı",
+      "fr": "Carte de rêve",
+      "en": "Dreamy Card",
+      "ru": "Открытка мечты",
+      "ba": "Dreamy Card"
+    },
+    "diamond_count": 1500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/9beb357cab0af8af57f13d26a998dc36.png~tplv-obj.webp",
+    "slug": "dreamy-card",
+    "duration": 1000
+  },
+  {
+    "id": 9913,
+    "names": {
+      "id": "Petualangan Gurun",
+      "pt": "Aventura no Deserto",
+      "de": "Wüstenabenteuer",
+      "es": "Aventura por el desierto",
+      "ar": "مغامرة صحراوية",
+      "tr": "Çöl Macerası",
+      "fr": "Aventure dans le désert",
+      "en": "Desert Adventure",
+      "ru": "Приключение в пустыне",
+      "ba": "Desert Adventure"
+    },
+    "diamond_count": 9699,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/bae185986955915e6581a9e974036287.png~tplv-obj.webp",
+    "slug": "desert-adventure",
+    "duration": 1000
+  },
+  {
+    "id": 9914,
+    "names": {
+      "id": "Wisata Malam Penuh Bintang",
+      "pt": "Turismo sob a noite estrelada",
+      "de": "Sternennacht-Tourismus",
+      "es": "Turismo en una noche estrellada",
+      "ar": "التنزه أسفل النجوم",
+      "tr": "Yıldızlı Gece Turizmi",
+      "fr": "Tourisme sous les étoiles",
+      "en": "Starry Night Tourism",
+      "ru": "Путешествие звездной ночью",
+      "ba": "Starry Night Tourism"
+    },
+    "diamond_count": 25000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/523adac3d909f9c62242a40c4a186922.png~tplv-obj.webp",
+    "slug": "starry-night-tourism",
+    "duration": 1000
+  },
+  {
+    "id": 9933,
+    "names": {
+      "id": "Adu kepalan tangan",
+      "pt": "Toque aqui",
+      "de": "Fistbump",
+      "es": "Choque de puños",
+      "ar": "مصافحة بقبضة اليد",
+      "tr": "Yumruk Tokuşturma",
+      "fr": "Poing contre poing",
+      "en": "Fist bump",
+      "ru": "Кулачки",
+      "ba": "Fist bump"
+    },
+    "diamond_count": 90,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/608e8d4f63da39e41f5198459d6274f7.png~tplv-obj.webp",
+    "slug": "fist-bump",
+    "duration": 1000
+  },
+  {
+    "id": 9947,
+    "names": {
+      "id": "Kalung Persahabatan",
+      "pt": "Colar da amizade",
+      "de": "Freundschaftshalsband",
+      "es": "Collar de amistad",
+      "ar": "عقد الصداقة",
+      "tr": "Dostluk Kolyesi",
+      "fr": "Collier d'amitié",
+      "en": "Friendship Necklace",
+      "ru": "Кулон дружбы",
+      "ba": "Friendship Necklace"
+    },
+    "diamond_count": 10,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/e033c3f28632e233bebac1668ff66a2f.png~tplv-obj.webp",
+    "slug": "friendship-necklace",
+    "duration": 1000
+  },
+  {
+    "id": 9948,
+    "names": {
+      "id": "Anda Luar Biasa",
+      "pt": "Você é demais",
+      "de": "Du bist fantastisch",
+      "es": "Molas un montón",
+      "ar": "أنت مدهش",
+      "tr": "Harikasın",
+      "fr": "Tu es incroyable",
+      "en": "You’re Amazing",
+      "ru": "Восхищаюсь",
+      "ba": "You’re Amazing"
+    },
+    "diamond_count": 500,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/b48c69f4df49c28391bcc069bbc31b41.png~tplv-obj.webp",
+    "slug": "you’re-amazing",
+    "duration": 1000
+  },
+  {
+    "id": 9949,
+    "names": {
+      "id": "Bersepeda Motor Bersama",
+      "pt": "Passeio de moto",
+      "de": "Gemeinsam Motorrad fahren",
+      "es": "Viaje en moto",
+      "ar": "ركوب الدراجات معًا",
+      "tr": "Birlikte Motosiklet",
+      "fr": "Moto entre amis",
+      "en": "Motorcycle Together",
+      "ru": "Вместе на мотоциклах",
+      "ba": "Motorcycle Together"
+    },
+    "diamond_count": 5000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/27f1d258fe26da50b7dd9125558ddd87.png~tplv-obj.webp",
+    "slug": "motorcycle-together",
+    "duration": 1000
+  },
+  {
+    "id": 9950,
+    "names": {
+      "id": "Lihat! Hujan Meteor!",
+      "pt": "Veja! Chuva de meteoro",
+      "de": "Schau! Ein Meteoritenschauer",
+      "es": "¡Mira! Lluvia de meteoritos",
+      "ar": "إنها شُهُب متساقطة",
+      "tr": "Bak! Meteor Yağmuru",
+      "fr": "Regarde ! Une pluie de météorites",
+      "en": "Look! Meteor Shower",
+      "ru": "Смотрите! Метеорный дождь",
+      "ba": "Look! Meteor Shower"
+    },
+    "diamond_count": 15000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/bebbeaf482b8602b0a2b8c2f7b161022.png~tplv-obj.webp",
+    "slug": "look!-meteor-shower",
+    "duration": 1000
+  },
+  {
+    "id": 10034,
+    "names": {
+      "id": "Mengirim keberuntungan",
+      "pt": "Enviando sorte",
+      "de": "Glück senden",
+      "es": "Mucha suerte",
+      "ar": "نشر الحظ",
+      "tr": "Bol şans",
+      "fr": "De la chance pour toi",
+      "en": "Sending luck",
+      "ru": "Желаю удачи",
+      "ba": "Sending luck"
+    },
+    "diamond_count": 399,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/f24ce09e3ff65dd4380144dc090a1bdd.png~tplv-obj.webp",
+    "slug": "sending-luck",
+    "duration": 1000
+  },
+  {
+    "id": 10092,
+    "names": {
+      "pt": "FrankStático",
+      "de": "FrankTastisch",
+      "es": "FrankTástico",
+      "ar": "السجق الأنيق",
+      "tr": "Müthiş Frank",
+      "fr": "FrankTastique",
+      "ru": "Невероятный Фрэнк",
+      "en": "FrankStatic",
+      "id": "FrankStatic",
+      "ba": "FrankStatic"
+    },
+    "diamond_count": 299,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/cebf6afc02fb579e4f811205ad120734.png~tplv-obj.webp",
+    "slug": "frankstatic",
+    "duration": 1000
+  },
+  {
+    "id": 10093,
+    "names": {
+      "pt": "Wurstie Olho Grande",
+      "de": "Niedlicher Wurstie",
+      "es": "Salchicha ojona",
+      "ar": "السجق اللطيف اللذيذ",
+      "tr": "Kocaman Gözlü Sosis",
+      "fr": "Wide Eye Wurstie",
+      "ru": "Глазастая сосиска",
+      "en": "Cute Sausage",
+      "id": "Cute Sausage",
+      "ba": "Cute Sausage"
+    },
+    "diamond_count": 5,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/0d0055dd2117dac25fbfb850be5e6993.png~tplv-obj.webp",
+    "slug": "cute-sausage",
+    "duration": 1000
+  },
+  {
+    "id": 10175,
+    "names": {
+      "id": "Hari Jadi Ke-1",
+      "pt": "1o. aniversário",
+      "de": "1. Jahrestag",
+      "es": "1.er aniversario",
+      "ar": "الذكرى السنوية الأولى",
+      "tr": "1. Yıl Dönümü",
+      "fr": "Premier anniversaire",
+      "en": "1st Anniversary",
+      "ru": "1-я годовщина",
+      "ba": "1st Anniversary"
+    },
+    "diamond_count": 5000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/bad3b06c71f3f1023eeb505ece267f12.png~tplv-obj.webp",
+    "slug": "1st-anniversary",
+    "duration": 1000
+  },
+  {
+    "id": 10176,
+    "names": {
+      "id": "Hari Jadi Ke-2",
+      "pt": "2o. aniversário",
+      "de": "2. Jahrestag",
+      "es": "2.º aniversario",
+      "ar": "الذكرى السنوية الثانية",
+      "tr": "2. Yıl Dönümü",
+      "fr": "Deuxième anniversaire",
+      "en": "2nd Anniversary",
+      "ru": "2-я годовщина",
+      "ba": "2nd Anniversary"
+    },
+    "diamond_count": 7000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/e0add774b1f3d9a77acbd80eba782937.png~tplv-obj.webp",
+    "slug": "2nd-anniversary",
+    "duration": 1000
+  },
+  {
+    "id": 10177,
+    "names": {
+      "id": "Hari Jadi Ke-3",
+      "pt": "3o. aniversário",
+      "de": "3. Jahrestag",
+      "es": "3.er aniversario",
+      "ar": "الذكرى السنوية الثالثة",
+      "tr": "3. Yıl Dönümü",
+      "fr": "Troisième anniversaire",
+      "en": "3rd Anniversary",
+      "ru": "3-я годовщина",
+      "ba": "3rd Anniversary"
+    },
+    "diamond_count": 12000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/fd0a0d3030028dd1e30f427a0d8259da.png~tplv-obj.webp",
+    "slug": "3rd-anniversary",
+    "duration": 1000
+  },
+  {
+    "id": 10230,
+    "names": {
+      "en": "Creator of the week",
+      "pt": "Creator of the week",
+      "de": "Creator*in der Woche",
+      "es": "Creator of the week",
+      "ar": "Creator of the week",
+      "tr": "Creator of the week",
+      "fr": "Creator of the week",
+      "ru": "Creator of the week",
+      "id": "Creator of the week",
+      "ba": "Creator of the week"
+    },
+    "diamond_count": 7000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/ec5a9adf86d1e81f2eb26777ea100019.png~tplv-obj.webp",
+    "slug": "creator-of-the-week",
+    "duration": 1000
+  },
+  {
+    "id": 10250,
+    "names": {
+      "en": "Sweetopia",
+      "id": "Sweetopia",
+      "pt": "Mundo doce",
+      "de": "Sweetopia",
+      "es": "Dulcetopia",
+      "ar": "عالم السعادة",
+      "tr": "Tatlıyopya",
+      "fr": "Sweetopia",
+      "ru": "Сладкая идиллия",
+      "ba": "Sweetopia"
+    },
+    "diamond_count": 15000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/4a4c640d75758babcd88742ffba6d869.png~tplv-obj.webp",
+    "slug": "sweetopia",
+    "duration": 1000
+  },
+  {
+    "id": 10282,
+    "names": {
+      "pt": "Beijo",
+      "de": "Kuss",
+      "es": "Beso",
+      "ar": "قبلة",
+      "tr": "Öpücük",
+      "fr": "Embrasser",
+      "ru": "Поцелуй",
+      "en": "Kiss",
+      "id": "Kiss",
+      "ba": "Kiss"
+    },
+    "diamond_count": 150,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/70529cd75b4d64587658c462c45dc238.png~tplv-obj.webp",
+    "slug": "kiss",
+    "duration": 1000
+  },
+  {
+    "id": 10283,
+    "names": {
+      "pt": "Anel de diamante de amor",
+      "de": "Diamantring der Liebe",
+      "es": "Anillo de diamantes de amor",
+      "ar": "خاتم الحب الماسي",
+      "tr": "Pırlanta Aşk Yüzüğü",
+      "fr": "Bague avec diamant d'amour",
+      "ru": "Помолвочное кольцо",
+      "en": "Love Diamond Ring",
+      "id": "Love Diamond Ring",
+      "ba": "Love Diamond Ring"
+    },
+    "diamond_count": 300,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/d623197cd4a72db871b3755b4ed6894c.png~tplv-obj.webp",
+    "slug": "love-diamond-ring",
+    "duration": 1000
+  },
+  {
+    "id": 10300,
+    "names": {
+      "pt": "Borboleta",
+      "de": "Schmetterling",
+      "es": "Mariposa",
+      "ar": "فراشة",
+      "tr": "Kelebek",
+      "fr": "Papillon",
+      "ru": "Бабочка",
+      "en": "Butterfly",
+      "id": "Butterfly",
+      "ba": "Butterfly"
+    },
+    "diamond_count": 88,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/b066a6dfb1540ae0157965fb9462d0e6.png~tplv-obj.webp",
+    "slug": "butterfly",
+    "duration": 1000
+  },
+  {
+    "id": 10395,
+    "names": {
+      "id": "Headset Game",
+      "pt": "Headset gamer",
+      "de": "Gaming-Headset",
+      "es": "Auriculares para jugar",
+      "ar": "سماعة رأس الألعاب",
+      "tr": "Oyun Kulaklığı",
+      "fr": "Casque de gaming",
+      "en": "Gaming Headset",
+      "ru": "Игровая гарнитура",
+      "ba": "Gaming Headset"
+    },
+    "diamond_count": 399,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/628788896d0a7c7de90e5bf4888f84f4.png~tplv-obj.webp",
+    "slug": "gaming-headset",
+    "duration": 3000
+  },
+  {
+    "id": 10396,
+    "names": {
+      "id": "Keyboard Game",
+      "pt": "Teclado gamer",
+      "de": "Gaming-Tastatur",
+      "es": "Teclado para jugar",
+      "ar": "لوحة مفاتيح الألعاب",
+      "tr": "Oyun Klavyesi",
+      "fr": "Clavier de gaming",
+      "en": "Gaming Keyboard",
+      "ru": "Игровая клавиатура",
+      "ba": "Gaming Keyboard"
+    },
+    "diamond_count": 4000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/085c46d6d7519b5f2de40216126456ef.png~tplv-obj.webp",
+    "slug": "gaming-keyboard",
+    "duration": 1000
+  },
+  {
+    "id": 10398,
+    "names": {
+      "id": "Spark",
+      "pt": "Spark",
+      "de": "Spark",
+      "es": "Spark",
+      "ar": "Spark",
+      "tr": "Spark",
+      "fr": "Spark",
+      "en": "Spark",
+      "ru": "Spark",
+      "ba": "Spark"
+    },
+    "diamond_count": 20000,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/d0d3789b857be852d587532b6949a81d.png~tplv-obj.webp",
+    "slug": "spark",
+    "duration": 1000
+  },
+  {
+    "id": 10406,
+    "names": {
+      "id": "Waktu minum kopi",
+      "pt": "Hora do café",
+      "de": "Kaffeepause",
+      "es": "Hora del café",
+      "ar": "وقت القهوة",
+      "tr": "Kahve zamanı",
+      "fr": "Pause Café",
+      "en": "Coffee time",
+      "ru": "Перерыв на кофе",
+      "ba": "Coffee time"
+    },
+    "diamond_count": 15,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/f4bfff279cb846318afcf7201c4407c1.png~tplv-obj.webp",
+    "slug": "coffee-time",
+    "duration": 1000
+  },
+  {
+    "id": 10407,
+    "names": {
+      "id": "Awas",
+      "pt": "Tome cuidado",
+      "de": "Achtung!",
+      "es": "Atención",
+      "ar": "شاهد",
+      "tr": "Dikkat et",
+      "fr": "Attention !",
+      "en": "Watch out",
+      "ru": "Осторожность",
+      "ba": "Watch out"
+    },
+    "diamond_count": 1800,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/d80eedff9321f5acabafbc885918139e.png~tplv-obj.webp",
+    "slug": "watch-out",
+    "duration": 1000
+  },
+  {
+    "id": 10408,
+    "names": {
+      "id": "Kentang di Paris",
+      "pt": "Batata em Paris",
+      "de": "Kartoffel in Paris",
+      "es": "Patata en Paris",
+      "ar": "البطاطس في باريس",
+      "tr": "Paris'te patates",
+      "fr": "Patate à Paris",
+      "en": "Potato in Paris",
+      "ru": "Картошка в Париже",
+      "ba": "Potato in Paris"
+    },
+    "diamond_count": 199,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/0ac3b58039881ac97bd79423121f0d27.png~tplv-obj.webp",
+    "slug": "potato-in-paris",
+    "duration": 1000
+  },
+  {
+    "id": 10464,
+    "names": {
+      "pt": "Carro esportivo dourado",
+      "de": "Goldener Sportwagen",
+      "es": "Auto deportivo de oro",
+      "ar": "عربية رياضية ذهبية",
+      "tr": "Altın spor araba",
+      "fr": "Voiture de sport en or",
+      "ru": "Спорткар",
+      "en": "Golden Sports Car",
+      "id": "Golden Sports Car",
+      "ba": "Golden Sports Car"
+    },
+    "diamond_count": 29999,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/4caa9de208d634c1fab77754fe16530c.png~tplv-obj.webp",
+    "slug": "golden-sports-car",
+    "duration": 1000
+  },
+  {
+    "id": 10465,
+    "names": {
+      "pt": "Motocicleta",
+      "de": "Motorrad",
+      "es": "Moto",
+      "ar": "دراجة بخارية",
+      "tr": "Motorsiklet",
+      "fr": "Moto",
+      "ru": "Мотоцикл",
+      "en": "Motorcycle",
+      "id": "Sepeda Motor",
+      "ba": "Motorcycle"
+    },
+    "diamond_count": 2988,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/6517b8f2f76dc75ff0f4f73107f8780e~tplv-obj.webp",
+    "slug": "motorcycle",
+    "duration": 1000
+  },
+  {
+    "id": 10521,
+    "names": {
+      "id": "Cherry Blossom Bunny",
+      "en": "Cherry Blossom Bunny",
+      "pt": "Cherry Blossom Bunny",
+      "de": "Cherry Blossom Bunny",
+      "es": "Cherry Blossom Bunny",
+      "ar": "Cherry Blossom Bunny",
+      "tr": "Cherry Blossom Bunny",
+      "fr": "Cherry Blossom Bunny",
+      "ru": "Cherry Blossom Bunny",
+      "ba": "Cherry Blossom Bunny"
+    },
+    "diamond_count": 10,
+    "image_url": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/resource/258d58fa8a5c9d9b1b75122f467a4d28.png~tplv-obj.webp",
+    "slug": "cherry-blossom-bunny",
+    "duration": 1000
+  }
+]

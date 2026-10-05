@@ -1,0 +1,39 @@
+name: Check
+
+# Disabled: workflows do not run under this account; uncomment if you fork this repository.
+#
+#  push:
+#    branches: [main]
+#  pull_request:
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Shell
+        run: shellcheck tools/*.sh
+
+      - name: The spec parses, and is normalised
+        run: |
+          jq empty spec/openapi.json
+          # fetch-spec.sh writes with --sort-keys; if the committed file is not in that form, the
+          # next refresh produces a diff of the whole document and hides the real change.
+          diff <(jq --sort-keys . spec/openapi.json) spec/openapi.json \
+            || { echo '::error::spec/openapi.json is not key-sorted — re-run tools/fetch-spec.sh'; exit 1; }
+
+      - name: Gift tables
+        run: |
+          python3 tools/check_gifts.py data/tiktok_gifts.json
+          python3 tools/check_gifts.py data/tiktok_gifts_coinvertify.json
+
+      - name: Tools compile
+        run: python3 -m compileall -q tools/
