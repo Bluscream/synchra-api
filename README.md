@@ -75,6 +75,7 @@ Two properties worth knowing:
 
 | | |
 | :--- | :--- |
+| [synchra-ts](https://github.com/Bluscream/synchra-ts) | TypeScript, generated from this spec — 241 operations, zero runtime dependencies |
 | [synchra-php](https://github.com/Bluscream/synchra-php) | PHP, generated from this spec |
 | [synchra.py](https://github.com/Bluscream/synchra.py) | Python, async (`aiohttp` + `pydantic` v2) |
 | [synchra.cli](https://github.com/Bluscream/synchra.cli) | terminal client, on top of synchra.py |

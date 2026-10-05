@@ -44,7 +44,14 @@ constructors of **290** models — a breaking change for any caller constructing
 The unsorted order is the server's own declaration order, which is at least meaningful. But it is not
 *promised*, so an upstream reorder can do all of that on its own, silently, on an ordinary refresh.
 If you generate code, pin the ordering in your **generator** (sort properties yourself, required
-first) rather than relying on the document's. Use `tools/diff-spec.sh` to see what changed; it
+first) rather than relying on the document's.
+
+[`synchra-ts`](https://github.com/Bluscream/synchra-ts) does exactly that and is therefore free to
+sort: an inline enum becomes an inline literal union with no name, every method takes one options
+object rather than positional arguments, and the emitters sort what they write. Its
+`test/generator.test.ts` generates the whole tree from a key-sorted and a key-reversed copy of this
+document and asserts the output is byte-identical — which is the only way to know the property holds
+rather than assuming it. Use `tools/diff-spec.sh` to see what changed; it
 compares sets, so it is key-order independent either way.
 
 A smaller trap in the same area: `60.0` and `100` both appear as bounds, and a decode/encode
