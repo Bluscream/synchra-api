@@ -1,0 +1,155 @@
+{
+  "$comment": [
+    "What the API description would say if we could write it. Applied to spec/openapi.json by",
+    "tools/annotate-spec.py, which writes spec/openapi.annotated.json.",
+    "",
+    "Every target is checked to exist before anything is written, so a target that goes stale fails",
+    "the run. That is deliberate: after a refresh, a failure here is the first sign that something",
+    "the notes depend on was renamed or removed.",
+    "",
+    "Text is Markdown and ends up in a generated client's docblocks, so keep it to what a caller",
+    "needs at the call site. Cross-cutting facts about the document and the tooling stay in",
+    "docs/CAVEATS.md; they have no operation or schema to hang on."
+  ],
+
+  "info": [
+    "**Notes below this line are not from Synchra.** They were added by",
+    "https://github.com/Bluscream/synchra-api, which also carries the per-endpoint notes, the",
+    "TikTok gift tables, and the caveats that have no endpoint to hang on.",
+    "",
+    "**There is no token endpoint.** `components.securitySchemes` declares OAuth2 with an empty",
+    "`flows` object, and there is no authorize or token URL anywhere in the API. Tokens are issued",
+    "from the dashboard by hand. In particular `POST /api/2/auth/token` does not exist and answers",
+    "404, so a refresh-grant flow cannot be built; resolve the token from outside the process.",
+    "",
+    "**Scopes and access are separate.** A token carries a fixed scope set, and whether it may act",
+    "on a given channel is granted per channel. A 403 therefore does not necessarily mean a missing",
+    "scope — see `GET /api/2/channels/{channel_id}/activities`.",
+    "",
+    "**Two other credential types exist** and appear in no security scheme: channel ingest API keys,",
+    "passed as an ordinary parameter, and the widget `x-kv-token` header.",
+    "",
+    "**Do not retry POST or PATCH automatically.** The API rate-limits with 429 and sends",
+    "`Retry-After`, but offers no idempotency key, so a retried POST that had already succeeded",
+    "sends the message twice. GET, HEAD, OPTIONS, PUT and DELETE are safe to retry.",
+    "",
+    "**A large part of the API is public.** Anything marked _public_ in these notes answers without",
+    "a token; everything else answers 401 without one."
+  ],
+
+  "operations": {
+    "GET /api/2/channels/{channel_id}/activities": [
+      "**A 403 here usually means the token is not granted on this channel, not that a scope is",
+      "missing.** Holding `channel_activity:read` is necessary and not sufficient: per-channel access",
+      "is granted separately, in the dashboard. A token minted by one account for another account's",
+      "channel reads chat happily and refuses this.",
+      "",
+      "Needs a token. Note that a gift, sub or raid does **not** arrive here — those come through",
+      "`GET /api/2/channels/{channel_id}/chat-messages` as notices."
+    ],
+
+    "GET /api/2/channels/{channel_id}/chat-messages": [
+      "**Public** — no token required.",
+      "",
+      "Carries gifts, subs and raids as well as chat, as *notices*. A notice leaves `message_parts`",
+      "empty and puts its content in `notice_message_parts` instead, so a reader that looks only at",
+      "`message_parts` renders every gift as a blank row. See the `ChatMessage` schema.",
+      "",
+      "A TikTok gift identifies itself with `type: notice`, `sub_type: tiktok_gift`. To turn a gift",
+      "into a price or a localised name, see the tables in",
+      "https://github.com/Bluscream/synchra-api/tree/main/data — the API offers no lookup for them."
+    ],
+
+    "GET /api/2/channels/{channel_id}/chat-events": [
+      "**Public** — no token required."
+    ],
+
+    "GET /api/2/channels/{channel_id}/random-chat-messages": [
+      "**Public** — no token required."
+    ],
+
+    "GET /api/2/channels/{channel_id}/providers": [
+      "**Public** — no token required. With `provider-streams`, this is enough to build a live-status",
+      "page with no credentials at all."
+    ],
+
+    "GET /api/2/channels/{channel_id}/viewers/{provider}/{provider_viewer_id}/info": [
+      "**The only reliable source of a viewer's picture.** `viewer_profile_picture_url` on a chat",
+      "message is filled for some providers and null for others, so a chat log rendered straight from",
+      "the API shows avatars for some people and blanks for the rest. This endpoint has one for every",
+      "provider.",
+      "",
+      "It is one request per viewer, so do not call it while rendering. Cache per **viewer** rather",
+      "than per message — somebody talking twenty times should cost one lookup — and cache the",
+      "negative answer too, or every refresh retries everyone who has not set a picture.",
+      "",
+      "Needs a token that can read this channel's viewers; without that it answers 403."
+    ],
+
+    "GET /api/2/channels/{channel_id}/provider-streams": [
+      "**Public** — no token required. Carries status, title, `viewer_count`, `peak_viewer_count` and",
+      "`started_at`."
+    ],
+
+    "GET /api/2/widgets/{widget_id}": [
+      "**Public, and the `widget_id` is the capability.** There is no further authorisation on a",
+      "widget: anyone holding the id can read it. Treat one like a secret — do not put it in a page",
+      "that is served to viewers if the widget's contents are not meant for them."
+    ],
+
+    "POST /api/2/chat/messages": [
+      "**Not safe to retry.** No idempotency key is offered, so a retry of a request that had already",
+      "succeeded posts the message a second time. If you wrap this in a retry policy, exclude it."
+    ]
+  },
+
+  "schemas": {
+    "ChatMessage": [
+      "**A notice carries its content somewhere else.** Normally the rendered content is the ordered,",
+      "typed list in `message_parts`. For a notice — a gift, a sub, a raid — `message_parts` is",
+      "**empty** and the content is in `notice_message_parts` instead.",
+      "",
+      "Reading only `message_parts` therefore draws every gift as a blank row, and because gifts",
+      "cluster, a busy stream's chat log appears to go dead. Read whichever list is non-empty.",
+      "",
+      "Deciding whether a notice counts as a \"message\" or an \"event\" in your own UI is worth doing",
+      "deliberately: the API delivers it through `chat-messages`, not through `activities`, so a",
+      "notification filter split along those lines puts gifts on the chat side."
+    ],
+
+    "ChatMessage.viewer_profile_picture_url": [
+      "**Present for some providers, null for others** — filled for TikTok, not for Twitch or",
+      "YouTube. Do not treat an absence as \"this viewer has no picture\"; it usually means Synchra",
+      "did not resolve one. The picture is available from",
+      "`GET /api/2/channels/{channel_id}/viewers/{provider}/{provider_viewer_id}/info`."
+    ],
+
+    "ChatMessage.viewer_name": [
+      "A handle, not a URL — the API carries no link to a viewer's profile, and building one is",
+      "per-provider. YouTube is addressed by channel id (`provider_viewer_id`), everyone else by",
+      "handle, and some providers have no public profile page at all."
+    ],
+
+    "ChatMessagePart": [
+      "Everything needed to render is already here: an `emote` carries its CDN urls at three sizes,",
+      "a `gift` an image url, a `mention` the resolved display name, a `link` its url. No second",
+      "lookup is required. Each part also has a text fallback, so a renderer that ignores images",
+      "still reads correctly."
+    ],
+
+    "ChatMessage.notice_message_parts": [
+      "The content of a notice — a gift, a sub, a raid. When this is non-empty, `message_parts` is",
+      "**empty**, and this is what there is to render."
+    ],
+
+    "Activity.message_parts": [
+      "Unlike `ChatMessage`, an activity has no second `notice_message_parts` list; this is always",
+      "where its content is."
+    ],
+
+    "Activity.viewer_profile_picture_url": [
+      "As on `ChatMessage`: filled for some providers and null for others, so an absence does not",
+      "mean the viewer has no picture."
+    ]
+  }
+}

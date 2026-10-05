@@ -1,0 +1,228 @@
+#!/usr/bin/env python3
+"""Apply overlay/annotations.json to the spec, writing spec/openapi.annotated.json.
+
+    tools/annotate-spec.py                  # spec/openapi.json -> spec/openapi.annotated.json
+    tools/annotate-spec.py --check          # verify the committed annotated file is current
+    tools/annotate-spec.py --targets-only   # just verify every target still exists
+
+The published description has a `description` on exactly one of its 240 operations, and all 240
+summaries are generated from function names. Everything a caller actually needs to know — that a 403
+here means per-channel access, that a notice empties `message_parts` — has nowhere to live in it.
+
+So rather than keeping those facts in prose beside the spec, they are written into it. A generated
+client then carries them in its docblocks, where someone reads them at the call site instead of
+after the bug.
+
+Every target is resolved before anything is written, and a missing one is a hard error. That is the
+point as much as the annotation is: when Synchra renames or removes something a note depends on,
+this fails, and it fails on the next refresh rather than silently annotating nothing.
+
+Targets are written the way a person refers to them — `GET /api/2/…`, `ChatMessage`,
+`ChatMessage.viewer_name` — not as JSON Pointers, because an escaped pointer to
+`/paths/~1api~12~1channels~1{channel_id}~1activities/get` is unreadable and unreviewable.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+BANNER = "> The notes below are not from Synchra. They were added by "
+SOURCE = "https://github.com/Bluscream/synchra-api"
+
+
+def text(value: str | list[str]) -> str:
+    """Overlay prose is written as a list of lines, so it stays reviewable in a diff."""
+    return value if isinstance(value, str) else "\n".join(value)
+
+
+def annotate(existing: str | None, note: str, *, attributed: bool = True) -> str:
+    """Append a note to a description, keeping whatever the service already said."""
+    block = f"{BANNER}{SOURCE}.\n\n{note}" if attributed else note
+
+    if not existing:
+        return block
+
+    return f"{existing.rstrip()}\n\n---\n\n{block}"
+
+
+def resolve_operation(spec: dict, target: str) -> dict:
+    method, _, path = target.partition(" ")
+
+    if not path:
+        raise KeyError(f"operation target {target!r} should look like 'GET /api/2/...'")
+
+    try:
+        operation = spec["paths"][path][method.lower()]
+    except KeyError as missing:
+        raise KeyError(f"no such operation: {target}") from missing
+
+    return operation
+
+
+def resolve_schema(spec: dict, target: str) -> dict:
+    name, _, field = target.partition(".")
+    schemas = spec["components"]["schemas"]
+
+    if name not in schemas:
+        raise KeyError(f"no such schema: {name}")
+
+    if not field:
+        return schemas[name]
+
+    properties = schemas[name].get("properties") or {}
+
+    if field not in properties:
+        raise KeyError(f"schema {name} has no property {field}")
+
+    return properties[field]
+
+
+def apply(spec: dict, overlay: dict) -> list[str]:
+    """Resolve every target first, then write. Nothing is applied if anything is missing."""
+    resolved: list[tuple[str, dict, str, bool]] = []
+    errors: list[str] = []
+
+    for target, note in (overlay.get("operations") or {}).items():
+        try:
+            resolved.append((target, resolve_operation(spec, target), text(note), True))
+        except KeyError as error:
+            errors.append(str(error))
+
+    for target, note in (overlay.get("schemas") or {}).items():
+        try:
+            resolved.append((target, resolve_schema(spec, target), text(note), True))
+        except KeyError as error:
+            errors.append(str(error))
+
+    if errors:
+        raise SystemExit(
+            "the overlay refers to {} thing(s) the description no longer has:\n  {}\n"
+            "Something was renamed or removed upstream — check the note is still true, "
+            "then update overlay/annotations.json.".format(len(errors), "\n  ".join(errors))
+        )
+
+    if overlay.get("info"):
+        spec["info"]["description"] = annotate(
+            spec["info"].get("description"), text(overlay["info"]), attributed=False
+        )
+
+    for _, node, note, attributed in resolved:
+        node["description"] = annotate(node.get("description"), note, attributed=attributed)
+
+    return [target for target, *_ in resolved]
+
+
+def render_docs(overlay: dict) -> str:
+    """Render the overlay as Markdown, so it is readable without opening a 1.3 MB JSON file.
+
+    Generated, not written by hand: the overlay is the one copy of this text. Anything maintained
+    alongside it would drift, and a note that contradicts the one in the docblock is worse than no
+    note at all.
+    """
+    out = [
+        "<!-- Generated by tools/annotate-spec.py from overlay/annotations.json. Do not edit. -->",
+        "",
+        "# Annotations",
+        "",
+        "What the API description would say about each endpoint and field if we could write it.",
+        "These are applied to `spec/openapi.annotated.json`, so a generated client carries them in",
+        "its docblocks; this page is the same text, readable.",
+        "",
+        "Cross-cutting facts — how the document is published, how it drifts, how the gift tables",
+        "behave — are in [CAVEATS.md](CAVEATS.md) instead, because they have no endpoint to hang on.",
+        "",
+    ]
+
+    if overlay.get("info"):
+        out += ["## Across the whole API", "", text(overlay["info"]), ""]
+
+    if overlay.get("operations"):
+        out += ["## Operations", ""]
+
+        for target, note in overlay["operations"].items():
+            out += [f"### `{target}`", "", text(note), ""]
+
+    if overlay.get("schemas"):
+        out += ["## Schemas and fields", ""]
+
+        for target, note in overlay["schemas"].items():
+            out += [f"### `{target}`", "", text(note), ""]
+
+    return "\n".join(out).rstrip() + "\n"
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--spec", type=Path, default=ROOT / "spec/openapi.json")
+    parser.add_argument("--overlay", type=Path, default=ROOT / "overlay/annotations.json")
+    parser.add_argument("--output", type=Path, default=ROOT / "spec/openapi.annotated.json")
+    parser.add_argument(
+        "--check",
+        action="store_true",
+        help="fail if the output file is not what this would write (for CI)",
+    )
+    parser.add_argument(
+        "--targets-only",
+        action="store_true",
+        help="only verify that every target still exists; write nothing",
+    )
+    parser.add_argument(
+        "--docs",
+        type=Path,
+        help="also render the notes as Markdown (docs/ANNOTATIONS.md), for reading on the web",
+    )
+    args = parser.parse_args()
+
+    spec = json.loads(args.spec.read_text(encoding="utf-8"))
+    overlay = json.loads(args.overlay.read_text(encoding="utf-8"))
+
+    applied = apply(spec, overlay)
+
+    # Key order is inherited from the input, never imposed. json.loads preserves it, and this must
+    # not re-sort: a client that generates code from this file takes class names and constructor
+    # parameter order from key order, so reordering here would silently reshape its public API. The
+    # input in this repository is already sorted, so the output is too. See docs/CAVEATS.md §1.
+    rendered = json.dumps(spec, indent=2, ensure_ascii=False) + "\n"
+
+    if args.targets_only:
+        print(f"all {len(applied)} overlay targets resolve")
+
+        return 0
+
+    if args.check:
+        if not args.output.exists():
+            print(f"{args.output} does not exist — run tools/annotate-spec.py", file=sys.stderr)
+
+            return 1
+
+        if args.output.read_text(encoding="utf-8") != rendered:
+            print(
+                f"{args.output} is stale — run tools/annotate-spec.py and commit the result",
+                file=sys.stderr,
+            )
+
+            return 1
+
+        print(f"{args.output} is current ({len(applied)} annotations)")
+
+        return 0
+
+    args.output.write_text(rendered, encoding="utf-8")
+    print(f"{len(applied)} annotations -> {args.output}")
+
+    for target in applied:
+        print(f"  {target}")
+
+    if args.docs:
+        args.docs.write_text(render_docs(overlay), encoding="utf-8")
+        print(f"rendered -> {args.docs}")
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

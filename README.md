@@ -9,14 +9,50 @@ diff, plus the findings that the description itself does not carry.
 
 | | |
 | :--- | :--- |
-| `spec/openapi.json` | OpenAPI 3.1.0 — **172 paths, 465 schemas**, API version 2.0 |
+| `spec/openapi.json` | OpenAPI 3.1.0 — **172 paths, 465 schemas**, API version 2.0, as published |
+| **`spec/openapi.annotated.json`** | **the same document with what it leaves unsaid written into it** |
 | `spec/websocket.md` | the WebSocket reference, from `/api/2/ws-docs` |
+| `overlay/annotations.json` | the notes, and the only copy of them |
 | `data/tiktok_gifts.json` | 289 TikTok gifts: id, slug, price in diamonds, image, names in up to 10 locales |
 | `data/tiktok_gifts_coinvertify.json` | the localised-names source, kept separate so a re-scrape is reviewable |
-| **[`docs/CAVEATS.md`](docs/CAVEATS.md)** | **15 things the description does not tell you** |
+| [`docs/ANNOTATIONS.md`](docs/ANNOTATIONS.md) | the notes, rendered (generated — do not edit) |
+| [`docs/CAVEATS.md`](docs/CAVEATS.md) | what has no endpoint to hang on: how the document is published, and how it drifts |
 
-Read `docs/CAVEATS.md` before writing a client. It is the actual value here — the spec you can fetch
-yourself in one `curl`.
+## Why an annotated spec
+
+The published description has a `description` on **1 of its 240 operations**, and all 240 `summary`
+fields are generated from function names — `"Get Activities"`. So there is nowhere in it for the
+things that actually cost you an afternoon:
+
+- a **403** on `/activities` usually means the token is not granted on *that channel*, not that a
+  scope is missing;
+- a **notice** — a gift, a sub, a raid — leaves `message_parts` **empty** and puts its content in
+  `notice_message_parts`, so a reader that knows only the first field renders every gift as a blank
+  row;
+- `POST /api/2/auth/token` **does not exist**, so the OAuth2 refresh flow the empty
+  `securitySchemes.flows` implies cannot be built.
+
+Keeping those in prose next to the spec means nobody reads them at the moment they matter. So they
+are written *into* the document instead:
+
+```bash
+tools/annotate-spec.py --docs docs/ANNOTATIONS.md    # overlay -> spec/openapi.annotated.json
+tools/annotate-spec.py --check                       # is the committed annotated file current?
+tools/annotate-spec.py --targets-only                # do all the notes still point at something?
+```
+
+Generate your client from `spec/openapi.annotated.json` and the notes land in its docblocks, where
+they are read at the call site rather than after the bug. `synchra-php` does this — its
+`tools/fetch-spec.sh` pulls `overlay/annotations.json` from here and applies it with
+`tools/annotate.jq` while fetching.
+
+Two properties worth knowing:
+
+- **A stale note is a hard error.** Every target is resolved before anything is written, so when
+  Synchra renames or removes something a note depends on, the run fails and names it. That makes the
+  overlay a drift detector as well as documentation — it caught a wrong target on its first run.
+- **Key order is never changed**, by either tool. A generator takes class names and constructor
+  parameter order from it; see [caveat 1](docs/CAVEATS.md#1-the-description-is-published-only-by-the-running-service).
 
 ## Clients
 
@@ -68,7 +104,7 @@ hence these tables. They are plain JSON arrays:
 ```
 
 Key them by **`id`**. The same gift is reissued under new ids — sometimes at a different price — so
-neither the name nor the slug is unique ([caveat 12](docs/CAVEATS.md#12-the-same-gift-exists-under-several-ids)).
+neither the name nor the slug is unique ([caveat 5](docs/CAVEATS.md#5-the-same-gift-exists-under-several-ids)).
 
 ```bash
 pip install -r tools/requirements.txt
