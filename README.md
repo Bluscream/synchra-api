@@ -16,7 +16,7 @@ diff, plus the findings that the description itself does not carry.
 | `data/tiktok_gifts.json` | 289 TikTok gifts: id, slug, price in diamonds, image, names in up to 10 locales |
 | `data/tiktok_gifts_coinvertify.json` | the localised-names source, kept separate so a re-scrape is reviewable |
 | [`docs/ANNOTATIONS.md`](docs/ANNOTATIONS.md) | the notes, rendered (generated — do not edit) |
-| [`docs/CAVEATS.md`](docs/CAVEATS.md) | what has no endpoint to hang on: how the document is published, and how it drifts |
+| [`docs/CAVEATS.md`](docs/CAVEATS.md) | what has no endpoint to hang on: how the document is published, how it drifts, and [where it is incomplete](docs/CAVEATS.md#3-it-is-current-and-it-is-not-complete) |
 
 ## Why an annotated spec
 
@@ -104,7 +104,7 @@ hence these tables. They are plain JSON arrays:
 ```
 
 Key them by **`id`**. The same gift is reissued under new ids — sometimes at a different price — so
-neither the name nor the slug is unique ([caveat 5](docs/CAVEATS.md#5-the-same-gift-exists-under-several-ids)).
+neither the name nor the slug is unique ([caveat 6](docs/CAVEATS.md#6-the-same-gift-exists-under-several-ids)).
 
 ```bash
 pip install -r tools/requirements.txt
@@ -126,7 +126,9 @@ it works as a CI or pre-commit gate.
 
 A refresh is a pull request with the regenerated file and the `diff-spec.sh` output in the
 description — that way the change to the API is reviewable even though the API has no changelog. If
-a refresh teaches you something the description does not say, it belongs in `docs/CAVEATS.md`.
+a refresh teaches you something the description does not say: if it belongs to an endpoint or a
+field, add it to `overlay/annotations.json` and regenerate; if it is about the document or the
+tooling, it goes in `docs/CAVEATS.md`.
 
 ## Provenance and licensing
 

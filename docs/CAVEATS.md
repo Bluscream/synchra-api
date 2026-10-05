@@ -77,7 +77,50 @@ Among the 31 that disappeared, two are worth knowing about specifically:
 - **`register-provider/{tiktok,streamelements}`** and the Kick `connect-url` family. Provider
   linking moved into the dashboard's own flow.
 
-## 3. Unknown enum values happen
+## 3. It is current, and it is not complete
+
+The copy in `spec/` is byte-identical to what the service serves — that part is easy to keep true,
+and `tools/fetch-spec.sh` plus a `git diff` is the whole mechanism. "Complete" is a different claim,
+and it is false in specific, checkable ways.
+
+**No errors are described.** Across all 240 operations the documented responses are only successes
+plus `422` — one operation also documents `413`, and that is the lot:
+
+```
+200: 165    201: 16    202: 1    204: 58    413: 1    422: 240
+```
+
+There is **no `401`, `403`, `404`, `409`, `429` or `5xx` anywhere in the document**, and every one of
+those happens: an anonymous call to a private endpoint answers 401, `/activities` answers 403, the
+service rate-limits with 429 and `Retry-After`. A client generated faithfully from this description
+has no error model at all, which is why `synchra-php` hand-writes its exception mapping instead of
+generating it. Do not read "not documented" as "does not occur".
+
+**Live routes are missing from it.** `GET /health` answers 200 and is not in the document — it *was*
+in the April snapshot, so it was removed from the description and not from the service. `GET
+/api/2/ws` is absent too, though that one is deliberate: the socket is specified in
+`spec/websocket.md` instead.
+
+**Four gateway payloads have no schema.** `KvEventData`, `ChannelGiveawaysEventData`, `QueueEvent`
+and `ActivityAlertWidgetTest` appear only in the WebSocket reference — see §5.
+
+**Authentication is not described.** `securitySchemes` is `{"OAuth2": {"flows": {}}}`, and the two
+other credential types the API accepts — channel ingest API keys and the widget `x-kv-token` header
+— appear in no scheme at all.
+
+**Almost nothing is explained.** One operation of 240 carries a `description`, and that one is the
+entire 61 KB WebSocket reference repeated inside it. Every `summary` is generated from a function
+name. That is what [`overlay/annotations.json`](../overlay/annotations.json) exists to patch.
+
+### How thoroughly this was checked
+
+Honestly: partially. The REST surface was compared against the paths the real dashboard calls, taken
+from two HAR captures, and **every REST path in them is in the document** — so there is no evidence
+of a hidden route behind the dashboard. But those captures cover the chat, activity and channel
+views only, not settings, giveaways, commands or the admin pages. A route used only by a page nobody
+captured would not show up. The absence of evidence here is thin evidence of absence.
+
+## 4. Unknown enum values happen
 
 The description models some fields as a union of several platforms' enums; the service will send a
 value that is not in the union. Decide up front whether an unknown value throws or passes through —
@@ -87,7 +130,7 @@ the declared type is worse. Either way, do not assume the enum is closed.
 Relatedly: a handful of fields (`KvEntry.value`, `DashboardProfileData.layout`) are genuinely "any
 JSON value" in the description. They cannot be modelled; document them in prose.
 
-## 4. Three WebSocket payloads are documented nowhere but the WS reference
+## 5. Four gateway payloads are documented nowhere but the WS reference
 
 `KvEventData`, `ChannelGiveawaysEventData` and `QueueEvent` appear in `spec/websocket.md` and never
 in `openapi.json`, so a generator driven only by the OpenAPI document will not produce them.
@@ -104,7 +147,7 @@ They are here because rendering a gift notice means turning a gift id into a nam
 image, and the API does not provide a lookup table for that. See
 [ANNOTATIONS.md](ANNOTATIONS.md) for how a gift reaches a client in the first place.
 
-## 5. The same gift exists under several ids
+## 6. The same gift exists under several ids
 
 TikTok reissues gifts: same name, same artwork, a new id — and sometimes a different price.
 
@@ -122,7 +165,7 @@ second, so where two rows share a slug it can only ever update the later of them
 alone would be wrong too — the scraped sources sometimes carry a slug and no usable id. If you need
 one canonical row per gift, pick by id and accept the duplicates.
 
-## 6. Each source is authoritative for different fields
+## 7. Each source is authoritative for different fields
 
 | Source | Good for | Weak on |
 | :--- | :--- | :--- |
@@ -133,7 +176,7 @@ Merge in that order and let the gist win on numbers, the scrape win on names. `m
 unions the `names` map key by key rather than replacing it, which is the only reason the combined
 table has 236 of 289 gifts localised.
 
-## 7. The scraper is the most fragile thing here
+## 8. The scraper is the most fragile thing here
 
 coinvertify.com is a Nuxt 3 app, and Nuxt serialises its payload with structural sharing: every
 nested value is replaced by an **index into one flat array**. The JSON has to be rehydrated before
@@ -143,7 +186,7 @@ the *shape* of the data rather than its name.
 A Nuxt upgrade on their side breaks this silently, yielding zero gifts rather than an error. The
 tool now fails loudly and leaves the existing table alone instead of writing an empty one.
 
-## 8. The old gift tooling never worked
+## 9. The old gift tooling never worked
 
 `check_dups.py` in the original Python tree could not report anything: it read
 `data.get("gifts", [])` from a file that is a bare JSON array, so it always saw zero gifts, and it
