@@ -107,8 +107,21 @@ A removal is the case to watch for — a generated client keeps compiling agains
 
 ## Using the gift tables
 
-A gift arrives in chat as a *notice*, and the API gives you an id, not a price or a localised name —
-hence these tables. They are plain JSON arrays:
+> **You probably do not need these.** Synchra resolves a gift server-side: a chat notice's `gift`
+> part already carries `name`, `image_url`, `count` and `count_display_name`, so there is nothing to
+> look up. Checked against live data — see
+> [`GiftPart`](docs/ANNOTATIONS.md#giftpart).
+>
+> They are still here for two narrower jobs. One: Synchra passes through whatever language the
+> platform sent, and that **varies within a single channel** — `Imperator Herz` arrived beside
+> `Popular Vote` and `Rose` — so a UI that wants one consistent language has to translate the name
+> itself. Two: a direct TikTok integration that reads the webcast stream without Synchra gets ids and
+> no names at all.
+>
+> And mind the join: Synchra's `gift.id` is its own cross-platform identifier, not TikTok's catalogue
+> id. Of five sampled gifts, **one** matched a table id. Match on name if you must, and expect misses.
+
+They are plain JSON arrays:
 
 ```json
 {

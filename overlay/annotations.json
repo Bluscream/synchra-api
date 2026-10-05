@@ -409,6 +409,32 @@
     "Activity.viewer_profile_picture_url": [
       "As on `ChatMessage`: filled for some providers and null for others, so an absence does not",
       "mean the viewer has no picture."
+    ],
+    "GiftPart": [
+      "**A gift already carries everything needed to render it.** `name`, `image_url`, `count` and",
+      "`count_display_name` all arrive resolved, so nothing has to be looked up — in particular you do",
+      "not need a gift table to turn an id into a name or a picture. Observed live:",
+      "",
+      "```json",
+      "{\"id\": \"1157212\", \"type\": \"diamond\", \"name\": \"Imperator Herz\", \"count\": 1,",
+      " \"count_display_name\": \"diamond\", \"image_url\": \"https://p16-webcast.tiktokcdn.com/...\"}",
+      "```",
+      "",
+      "Three things about it are not obvious.",
+      "",
+      "**`name` is in whatever language the platform sent, which varies within one channel.** The sample",
+      "above is German (`Imperator Herz`) and arrived alongside `Popular Vote`, `Heart Me` and `Rose` in",
+      "English, on the same channel. There is no parameter to ask for a locale. If you need consistent",
+      "language you must translate it yourself — and see below, because the obvious way does not work.",
+      "",
+      "**`id` is Synchra's cross-platform gift identifier, not TikTok's catalogue id.** Non-TikTok gifts",
+      "use string ids (`rose`, `super_chat`, `cheer-1000`) and the TikTok ones do not reliably match the",
+      "ids in a scraped gift table: of five sampled, one matched. Do not join on it without checking.",
+      "",
+      "**`count` and the part's `text` do not mean one fixed thing.** Across one sample: `count: 1` with",
+      "text `\"1 diamond\"`, `count: 10` with text `\"10 diamonds\"`, `count: 10` with text `\"Tiny Diny\"`,",
+      "and `count: 10000000` with text `\"$10.00\"` for a YouTube Super Chat. Read `type` and",
+      "`count_display_name` before interpreting `count` as a price, a quantity or a currency amount."
     ]
   }
 }

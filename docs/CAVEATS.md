@@ -149,9 +149,34 @@ through a JSON parser will throw on its own keepalive.
 # TikTok gift tables
 
 `data/tiktok_gifts.json` and `data/tiktok_gifts_coinvertify.json` are **not** from the Synchra API.
-They are here because rendering a gift notice means turning a gift id into a name, a price and an
-image, and the API does not provide a lookup table for that. See
-[ANNOTATIONS.md](ANNOTATIONS.md) for how a gift reaches a client in the first place.
+They were collected on the assumption that rendering a gift notice means turning an id into a name, a
+price and an image. **That assumption was wrong**, and it is worth saying so here rather than leaving
+the tables looking load-bearing.
+
+Synchra resolves a gift server-side. A notice's `gift` part arrives with `name`, `image_url`, `count`
+and `count_display_name` already filled, so a renderer needs no table at all — see
+[`GiftPart`](ANNOTATIONS.md#giftpart), which was written from live data.
+
+Worse for the tables: **the ids do not reliably join.** Synchra's `gift.id` is its own
+cross-platform identifier — non-TikTok gifts use string ids like `rose`, `super_chat` and
+`cheer-1000` — and of five TikTok gifts sampled from live chat, exactly one had an id present in
+`data/tiktok_gifts.json`. Two of them (`Popular Vote`, id `13651`; `Imperator Herz`, id `1157212`)
+appear in the table under no id and no name, in any locale.
+
+What the tables are still good for:
+
+- **Consistent language.** Synchra passes through whatever locale the platform sent, and it varies
+  within one channel: `Imperator Herz` arrived alongside `Popular Vote`, `Heart Me` and `Rose`. There
+  is no parameter to ask for a language, so a UI that wants one has to translate the name itself.
+- **A direct TikTok integration** that reads the webcast stream without Synchra, which gets ids and
+  no names.
+
+TikTok's own `webcast/gift/list` endpoint would be the authoritative source for both, but it needs a
+room id and a signed session — unauthenticated it answers `200` with an empty body — so it is not a
+drop-in replacement for the scrape.
+
+A sample of five gifts is thin evidence, and the join rate above should be read as "do not assume
+this works" rather than as a measurement.
 
 ## 6. The same gift exists under several ids
 
