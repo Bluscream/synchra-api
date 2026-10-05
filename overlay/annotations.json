@@ -78,7 +78,7 @@
       "/api/2/ws": {
         "get": {
           "tags": [
-            "Gateway"
+            "WebSocket"
           ],
           "summary": "WebSocket Gateway",
           "description": "> Added by https://github.com/Bluscream/synchra-api — the published description does not list this route.\n\nThe realtime gateway: `wss://api.synchra.net/api/2/ws`. Omitted from the OpenAPI document because OpenAPI 3.1 cannot describe a socket; the protocol is specified in `spec/websocket.md`, served by `GET /api/2/ws-docs`.\n\nIt is listed here so that a reader of the description knows the gateway exists and where it is.\n\n**The handshake itself takes no credential** — verified: a plain `GET` answers `426 Upgrade Required`, not 401. The socket is authenticated *after* connecting, by sending an `authorization` command; private subscriptions fail until then.\n\nThe socket accepts the bare text `ping` as well as `{\"command\":\"ping\"}` and replies with the bare text `pong` — not JSON. A client that pipes every frame through a JSON parser will throw on its own keepalive.",
