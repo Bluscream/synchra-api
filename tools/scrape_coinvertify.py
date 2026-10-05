@@ -95,6 +95,7 @@ def main() -> int:
 
     gifts: list[dict] = []
     seen: set[str] = set()
+    skipped: list[str] = []
 
     for page in range(1, args.pages + 1):
         print(f"scraping page {page}")
@@ -103,6 +104,16 @@ def main() -> int:
             slug = gift.get("slug")
 
             if not slug or slug in seen:
+                continue
+
+            # The site disambiguates a reissued gift by appending the price to the slug —
+            # `gift-box-1999` beside `gift-box` — and those extra rows carry neither translations nor
+            # a diamond count. They are the same gift under an id the webcast payload already has, so
+            # they would add nothing and fail the table's own validation. Skipped, and counted, rather
+            # than dropped silently: if the real rows ever start arriving empty, the count says so.
+            if not gift.get("translations") and not gift.get("diamond_count"):
+                skipped.append(slug)
+
                 continue
 
             seen.add(slug)
@@ -118,9 +129,25 @@ def main() -> int:
 
     if not gifts:
         raise SystemExit(
-            "scraped 0 gifts — the site's markup or Nuxt payload format has changed; "
-            "the existing table was left alone"
+            f"scraped 0 usable gifts of {len(skipped)} rows seen — the site's payload no longer "
+            "carries what this reads. The existing table was left alone; see docs/CAVEATS.md §7."
         )
+
+    # The localised names are the only reason this tool exists, so a scrape that returns gifts
+    # without them is a failure even though it returned gifts. Observed 2026-10-05: the page stopped
+    # carrying `translations` in its server-rendered payload partway through a session, and a run
+    # without this check would have replaced ten locales with none and called it success.
+    localised = sum(1 for gift in gifts if len(gift.get("names") or {}) > 1)
+
+    if localised < len(gifts) // 2:
+        raise SystemExit(
+            f"only {localised} of {len(gifts)} scraped gifts carry more than one locale. The page's "
+            "payload has probably stopped including translations — writing this would discard the "
+            "names the existing table already has. Left alone; see docs/CAVEATS.md §7."
+        )
+
+    if skipped:
+        print(f"skipped {len(skipped)} price-disambiguated stub rows: {', '.join(sorted(skipped))}")
 
     gifts.sort(key=lambda g: (g.get("id") or 0, g.get("slug") or ""))
     args.output.write_text(

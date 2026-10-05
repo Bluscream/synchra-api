@@ -189,6 +189,21 @@ nested value is replaced by an **index into one flat array**. The JSON has to be
 it means anything, and the gift list sits under a generated, opaque key — so the scraper looks for
 the *shape* of the data rather than its name.
 
+**It already broke once, mid-session, on 2026-10-05.** A scrape at one point returned 235 gifts with
+ten locales each; twenty minutes later the same code against the same URLs returned 247 rows whose
+`translations` and `diamond_count` were *all* null, and the page's server-rendered payload no longer
+contained the word `translations` at all. Whether that is a deploy, an A/B bucket or anti-scraping
+behaviour is unknown.
+
+That is the argument for vendoring the table rather than fetching it: `data/tiktok_gifts.json` may
+now be the only copy of those names outside TikTok. The tool refuses to write a table where fewer
+than half the rows carry more than one locale, so the run above failed loudly and changed nothing
+instead of replacing ten locales with none and reporting success.
+
+It also skips the stub rows the site uses to disambiguate a reissued gift — `gift-box-1999` beside
+`gift-box` — which carry neither a name nor a price, and are the same gift under an id the webcast
+payload already has.
+
 A Nuxt upgrade on their side breaks this silently, yielding zero gifts rather than an error. The
 tool now fails loudly and leaves the existing table alone instead of writing an empty one.
 
