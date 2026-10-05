@@ -19,6 +19,28 @@ That is the reason this repository exists. `tools/fetch-spec.sh` writes the docu
 `jq --sort-keys`, because the API does **not** guarantee a stable key order — without normalising,
 every refresh produces a diff of thousands of lines in which the real change is invisible.
 
+### …and do not sort the copy your generator reads
+
+Sorting is right for *this* repository, where the document is the artifact. It is wrong for a client
+that generates code from it, because key order leaks into the generated API: a generator naturally
+names an inline enum after the first property that references it, and emits constructor parameters in
+the order the properties appear.
+
+Measured on `synchra-php`: sorting the keys renamed two enums, dropped a union, and reordered the
+constructors of **290** models — a breaking change for any caller constructing a model positionally.
+
+The unsorted order is the server's own declaration order, which is at least meaningful. But it is not
+*promised*, so an upstream reorder can do all of that on its own, silently, on an ordinary refresh.
+If you generate code, pin the ordering in your **generator** (sort properties yourself, required
+first) rather than relying on the document's. Use `tools/diff-spec.sh` to see what changed; it
+compares sets, so it is key-order independent either way.
+
+A smaller trap in the same area: `60.0` and `100` both appear as bounds, and a decode/encode
+round-trip in a language that has one numeric type — PHP, for instance — rewrites `60.0` as `60`.
+Harmless for a JSON Schema number, but it means that pipeline cannot reproduce its own committed
+file, and the resulting few hundred lines of diff noise hide real changes. `jq` preserves the
+literal.
+
 ## 2. Routes get removed, not just added
 
 Between a snapshot taken 2026-04-02 and one taken 2026-10-05:
@@ -71,6 +93,11 @@ id like a secret, because anyone holding one can read that widget.
 empty, so the description states *that* it is OAuth2 without documenting an authorize or token URL.
 There is no token endpoint; tokens come from the dashboard by hand. A generator that trusts
 `securitySchemes` to build an auth layer will produce nothing usable.
+
+Concretely: `POST /api/2/auth/token` **does not exist** and answers 404. It is a plausible-looking
+guess, and `synchra.py` shipped it as the default `token_url` for its refresh flow, which therefore
+cannot work. If you need a token to change while a process runs, resolve it from the outside — a
+callable, a file, a secrets manager — rather than expecting a refresh grant.
 
 ## 5. A notice puts its content somewhere else
 
