@@ -1,37 +1,30 @@
 #!/usr/bin/env python3
 """Apply overlay/annotations.json to the spec, writing spec/openapi.annotated.json.
 
-    tools/annotate-spec.py                  # spec/openapi.json -> spec/openapi.annotated.json
-    tools/annotate-spec.py --check          # verify the committed annotated file is current
-    tools/annotate-spec.py --targets-only   # just verify every target still exists
+    tools/annotate-spec.py                       # write the annotated spec
+    tools/annotate-spec.py --docs docs/ANNOTATIONS.md
+    tools/annotate-spec.py --check               # verify the committed files are current (for CI)
+    tools/annotate-spec.py --summary             # what the overlay adds, counted
 
-The published description has a `description` on exactly one of its 240 operations, and all 240
-summaries are generated from function names. Everything a caller actually needs to know — that a 403
-here means per-channel access, that a notice empties `message_parts` — has nowhere to live in it.
+The published description has a `description` on exactly one of its 240 operations, documents no
+error but 422, declares OAuth2 with no flows, and omits routes the service answers. Everything a
+caller needs to know therefore has nowhere to live in it — so it is written in, here.
 
-So rather than keeping those facts in prose beside the spec, they are written into it. A generated
-client then carries them in its docblocks, where someone reads them at the call site instead of
-after the bug.
-
-Every target is resolved before anything is written, and a missing one is a hard error. That is the
-point as much as the annotation is: when Synchra renames or removes something a note depends on,
-this fails, and it fails on the next refresh rather than silently annotating nothing.
-
-Targets are written the way a person refers to them — `GET /api/2/…`, `ChatMessage`,
-`ChatMessage.viewer_name` — not as JSON Pointers, because an escaped pointer to
-`/paths/~1api~12~1channels~1{channel_id}~1activities/get` is unreadable and unreviewable.
+The application itself is `tools/annotate.jq`, which is the single implementation: synchra-php
+vendors the same file and runs it during its own fetch. This script is the wrapper that adds the
+things a CI job wants — staleness checks, a rendered copy, a summary — and nothing about *what* an
+annotation means lives here.
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import subprocess
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-BANNER = "> The notes below are not from Synchra. They were added by "
-SOURCE = "https://github.com/Bluscream/synchra-api"
 
 
 def text(value: str | list[str]) -> str:
@@ -39,81 +32,20 @@ def text(value: str | list[str]) -> str:
     return value if isinstance(value, str) else "\n".join(value)
 
 
-def annotate(existing: str | None, note: str, *, attributed: bool = True) -> str:
-    """Append a note to a description, keeping whatever the service already said."""
-    block = f"{BANNER}{SOURCE}.\n\n{note}" if attributed else note
+def apply(spec: Path, overlay: Path, program: Path) -> str:
+    """Run the jq overlay. Its own error messages are the useful ones, so they pass straight through."""
+    done = subprocess.run(
+        ["jq", "--argjson", "overlay", overlay.read_text(encoding="utf-8"), "--from-file", str(program)],
+        stdin=spec.open("rb"),
+        capture_output=True,
+        text=True,
+        check=False,
+    )
 
-    if not existing:
-        return block
+    if done.returncode != 0:
+        raise SystemExit(done.stderr.strip() or f"jq failed with status {done.returncode}")
 
-    return f"{existing.rstrip()}\n\n---\n\n{block}"
-
-
-def resolve_operation(spec: dict, target: str) -> dict:
-    method, _, path = target.partition(" ")
-
-    if not path:
-        raise KeyError(f"operation target {target!r} should look like 'GET /api/2/...'")
-
-    try:
-        operation = spec["paths"][path][method.lower()]
-    except KeyError as missing:
-        raise KeyError(f"no such operation: {target}") from missing
-
-    return operation
-
-
-def resolve_schema(spec: dict, target: str) -> dict:
-    name, _, field = target.partition(".")
-    schemas = spec["components"]["schemas"]
-
-    if name not in schemas:
-        raise KeyError(f"no such schema: {name}")
-
-    if not field:
-        return schemas[name]
-
-    properties = schemas[name].get("properties") or {}
-
-    if field not in properties:
-        raise KeyError(f"schema {name} has no property {field}")
-
-    return properties[field]
-
-
-def apply(spec: dict, overlay: dict) -> list[str]:
-    """Resolve every target first, then write. Nothing is applied if anything is missing."""
-    resolved: list[tuple[str, dict, str, bool]] = []
-    errors: list[str] = []
-
-    for target, note in (overlay.get("operations") or {}).items():
-        try:
-            resolved.append((target, resolve_operation(spec, target), text(note), True))
-        except KeyError as error:
-            errors.append(str(error))
-
-    for target, note in (overlay.get("schemas") or {}).items():
-        try:
-            resolved.append((target, resolve_schema(spec, target), text(note), True))
-        except KeyError as error:
-            errors.append(str(error))
-
-    if errors:
-        raise SystemExit(
-            "the overlay refers to {} thing(s) the description no longer has:\n  {}\n"
-            "Something was renamed or removed upstream — check the note is still true, "
-            "then update overlay/annotations.json.".format(len(errors), "\n  ".join(errors))
-        )
-
-    if overlay.get("info"):
-        spec["info"]["description"] = annotate(
-            spec["info"].get("description"), text(overlay["info"]), attributed=False
-        )
-
-    for _, node, note, attributed in resolved:
-        node["description"] = annotate(node.get("description"), note, attributed=attributed)
-
-    return [target for target, *_ in resolved]
+    return done.stdout
 
 
 def render_docs(overlay: dict) -> str:
@@ -140,6 +72,66 @@ def render_docs(overlay: dict) -> str:
     if overlay.get("info"):
         out += ["## Across the whole API", "", text(overlay["info"]), ""]
 
+    add = overlay.get("add") or {}
+
+    if add.get("paths"):
+        out += [
+            "## Routes the description omits",
+            "",
+            "The service answers these; the published document does not list them.",
+            "",
+        ]
+
+        for path, node in add["paths"].items():
+            for method, operation in node.items():
+                out += [f"### `{method.upper()} {path}`", "", operation.get("description", ""), ""]
+
+    if add.get("schemas"):
+        out += [
+            "## Schemas the description omits",
+            "",
+            "Gateway payloads named by `spec/websocket.md` but defined in no schema.",
+            "",
+        ]
+
+        for name, node in add["schemas"].items():
+            fields = ", ".join(f"`{f}`" for f in (node.get("properties") or {}))
+            out += [f"### `{name}`", "", node.get("description", ""), "", f"Fields: {fields}", ""]
+
+    if overlay.get("errors"):
+        rules = {
+            "always": "every operation",
+            "authenticated": "every operation that is not in `public`",
+            "identified": "every operation whose path takes a parameter",
+        }
+        out += [
+            "## Error responses",
+            "",
+            "The published description documents no error but 422. These are added by rule, and every",
+            "body is the `Error` schema.",
+            "",
+            "| Status | Added to | Meaning |",
+            "| :--- | :--- | :--- |",
+        ]
+
+        for rule, where in rules.items():
+            for status, response in (overlay["errors"].get(rule) or {}).items():
+                summary = response.get("description", "").split(".")[0]
+                out += [f"| `{status}` | {where} | {summary} |"]
+
+        out += [""]
+
+    if overlay.get("public"):
+        out += [
+            "## Verified public",
+            "",
+            "Each of these answers without a token — checked with an unauthenticated request, not",
+            "inferred from the document. They are marked `security: []` in the annotated spec.",
+            "",
+        ]
+        out += [f"- `{entry}`" for entry in overlay["public"]]
+        out += [""]
+
     if overlay.get("operations"):
         out += ["## Operations", ""]
 
@@ -155,71 +147,94 @@ def render_docs(overlay: dict) -> str:
     return "\n".join(out).rstrip() + "\n"
 
 
+def summarise(before: dict, after: dict, overlay: dict) -> list[str]:
+    def responses(spec: dict) -> int:
+        return sum(
+            len(operation.get("responses") or {})
+            for node in spec["paths"].values()
+            for method, operation in node.items()
+            if method in {"get", "post", "put", "delete", "patch"}
+        )
+
+    def described(spec: dict) -> int:
+        return sum(
+            1
+            for node in spec["paths"].values()
+            for method, operation in node.items()
+            if method in {"get", "post", "put", "delete", "patch"} and operation.get("description")
+        )
+
+    def schemes(spec: dict) -> int:
+        return len(spec["components"].get("securitySchemes") or {})
+
+    rows = [
+        ("paths", len(before["paths"]), len(after["paths"])),
+        ("schemas", len(before["components"]["schemas"]), len(after["components"]["schemas"])),
+        ("documented responses", responses(before), responses(after)),
+        ("operations with a description", described(before), described(after)),
+        ("security schemes", schemes(before), schemes(after)),
+        ("marked public", 0, len(overlay.get("public") or [])),
+    ]
+
+    return [f"{label:<30} {was:5d} -> {now:5d}" for label, was, now in rows]
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--spec", type=Path, default=ROOT / "spec/openapi.json")
     parser.add_argument("--overlay", type=Path, default=ROOT / "overlay/annotations.json")
+    parser.add_argument("--program", type=Path, default=ROOT / "tools/annotate.jq")
     parser.add_argument("--output", type=Path, default=ROOT / "spec/openapi.annotated.json")
+    parser.add_argument("--docs", type=Path, help="also render the notes as Markdown")
     parser.add_argument(
         "--check",
         action="store_true",
-        help="fail if the output file is not what this would write (for CI)",
+        help="fail if the output (and --docs, if given) is not what this would write",
     )
-    parser.add_argument(
-        "--targets-only",
-        action="store_true",
-        help="only verify that every target still exists; write nothing",
-    )
-    parser.add_argument(
-        "--docs",
-        type=Path,
-        help="also render the notes as Markdown (docs/ANNOTATIONS.md), for reading on the web",
-    )
+    parser.add_argument("--summary", action="store_true", help="print what the overlay changed")
     args = parser.parse_args()
 
-    spec = json.loads(args.spec.read_text(encoding="utf-8"))
+    rendered = apply(args.spec, args.overlay, args.program)
     overlay = json.loads(args.overlay.read_text(encoding="utf-8"))
-
-    applied = apply(spec, overlay)
-
-    # Key order is inherited from the input, never imposed. json.loads preserves it, and this must
-    # not re-sort: a client that generates code from this file takes class names and constructor
-    # parameter order from key order, so reordering here would silently reshape its public API. The
-    # input in this repository is already sorted, so the output is too. See docs/CAVEATS.md §1.
-    rendered = json.dumps(spec, indent=2, ensure_ascii=False) + "\n"
-
-    if args.targets_only:
-        print(f"all {len(applied)} overlay targets resolve")
-
-        return 0
+    docs = render_docs(overlay) if args.docs else None
 
     if args.check:
-        if not args.output.exists():
-            print(f"{args.output} does not exist — run tools/annotate-spec.py", file=sys.stderr)
+        stale = []
 
-            return 1
+        if not args.output.exists() or args.output.read_text(encoding="utf-8") != rendered:
+            stale.append(str(args.output))
 
-        if args.output.read_text(encoding="utf-8") != rendered:
+        if docs is not None and (
+            not args.docs.exists() or args.docs.read_text(encoding="utf-8") != docs
+        ):
+            stale.append(str(args.docs))
+
+        if stale:
             print(
-                f"{args.output} is stale — run tools/annotate-spec.py and commit the result",
+                "stale, run tools/annotate-spec.py and commit the result:\n  "
+                + "\n  ".join(stale),
                 file=sys.stderr,
             )
 
             return 1
 
-        print(f"{args.output} is current ({len(applied)} annotations)")
+        print("annotated spec and rendered notes are current")
 
         return 0
 
     args.output.write_text(rendered, encoding="utf-8")
-    print(f"{len(applied)} annotations -> {args.output}")
+    print(f"wrote {args.output}")
 
-    for target in applied:
-        print(f"  {target}")
+    if docs is not None:
+        args.docs.write_text(docs, encoding="utf-8")
+        print(f"wrote {args.docs}")
 
-    if args.docs:
-        args.docs.write_text(render_docs(overlay), encoding="utf-8")
-        print(f"rendered -> {args.docs}")
+    if args.summary:
+        before = json.loads(args.spec.read_text(encoding="utf-8"))
+        print()
+
+        for line in summarise(before, json.loads(rendered), overlay):
+            print(f"  {line}")
 
     return 0
 

@@ -15,24 +15,116 @@ behave — are in [CAVEATS.md](CAVEATS.md) instead, because they have no endpoin
 https://github.com/Bluscream/synchra-api, which also carries the per-endpoint notes, the
 TikTok gift tables, and the caveats that have no endpoint to hang on.
 
-**There is no token endpoint.** `components.securitySchemes` declares OAuth2 with an empty
-`flows` object, and there is no authorize or token URL anywhere in the API. Tokens are issued
-from the dashboard by hand. In particular `POST /api/2/auth/token` does not exist and answers
-404, so a refresh-grant flow cannot be built; resolve the token from outside the process.
+**There is no token endpoint.** `OAuth2` is declared with an empty `flows` object and there is no
+authorize or token URL anywhere in the API. Tokens are issued from the dashboard by hand and sent
+as `Authorization: Bearer <token>`. In particular `POST /api/2/auth/token` does not exist and
+answers 404, so a refresh-grant flow cannot be built; resolve the token from outside the process.
 
-**Scopes and access are separate.** A token carries a fixed scope set, and whether it may act
-on a given channel is granted per channel. A 403 therefore does not necessarily mean a missing
-scope — see `GET /api/2/channels/{channel_id}/activities`.
+**Scopes are not the same thing as access.** A token carries a fixed scope set, and whether it
+may act on a given channel is granted separately, per channel. A 403 therefore does not
+necessarily mean a missing scope.
 
-**Two other credential types exist** and appear in no security scheme: channel ingest API keys,
-passed as an ordinary parameter, and the widget `x-kv-token` header.
+**A good part of the API is public.** Operations with `security: []` were each verified to answer
+without a token. The rest answer 401 without one.
+
+**Error responses are documented by this overlay, not by Synchra.** The published description
+lists only successes and 422, though 401, 403, 404 and 429 all occur. Every error body is the
+`Error` schema — `{code, message, type, errors[]}` — which was confirmed against live responses.
 
 **Do not retry POST or PATCH automatically.** The API rate-limits with 429 and sends
-`Retry-After`, but offers no idempotency key, so a retried POST that had already succeeded
-sends the message twice. GET, HEAD, OPTIONS, PUT and DELETE are safe to retry.
+`Retry-After`, but offers no idempotency key, so a retried POST that had already succeeded sends
+the message twice. GET, HEAD, OPTIONS, PUT and DELETE are safe to retry.
 
-**A large part of the API is public.** Anything marked _public_ in these notes answers without
-a token; everything else answers 401 without one.
+**Two credential types exist that are not security schemes.** A channel ingest API key is passed
+as an ordinary parameter, and the widget `x-kv-token` header is declared below as `WidgetKvToken`.
+
+## Routes the description omits
+
+The service answers these; the published document does not list them.
+
+### `GET /health`
+
+> Added by https://github.com/Bluscream/synchra-api — the service answers this, the published description does not list it.
+
+Liveness check. Needs no credential.
+
+It *was* in the description as of 2026-04-02 and has since been removed from it — but not from the service, which still answers 200. Verified live.
+
+### `GET /api/2/ws`
+
+> Added by https://github.com/Bluscream/synchra-api — the published description does not list this route.
+
+The realtime gateway: `wss://api.synchra.net/api/2/ws`. Omitted from the OpenAPI document because OpenAPI 3.1 cannot describe a socket; the protocol is specified in `spec/websocket.md`, served by `GET /api/2/ws-docs`.
+
+It is listed here so that a reader of the description knows the gateway exists and where it is.
+
+**The handshake itself takes no credential** — verified: a plain `GET` answers `426 Upgrade Required`, not 401. The socket is authenticated *after* connecting, by sending an `authorization` command; private subscriptions fail until then.
+
+The socket accepts the bare text `ping` as well as `{"command":"ping"}` and replies with the bare text `pong` — not JSON. A client that pipes every frame through a JSON parser will throw on its own keepalive.
+
+## Schemas the description omits
+
+Gateway payloads named by `spec/websocket.md` but defined in no schema.
+
+### `KvEventData`
+
+> Added by https://github.com/Bluscream/synchra-api.
+
+The payload of a `widget_value` gateway event: one key in a widget's shared key-value store changed. Named by `spec/websocket.md`, which defines no schema for it; these fields follow its documented example.
+
+Fields: `key`, `value`, `revision`, `expires_at`
+
+### `ChannelGiveawaysEventData`
+
+> Added by https://github.com/Bluscream/synchra-api.
+
+The payload of a `channel_giveaways` gateway event: a pointer, not the giveaway. Re-read the giveaway to get its new state. Named by `spec/websocket.md`, which defines no schema for it.
+
+Fields: `channel_id`, `giveaway_id`
+
+### `QueueEvent`
+
+> Added by https://github.com/Bluscream/synchra-api.
+
+The payload of a `channel_queue` gateway event. It carries only the kind of change, for example `channel_queue_viewer_created` — re-read the queue to get its contents. Named by `spec/websocket.md`, which defines no schema for it.
+
+Fields: `type`
+
+### `ActivityAlertWidgetTest`
+
+> Added by https://github.com/Bluscream/synchra-api.
+
+The payload of an `activity_alert_test` gateway event: a test alert fired at one widget, carrying a whole activity. Present in `spec/websocket.md` as a JSON example only — no schema, not even a named type reference.
+
+Fields: `widget_id`, `activity`
+
+## Error responses
+
+The published description documents no error but 422. These are added by rule, and every
+body is the `Error` schema.
+
+| Status | Added to | Meaning |
+| :--- | :--- | :--- |
+| `429` | every operation | Rate limited |
+| `500` | every operation | Server error |
+| `401` | every operation that is not in `public` | No token, or a token the service does not accept |
+| `403` | every operation that is not in `public` | Authenticated but not permitted |
+| `404` | every operation whose path takes a parameter | No such route, or no such resource |
+
+## Verified public
+
+Each of these answers without a token — checked with an unauthenticated request, not
+inferred from the document. They are marked `security: []` in the annotated spec.
+
+- `GET /api/2/channels/{channel_id}/providers`
+- `GET /api/2/channels/{channel_id}/provider-streams`
+- `GET /api/2/channels/{channel_id}/chat-messages`
+- `GET /api/2/channels/{channel_id}/chat-events`
+- `GET /api/2/channels/{channel_id}/random-chat-messages`
+- `GET /api/2/activity-types`
+- `GET /api/2/currencies.json`
+- `GET /api/2/subscription/plans`
+- `GET /api/2/link-tracking/config`
 
 ## Operations
 
@@ -43,12 +135,13 @@ missing.** Holding `channel_activity:read` is necessary and not sufficient: per-
 is granted separately, in the dashboard. A token minted by one account for another account's
 channel reads chat happily and refuses this.
 
-Needs a token. Note that a gift, sub or raid does **not** arrive here — those come through
+Needs a token — verified: an anonymous call answers 401. Note that a gift, sub or raid does
+**not** arrive here; those come through
 `GET /api/2/channels/{channel_id}/chat-messages` as notices.
 
 ### `GET /api/2/channels/{channel_id}/chat-messages`
 
-**Public** — no token required.
+**Public** — verified to answer without a token.
 
 Carries gifts, subs and raids as well as chat, as *notices*. A notice leaves `message_parts`
 empty and puts its content in `notice_message_parts` instead, so a reader that looks only at
@@ -58,18 +151,27 @@ A TikTok gift identifies itself with `type: notice`, `sub_type: tiktok_gift`. To
 into a price or a localised name, see the tables in
 https://github.com/Bluscream/synchra-api/tree/main/data — the API offers no lookup for them.
 
+An unknown `channel_id` answers **200 with an empty `records` array**, not 404. Do not use this
+to test whether a channel exists.
+
 ### `GET /api/2/channels/{channel_id}/chat-events`
 
-**Public** — no token required.
+**Public** — verified to answer without a token.
 
 ### `GET /api/2/channels/{channel_id}/random-chat-messages`
 
-**Public** — no token required.
+**Public** — verified to answer without a token.
 
 ### `GET /api/2/channels/{channel_id}/providers`
 
-**Public** — no token required. With `provider-streams`, this is enough to build a live-status
-page with no credentials at all.
+**Public** — verified to answer without a token. With `provider-streams`, this is enough to
+build a live-status page with no credentials at all.
+
+### `GET /api/2/channels/{channel_id}`
+
+Needs a token, unlike the channel's `providers`, `provider-streams` and chat — verified: an
+anonymous call answers 401. A public page that only needs the display name and live state can
+be built without this.
 
 ### `GET /api/2/channels/{channel_id}/viewers/{provider}/{provider_viewer_id}/info`
 
@@ -86,8 +188,8 @@ Needs a token that can read this channel's viewers; without that it answers 403.
 
 ### `GET /api/2/channels/{channel_id}/provider-streams`
 
-**Public** — no token required. Carries status, title, `viewer_count`, `peak_viewer_count` and
-`started_at`.
+**Public** — verified to answer without a token. Carries status, title, `viewer_count`,
+`peak_viewer_count` and `started_at`.
 
 ### `GET /api/2/widgets/{widget_id}`
 
@@ -100,7 +202,49 @@ that is served to viewers if the widget's contents are not meant for them.
 **Not safe to retry.** No idempotency key is offered, so a retry of a request that had already
 succeeded posts the message a second time. If you wrap this in a retry policy, exclude it.
 
+### `GET /api/2/ws-docs`
+
+Answers with the WebSocket protocol reference as Markdown — about 61 KB. The published
+description repeats that entire document inside this operation's own `description`, which is
+the only `description` Synchra fills anywhere in the API.
+
+A generator should treat it as a document to link to, not text to inline: it is 2,000+ lines of
+Markdown tables.
+
+### `GET /api/2/chat/emotes`
+
+Needs a token — verified: an anonymous call answers 401. That is worth knowing because the
+chat messages these emotes decorate are *public*, so a public chat renderer can show the text
+but cannot resolve the emote list from here.
+
+In practice it does not need to: a chat message's `message_parts` already carry each emote's
+CDN urls at three sizes, so nothing has to be looked up.
+
 ## Schemas and fields
+
+### `Error`
+
+The body of every error response, confirmed against the live service for 401, 404 and 422:
+
+```json
+{"code": 401, "message": "Not authenticated", "type": "unauthenticated", "errors": []}
+```
+
+`type` is a stable machine-readable string — `unauthenticated`, `validation_error` — except on a
+routing 404, where it is the **empty string**. Branch on `code` first.
+
+`errors` carries per-field detail for a 422 and is an empty array otherwise.
+
+The published description references this schema only from 422 responses. Every other error
+response in this document was added by synchra-api.
+
+### `SubError`
+
+One field's validation failure, inside `Error.errors`. `input` is the value that was rejected
+and may be any JSON type, or null.
+
+`field` is the parameter or body field name — for a query parameter the service reports it
+unqualified (`provider`), not dotted.
 
 ### `ChatMessage`
 

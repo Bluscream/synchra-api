@@ -33,13 +33,30 @@ things that actually cost you an afternoon:
   `securitySchemes.flows` implies cannot be built.
 
 Keeping those in prose next to the spec means nobody reads them at the moment they matter. So they
-are written *into* the document instead:
+are written *into* the document instead — and not only prose. The overlay also supplies what the
+description structurally lacks:
+
+| | published | annotated |
+| :--- | ---: | ---: |
+| paths | 172 | **174** — adds `GET /health` and `GET /api/2/ws`, both of which the service answers |
+| schemas | 465 | **469** — adds the four gateway payloads only `websocket.md` names |
+| documented responses | 481 | **1635** — the published document has no `401`, `403`, `404`, `429` or `5xx` anywhere |
+| operations with a description | 1 | **14** |
+| security schemes | 1 | **3** — `BearerToken` and the widget `x-kv-token` header, neither of which was declared |
+| operations marked `security: []` | 0 | **9** — each verified with an unauthenticated request |
 
 ```bash
-tools/annotate-spec.py --docs docs/ANNOTATIONS.md    # overlay -> spec/openapi.annotated.json
-tools/annotate-spec.py --check                       # is the committed annotated file current?
-tools/annotate-spec.py --targets-only                # do all the notes still point at something?
+tools/annotate-spec.py --docs docs/ANNOTATIONS.md --summary   # apply, render, and print that table
+tools/annotate-spec.py --check --docs docs/ANNOTATIONS.md     # are the committed files current?
 ```
+
+Both documents validate against `openapi-spec-validator`, and CI checks that.
+
+Error responses are added **by rule**, not listed per operation — `429` and `500` everywhere, `401`
+and `403` on anything not marked public, `404` wherever the path takes a parameter — because 240
+operations' worth of hand-written response objects would be unreviewable and stale within a month.
+An existing response is never replaced. Every body is the `Error` schema, whose shape was confirmed
+against live `401`, `404` and `422` responses.
 
 Generate your client from `spec/openapi.annotated.json` and the notes land in its docblocks, where
 they are read at the call site rather than after the bug. `synchra-php` does this — its

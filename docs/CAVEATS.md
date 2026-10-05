@@ -83,6 +83,12 @@ The copy in `spec/` is byte-identical to what the service serves — that part i
 and `tools/fetch-spec.sh` plus a `git diff` is the whole mechanism. "Complete" is a different claim,
 and it is false in specific, checkable ways.
 
+> Everything in this section is **repaired in `spec/openapi.annotated.json`**: the missing routes and
+> schemas are added, the error responses are supplied by rule, the security schemes are filled in and
+> the public operations are marked `security: []`. The list below is what the *published* document
+> omits — read it to know what you are relying on the overlay for, and what a client built straight
+> from `openapi.json` will not know.
+
 **No errors are described.** Across all 240 operations the documented responses are only successes
 plus `422` — one operation also documents `413`, and that is the lot:
 

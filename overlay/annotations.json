@@ -1,42 +1,269 @@
 {
   "$comment": [
-    "What the API description would say if we could write it. Applied to spec/openapi.json by",
-    "tools/annotate-spec.py, which writes spec/openapi.annotated.json.",
+    "What the API description would say if we could write it. Applied by tools/annotate.jq, via",
+    "tools/annotate-spec.py, to produce spec/openapi.annotated.json.",
     "",
-    "Every target is checked to exist before anything is written, so a target that goes stale fails",
-    "the run. That is deliberate: after a refresh, a failure here is the first sign that something",
-    "the notes depend on was renamed or removed.",
+    "Every target is checked before anything is written. A note whose target is missing is fatal:",
+    "something was renamed or removed upstream. So is an addition whose target now EXISTS: Synchra",
+    "documented it, and ours should be deleted rather than shadow theirs.",
     "",
-    "Text is Markdown and ends up in a generated client's docblocks, so keep it to what a caller",
-    "needs at the call site. Cross-cutting facts about the document and the tooling stay in",
-    "docs/CAVEATS.md; they have no operation or schema to hang on."
+    "Prose is Markdown and ends up in a generated client's docblocks, so keep it to what a caller",
+    "needs at the call site. Facts about the document itself stay in docs/CAVEATS.md.",
+    "",
+    "Everything factual here was verified against the live service, not inferred from the document."
   ],
-
   "info": [
     "**Notes below this line are not from Synchra.** They were added by",
     "https://github.com/Bluscream/synchra-api, which also carries the per-endpoint notes, the",
     "TikTok gift tables, and the caveats that have no endpoint to hang on.",
     "",
-    "**There is no token endpoint.** `components.securitySchemes` declares OAuth2 with an empty",
-    "`flows` object, and there is no authorize or token URL anywhere in the API. Tokens are issued",
-    "from the dashboard by hand. In particular `POST /api/2/auth/token` does not exist and answers",
-    "404, so a refresh-grant flow cannot be built; resolve the token from outside the process.",
+    "**There is no token endpoint.** `OAuth2` is declared with an empty `flows` object and there is no",
+    "authorize or token URL anywhere in the API. Tokens are issued from the dashboard by hand and sent",
+    "as `Authorization: Bearer <token>`. In particular `POST /api/2/auth/token` does not exist and",
+    "answers 404, so a refresh-grant flow cannot be built; resolve the token from outside the process.",
     "",
-    "**Scopes and access are separate.** A token carries a fixed scope set, and whether it may act",
-    "on a given channel is granted per channel. A 403 therefore does not necessarily mean a missing",
-    "scope — see `GET /api/2/channels/{channel_id}/activities`.",
+    "**Scopes are not the same thing as access.** A token carries a fixed scope set, and whether it",
+    "may act on a given channel is granted separately, per channel. A 403 therefore does not",
+    "necessarily mean a missing scope.",
     "",
-    "**Two other credential types exist** and appear in no security scheme: channel ingest API keys,",
-    "passed as an ordinary parameter, and the widget `x-kv-token` header.",
+    "**A good part of the API is public.** Operations with `security: []` were each verified to answer",
+    "without a token. The rest answer 401 without one.",
+    "",
+    "**Error responses are documented by this overlay, not by Synchra.** The published description",
+    "lists only successes and 422, though 401, 403, 404 and 429 all occur. Every error body is the",
+    "`Error` schema — `{code, message, type, errors[]}` — which was confirmed against live responses.",
     "",
     "**Do not retry POST or PATCH automatically.** The API rate-limits with 429 and sends",
-    "`Retry-After`, but offers no idempotency key, so a retried POST that had already succeeded",
-    "sends the message twice. GET, HEAD, OPTIONS, PUT and DELETE are safe to retry.",
+    "`Retry-After`, but offers no idempotency key, so a retried POST that had already succeeded sends",
+    "the message twice. GET, HEAD, OPTIONS, PUT and DELETE are safe to retry.",
     "",
-    "**A large part of the API is public.** Anything marked _public_ in these notes answers without",
-    "a token; everything else answers 401 without one."
+    "**Two credential types exist that are not security schemes.** A channel ingest API key is passed",
+    "as an ordinary parameter, and the widget `x-kv-token` header is declared below as `WidgetKvToken`."
   ],
-
+  "add": {
+    "securitySchemes": {
+      "OAuth2": {
+        "type": "oauth2",
+        "flows": {},
+        "description": "Kept with the empty `flows` the service publishes, because every operation's `security` refers to it by name and removing it would leave those references dangling. There is no OAuth2 flow in practice: a token is created in the dashboard and sent as `Authorization: Bearer <token>`. See `BearerToken`, which describes what actually happens on the wire."
+      },
+      "BearerToken": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "How a token is really sent. Added by synchra-api: the published description has no scheme for it."
+      },
+      "WidgetKvToken": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "x-kv-token",
+        "description": "Authorises writes to a widget's shared key-value store. Added by synchra-api; it appears in no published security scheme."
+      }
+    },
+    "paths": {
+      "/health": {
+        "get": {
+          "tags": [
+            "Service"
+          ],
+          "summary": "Health",
+          "description": "> Added by https://github.com/Bluscream/synchra-api — the service answers this, the published description does not list it.\n\nLiveness check. Needs no credential.\n\nIt *was* in the description as of 2026-04-02 and has since been removed from it — but not from the service, which still answers 200. Verified live.",
+          "security": [],
+          "responses": {
+            "200": {
+              "description": "The service is up."
+            }
+          }
+        }
+      },
+      "/api/2/ws": {
+        "get": {
+          "tags": [
+            "Gateway"
+          ],
+          "summary": "WebSocket Gateway",
+          "description": "> Added by https://github.com/Bluscream/synchra-api — the published description does not list this route.\n\nThe realtime gateway: `wss://api.synchra.net/api/2/ws`. Omitted from the OpenAPI document because OpenAPI 3.1 cannot describe a socket; the protocol is specified in `spec/websocket.md`, served by `GET /api/2/ws-docs`.\n\nIt is listed here so that a reader of the description knows the gateway exists and where it is.\n\n**The handshake itself takes no credential** — verified: a plain `GET` answers `426 Upgrade Required`, not 401. The socket is authenticated *after* connecting, by sending an `authorization` command; private subscriptions fail until then.\n\nThe socket accepts the bare text `ping` as well as `{\"command\":\"ping\"}` and replies with the bare text `pong` — not JSON. A client that pipes every frame through a JSON parser will throw on its own keepalive.",
+          "responses": {
+            "101": {
+              "description": "Switching protocols; the connection becomes a WebSocket."
+            },
+            "426": {
+              "description": "Sent for a plain request with no `Connection: Upgrade` header. The body is a plain-text protocol-violation message, not an `Error`."
+            }
+          },
+          "security": []
+        }
+      }
+    },
+    "schemas": {
+      "KvEventData": {
+        "type": "object",
+        "title": "KvEventData",
+        "description": "> Added by https://github.com/Bluscream/synchra-api.\n\nThe payload of a `widget_value` gateway event: one key in a widget's shared key-value store changed. Named by `spec/websocket.md`, which defines no schema for it; these fields follow its documented example.",
+        "properties": {
+          "key": {
+            "type": "string",
+            "title": "Key"
+          },
+          "value": {
+            "title": "Value",
+            "description": "Any JSON value. Genuinely unconstrained — do not model it as a union."
+          },
+          "revision": {
+            "type": "integer",
+            "title": "Revision"
+          },
+          "expires_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expires At"
+          }
+        },
+        "required": [
+          "key",
+          "value",
+          "revision"
+        ]
+      },
+      "ChannelGiveawaysEventData": {
+        "type": "object",
+        "title": "ChannelGiveawaysEventData",
+        "description": "> Added by https://github.com/Bluscream/synchra-api.\n\nThe payload of a `channel_giveaways` gateway event: a pointer, not the giveaway. Re-read the giveaway to get its new state. Named by `spec/websocket.md`, which defines no schema for it.",
+        "properties": {
+          "channel_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Channel Id"
+          },
+          "giveaway_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Giveaway Id"
+          }
+        },
+        "required": [
+          "channel_id",
+          "giveaway_id"
+        ]
+      },
+      "QueueEvent": {
+        "type": "object",
+        "title": "QueueEvent",
+        "description": "> Added by https://github.com/Bluscream/synchra-api.\n\nThe payload of a `channel_queue` gateway event. It carries only the kind of change, for example `channel_queue_viewer_created` — re-read the queue to get its contents. Named by `spec/websocket.md`, which defines no schema for it.",
+        "properties": {
+          "type": {
+            "type": "string",
+            "title": "Type"
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "ActivityAlertWidgetTest": {
+        "type": "object",
+        "title": "ActivityAlertWidgetTest",
+        "description": "> Added by https://github.com/Bluscream/synchra-api.\n\nThe payload of an `activity_alert_test` gateway event: a test alert fired at one widget, carrying a whole activity. Present in `spec/websocket.md` as a JSON example only — no schema, not even a named type reference.",
+        "properties": {
+          "widget_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Widget Id"
+          },
+          "activity": {
+            "$ref": "#/components/schemas/Activity"
+          }
+        },
+        "required": [
+          "widget_id",
+          "activity"
+        ]
+      }
+    }
+  },
+  "errors": {
+    "always": {
+      "429": {
+        "description": "Rate limited. Carries `Retry-After`. Added by synchra-api; the published description documents no error but 422.",
+        "headers": {
+          "Retry-After": {
+            "description": "Seconds to wait before retrying.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Server error. Added by synchra-api; the published description documents no error but 422.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      }
+    },
+    "authenticated": {
+      "401": {
+        "description": "No token, or a token the service does not accept. Body is an `Error` with `type: unauthenticated`. Added by synchra-api, verified against the live service.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "403": {
+        "description": "Authenticated but not permitted. Usually means the token is not granted on this channel rather than that a scope is missing — the two are separate. Added by synchra-api, verified against the live service.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      }
+    },
+    "identified": {
+      "404": {
+        "description": "No such route, or no such resource. Note that a *list* endpoint given an unknown parent id answers 200 with an empty `records` array instead of 404. Added by synchra-api, verified against the live service.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      }
+    }
+  },
+  "public": [
+    "GET /api/2/channels/{channel_id}/providers",
+    "GET /api/2/channels/{channel_id}/provider-streams",
+    "GET /api/2/channels/{channel_id}/chat-messages",
+    "GET /api/2/channels/{channel_id}/chat-events",
+    "GET /api/2/channels/{channel_id}/random-chat-messages",
+    "GET /api/2/activity-types",
+    "GET /api/2/currencies.json",
+    "GET /api/2/subscription/plans",
+    "GET /api/2/link-tracking/config"
+  ],
   "operations": {
     "GET /api/2/channels/{channel_id}/activities": [
       "**A 403 here usually means the token is not granted on this channel, not that a scope is",
@@ -44,12 +271,12 @@
       "is granted separately, in the dashboard. A token minted by one account for another account's",
       "channel reads chat happily and refuses this.",
       "",
-      "Needs a token. Note that a gift, sub or raid does **not** arrive here — those come through",
+      "Needs a token — verified: an anonymous call answers 401. Note that a gift, sub or raid does",
+      "**not** arrive here; those come through",
       "`GET /api/2/channels/{channel_id}/chat-messages` as notices."
     ],
-
     "GET /api/2/channels/{channel_id}/chat-messages": [
-      "**Public** — no token required.",
+      "**Public** — verified to answer without a token.",
       "",
       "Carries gifts, subs and raids as well as chat, as *notices*. A notice leaves `message_parts`",
       "empty and puts its content in `notice_message_parts` instead, so a reader that looks only at",
@@ -57,22 +284,26 @@
       "",
       "A TikTok gift identifies itself with `type: notice`, `sub_type: tiktok_gift`. To turn a gift",
       "into a price or a localised name, see the tables in",
-      "https://github.com/Bluscream/synchra-api/tree/main/data — the API offers no lookup for them."
+      "https://github.com/Bluscream/synchra-api/tree/main/data — the API offers no lookup for them.",
+      "",
+      "An unknown `channel_id` answers **200 with an empty `records` array**, not 404. Do not use this",
+      "to test whether a channel exists."
     ],
-
     "GET /api/2/channels/{channel_id}/chat-events": [
-      "**Public** — no token required."
+      "**Public** — verified to answer without a token."
     ],
-
     "GET /api/2/channels/{channel_id}/random-chat-messages": [
-      "**Public** — no token required."
+      "**Public** — verified to answer without a token."
     ],
-
     "GET /api/2/channels/{channel_id}/providers": [
-      "**Public** — no token required. With `provider-streams`, this is enough to build a live-status",
-      "page with no credentials at all."
+      "**Public** — verified to answer without a token. With `provider-streams`, this is enough to",
+      "build a live-status page with no credentials at all."
     ],
-
+    "GET /api/2/channels/{channel_id}": [
+      "Needs a token, unlike the channel's `providers`, `provider-streams` and chat — verified: an",
+      "anonymous call answers 401. A public page that only needs the display name and live state can",
+      "be built without this."
+    ],
     "GET /api/2/channels/{channel_id}/viewers/{provider}/{provider_viewer_id}/info": [
       "**The only reliable source of a viewer's picture.** `viewer_profile_picture_url` on a chat",
       "message is filled for some providers and null for others, so a chat log rendered straight from",
@@ -85,25 +316,59 @@
       "",
       "Needs a token that can read this channel's viewers; without that it answers 403."
     ],
-
     "GET /api/2/channels/{channel_id}/provider-streams": [
-      "**Public** — no token required. Carries status, title, `viewer_count`, `peak_viewer_count` and",
-      "`started_at`."
+      "**Public** — verified to answer without a token. Carries status, title, `viewer_count`,",
+      "`peak_viewer_count` and `started_at`."
     ],
-
     "GET /api/2/widgets/{widget_id}": [
       "**Public, and the `widget_id` is the capability.** There is no further authorisation on a",
       "widget: anyone holding the id can read it. Treat one like a secret — do not put it in a page",
       "that is served to viewers if the widget's contents are not meant for them."
     ],
-
     "POST /api/2/chat/messages": [
       "**Not safe to retry.** No idempotency key is offered, so a retry of a request that had already",
       "succeeded posts the message a second time. If you wrap this in a retry policy, exclude it."
+    ],
+    "GET /api/2/ws-docs": [
+      "Answers with the WebSocket protocol reference as Markdown — about 61 KB. The published",
+      "description repeats that entire document inside this operation's own `description`, which is",
+      "the only `description` Synchra fills anywhere in the API.",
+      "",
+      "A generator should treat it as a document to link to, not text to inline: it is 2,000+ lines of",
+      "Markdown tables."
+    ],
+    "GET /api/2/chat/emotes": [
+      "Needs a token — verified: an anonymous call answers 401. That is worth knowing because the",
+      "chat messages these emotes decorate are *public*, so a public chat renderer can show the text",
+      "but cannot resolve the emote list from here.",
+      "",
+      "In practice it does not need to: a chat message's `message_parts` already carry each emote's",
+      "CDN urls at three sizes, so nothing has to be looked up."
     ]
   },
-
   "schemas": {
+    "Error": [
+      "The body of every error response, confirmed against the live service for 401, 404 and 422:",
+      "",
+      "```json",
+      "{\"code\": 401, \"message\": \"Not authenticated\", \"type\": \"unauthenticated\", \"errors\": []}",
+      "```",
+      "",
+      "`type` is a stable machine-readable string — `unauthenticated`, `validation_error` — except on a",
+      "routing 404, where it is the **empty string**. Branch on `code` first.",
+      "",
+      "`errors` carries per-field detail for a 422 and is an empty array otherwise.",
+      "",
+      "The published description references this schema only from 422 responses. Every other error",
+      "response in this document was added by synchra-api."
+    ],
+    "SubError": [
+      "One field's validation failure, inside `Error.errors`. `input` is the value that was rejected",
+      "and may be any JSON type, or null.",
+      "",
+      "`field` is the parameter or body field name — for a query parameter the service reports it",
+      "unqualified (`provider`), not dotted."
+    ],
     "ChatMessage": [
       "**A notice carries its content somewhere else.** Normally the rendered content is the ordered,",
       "typed list in `message_parts`. For a notice — a gift, a sub, a raid — `message_parts` is",
@@ -116,37 +381,31 @@
       "deliberately: the API delivers it through `chat-messages`, not through `activities`, so a",
       "notification filter split along those lines puts gifts on the chat side."
     ],
-
     "ChatMessage.viewer_profile_picture_url": [
       "**Present for some providers, null for others** — filled for TikTok, not for Twitch or",
       "YouTube. Do not treat an absence as \"this viewer has no picture\"; it usually means Synchra",
       "did not resolve one. The picture is available from",
       "`GET /api/2/channels/{channel_id}/viewers/{provider}/{provider_viewer_id}/info`."
     ],
-
     "ChatMessage.viewer_name": [
       "A handle, not a URL — the API carries no link to a viewer's profile, and building one is",
       "per-provider. YouTube is addressed by channel id (`provider_viewer_id`), everyone else by",
       "handle, and some providers have no public profile page at all."
     ],
-
     "ChatMessagePart": [
       "Everything needed to render is already here: an `emote` carries its CDN urls at three sizes,",
       "a `gift` an image url, a `mention` the resolved display name, a `link` its url. No second",
       "lookup is required. Each part also has a text fallback, so a renderer that ignores images",
       "still reads correctly."
     ],
-
     "ChatMessage.notice_message_parts": [
       "The content of a notice — a gift, a sub, a raid. When this is non-empty, `message_parts` is",
       "**empty**, and this is what there is to render."
     ],
-
     "Activity.message_parts": [
       "Unlike `ChatMessage`, an activity has no second `notice_message_parts` list; this is always",
       "where its content is."
     ],
-
     "Activity.viewer_profile_picture_url": [
       "As on `ChatMessage`: filled for some providers and null for others, so an absence does not",
       "mean the viewer has no picture."

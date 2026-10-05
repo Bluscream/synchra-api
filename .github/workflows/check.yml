@@ -30,15 +30,24 @@ jobs:
           diff <(jq --sort-keys . spec/openapi.json) spec/openapi.json \
             || { echo '::error::spec/openapi.json is not key-sorted — re-run tools/fetch-spec.sh'; exit 1; }
 
-      # --targets-only is the drift check: it fails when a note points at an operation or field the
-      # description no longer has. --check is the staleness check on the committed annotated file.
+      # Applying the overlay is itself the drift check: a note whose target the description no longer
+      # has, or an addition it now defines itself, fails here and names what moved. --check then
+      # confirms the committed annotated spec and rendered notes match what this would write.
       - name: Annotations
+        run: python3 tools/annotate-spec.py --check --docs docs/ANNOTATIONS.md
+
+      # Both documents, because the overlay adds paths, schemas, responses and security schemes — any
+      # of which could make a valid document invalid.
+      - name: Specs are valid OpenAPI
         run: |
-          python3 tools/annotate-spec.py --targets-only
-          python3 tools/annotate-spec.py --check
-          python3 tools/annotate-spec.py --docs "$RUNNER_TEMP/ANNOTATIONS.md" >/dev/null
-          diff "$RUNNER_TEMP/ANNOTATIONS.md" docs/ANNOTATIONS.md \
-            || { echo '::error::docs/ANNOTATIONS.md is stale — regenerate it'; exit 1; }
+          pip install --quiet openapi-spec-validator
+          python3 - <<'PY'
+          import json
+          from openapi_spec_validator import validate
+          for f in ('spec/openapi.json', 'spec/openapi.annotated.json'):
+              validate(json.load(open(f)))
+              print('valid:', f)
+          PY
 
       - name: Gift tables
         run: |
